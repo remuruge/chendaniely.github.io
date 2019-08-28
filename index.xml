@@ -447,13 +447,13 @@ The downside is if you start branching off other branches (instead of the main &
 you’ll have to &lt;code&gt;rebase&lt;/code&gt; or &lt;code&gt;cherry-pick&lt;/code&gt; to update the branches after a branch gets merged.&lt;/p&gt;
 &lt;div id=&#34;the-general-problem&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;The general problem&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;m1-m2-m3 # the master branch
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;m1-m2-m3 # the master branch
        \
         x11-x12-x13 # example branch_1
                   \
                    y21-y22-y23 # example branch_2 that depends on branch_1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;After a squash and merge the Git DAG looks like this&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
        \
         x11-x12-x13 # commits from branch_1 still exist
                   \
@@ -467,7 +467,7 @@ so a rebase of &lt;code&gt;branch_2&lt;/code&gt; against the new master will cau
 git rebase master
 # fix conflicts
 # so many conflicts&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
           \
            x11-x12-x13-y21-y22-y23 # commits from branch_1 and branch_2&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Instead, you need to &lt;code&gt;git cherry-pick&lt;/code&gt; the commits against the updated master
@@ -475,7 +475,7 @@ with just the commits from &lt;code&gt;branch_2&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git checkout master # go to master branch so you can cherry-pick commits on top
 git cherry-pick y21^..y23 # this is how to cherry-pick multiple commits
 # (note the ^ to also include commit y21, otherwise it is left exclusive)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
        \  \
         \  y21-y22-y23 # cherry-pick commits from branch_2 # this is good
          \
@@ -485,7 +485,7 @@ so we can deleate that branch using &lt;code&gt;git branch -D branch_1&lt;/code&
 note you have to use a force delete with the &lt;code&gt;-D&lt;/code&gt; flag,
 because git does not think that &lt;code&gt;branch_1&lt;/code&gt; was merged because we did a squash+merge.
 Otherwise you would’ve been able to use the lowercase &lt;code&gt;-d&lt;/code&gt; flag to delete the branch.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;m1-m2-m3-s1 # master branch + squash-merge
           \
            y21-y22-y23 # cherry-pick commits from branch_2 # yay!&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we finally get everthing up to date, and can re-update the pull request for branch 2
@@ -508,13 +508,13 @@ However here’s an example where I created separate branches for each “featur
 but they all rely on the previous feature.&lt;/p&gt;
 &lt;p&gt;Output of my &lt;code&gt;git log --oneline --graph --decorate --all&lt;/code&gt;, which I have aliased as &lt;code&gt;git l&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Here’s the current state we’re in after we perform a squash+merge on GitHub&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;              vignettes
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;              vignettes
              /
 older_commits
              \
               master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here’s what the actual state of the repository looks like.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:06] $ git l
 * 16f4b6b (HEAD -&amp;gt; vignettes) intro to gradethis for learnr docs
 * b4e2873 (origin/vignettes) emphasize not to use ==
@@ -534,13 +534,13 @@ older_commits
 * d5cf9de Doc fixes (#62) and function pruning
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;What we want is something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;older_commits
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;older_commits
              \
               master
                     \
                      vignettes&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;First we pull and update &lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:18] $ git pull origin master
 From github.com:rstudio-education/gradethis
  * branch            master     -&amp;gt; FETCH_HEAD
@@ -549,13 +549,13 @@ Fast-forward
  inst/tutorials/grading-demo/grading-demo.Rmd | 249 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------------------------------------------------------
  1 file changed, 112 insertions(+), 137 deletions(-)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now that master is up to date,&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;              vignettes
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;              vignettes
              /
 older_commits
              \
               master-master # master has moved up a commit from pull&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;we can cherry-pick the commits of interest&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:30] $ git cherry-pick f66aa39^..16f4b6b
 [master 28c7ebe] i don&amp;#39;t want to stash
  Date: Wed Aug 14 10:03:25 2019 -0400
@@ -579,10 +579,10 @@ In my case it would’ve been &lt;code&gt;d5cf9de&lt;/code&gt;.&lt;/p&gt;
 Since we &lt;code&gt;cherry-pick&lt;/code&gt;ed commits on master we’re actually still on master.
 So we need to do update where our branches are pointing to by using `git reset –hard &lt;commit&gt;&lt;/p&gt;
 &lt;p&gt;First we checkout the &lt;code&gt;vignettes&lt;/code&gt; branch,&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:46] $ git checkout vignettes 
 Switched to branch &amp;#39;vignettes&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:52] $ git l
 * 846bb18 (master) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -606,27 +606,27 @@ Switched to branch &amp;#39;vignettes&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 |/  
 * d5cf9de Doc fixes (#62) and function pruning&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and then set it to the correct commit location.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:04] $ git reset --hard 846bb18
 HEAD is now at 846bb18 intro to gradethis for learnr docs&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We then repeat the process for the &lt;code&gt;master&lt;/code&gt; branch.&lt;/p&gt;
 &lt;p&gt;First &lt;code&gt;checkout master&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:07] $ git checkout master
 Switched to branch &amp;#39;master&amp;#39;
 Your branch is ahead of &amp;#39;origin/master&amp;#39; by 3 commits.
   (use &amp;quot;git push&amp;quot; to publish your local commits)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then &lt;code&gt;reset --hard&lt;/code&gt; to the correct location:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:11] $ git reset --hard a195fa3
 HEAD is now at a195fa3 fix gradethis demo (#70)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now everything is in the right place&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;older_commits
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;older_commits
              \
               master
                     \
                      vignettes&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:21] $ git l
 * 846bb18 (vignettes) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -648,10 +648,10 @@ HEAD is now at a195fa3 fix gradethis demo (#70)&lt;/code&gt;&lt;/pre&gt;
 * d5cf9de Doc fixes (#62) and function pruning&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Finally, we can update the GitHub remote by force bushing the branch
 (remember to be on the branch before pushing).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:53:25] $ git checkout vignettes 
 Switched to branch &amp;#39;vignettes&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:53:30] $ git push -f origin vignettes 
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
@@ -663,7 +663,7 @@ remote: Resolving deltas: 100% (7/7), completed with 1 local object.
 To github.com:rstudio-education/gradethis.git
  + b4e2873...846bb18 vignettes -&amp;gt; vignettes (forced update)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The final Graph now looks like this&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+&lt;pre class=&#34;console&#34;&gt;&lt;code&gt;dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:54:13] $ git l
 * 846bb18 (HEAD -&amp;gt; vignettes, origin/vignettes) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -689,9 +689,9 @@ and it just makes &lt;code&gt;rebase&lt;/code&gt;ing a pain with all the commits
 and led to fewer merge conflicts.&lt;/p&gt;
 &lt;p&gt;Again, the notation for &lt;code&gt;cherry-pick&lt;/code&gt; is weird, in that it is &lt;em&gt;left exclusive&lt;/em&gt; unless you put in the &lt;code&gt;^&lt;/code&gt;,
 i.e.,&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git cherry-pick &amp;lt;commit-start&amp;gt;^..&amp;lt;commit-end&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git cherry-pick &amp;lt;commit-start&amp;gt;^..&amp;lt;commit-end&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;not&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git cherry-pick &amp;lt;commit-start&amp;gt;..&amp;lt;commit-end&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git cherry-pick &amp;lt;commit-start&amp;gt;..&amp;lt;commit-end&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>

@@ -62,10 +62,8 @@ Also, sorry I may be glossing over some of the Git basics in this post…">
     
       
       
-        
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
       
     
 
@@ -134,7 +132,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
   
   <meta property="article:published_time" content="2019-08-27T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-27T23:19:44-04:00">
+  <meta property="article:modified_time" content="2019-08-27T23:44:25-04:00">
   
 
   
@@ -385,7 +383,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
 
 
 <meta content="2019-08-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-27 23:19:44 -0400 EDT" itemprop="dateModified">
+<meta content="2019-08-27 23:44:25 -0400 EDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -560,13 +558,13 @@ The downside is if you start branching off other branches (instead of the main <
 you’ll have to <code>rebase</code> or <code>cherry-pick</code> to update the branches after a branch gets merged.</p>
 <div id="the-general-problem" class="section level1">
 <h1>The general problem</h1>
-<pre><code>m1-m2-m3 # the master branch
+<pre class="markdown"><code>m1-m2-m3 # the master branch
        \
         x11-x12-x13 # example branch_1
                   \
                    y21-y22-y23 # example branch_2 that depends on branch_1</code></pre>
 <p>After a squash and merge the Git DAG looks like this</p>
-<pre><code>m1-m2-m3-s1 # master branch + squash-merge
+<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
        \
         x11-x12-x13 # commits from branch_1 still exist
                   \
@@ -580,7 +578,7 @@ so a rebase of <code>branch_2</code> against the new master will cause conflicts
 git rebase master
 # fix conflicts
 # so many conflicts</code></pre>
-<pre><code>m1-m2-m3-s1 # master branch + squash-merge
+<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
           \
            x11-x12-x13-y21-y22-y23 # commits from branch_1 and branch_2</code></pre>
 <p>Instead, you need to <code>git cherry-pick</code> the commits against the updated master
@@ -588,7 +586,7 @@ with just the commits from <code>branch_2</code>.</p>
 <pre class="bash"><code>git checkout master # go to master branch so you can cherry-pick commits on top
 git cherry-pick y21^..y23 # this is how to cherry-pick multiple commits
 # (note the ^ to also include commit y21, otherwise it is left exclusive)</code></pre>
-<pre><code>m1-m2-m3-s1 # master branch + squash-merge
+<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
        \  \
         \  y21-y22-y23 # cherry-pick commits from branch_2 # this is good
          \
@@ -598,7 +596,7 @@ so we can deleate that branch using <code>git branch -D branch_1</code>,
 note you have to use a force delete with the <code>-D</code> flag,
 because git does not think that <code>branch_1</code> was merged because we did a squash+merge.
 Otherwise you would’ve been able to use the lowercase <code>-d</code> flag to delete the branch.</p>
-<pre><code>m1-m2-m3-s1 # master branch + squash-merge
+<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
           \
            y21-y22-y23 # cherry-pick commits from branch_2 # yay!</code></pre>
 <p>Now we finally get everthing up to date, and can re-update the pull request for branch 2
@@ -621,13 +619,13 @@ However here’s an example where I created separate branches for each “featur
 but they all rely on the previous feature.</p>
 <p>Output of my <code>git log --oneline --graph --decorate --all</code>, which I have aliased as <code>git l</code></p>
 <p>Here’s the current state we’re in after we perform a squash+merge on GitHub</p>
-<pre><code>              vignettes
+<pre class="markdown"><code>              vignettes
              /
 older_commits
              \
               master</code></pre>
 <p>Here’s what the actual state of the repository looks like.</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:06] $ git l
 * 16f4b6b (HEAD -&gt; vignettes) intro to gradethis for learnr docs
 * b4e2873 (origin/vignettes) emphasize not to use ==
@@ -647,13 +645,13 @@ older_commits
 * d5cf9de Doc fixes (#62) and function pruning
 </code></pre>
 <p>What we want is something like this:</p>
-<pre><code>older_commits
+<pre class="markdown"><code>older_commits
              \
               master
                     \
                      vignettes</code></pre>
 <p>First we pull and update <code>master</code></p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:18] $ git pull origin master
 From github.com:rstudio-education/gradethis
  * branch            master     -&gt; FETCH_HEAD
@@ -662,13 +660,13 @@ Fast-forward
  inst/tutorials/grading-demo/grading-demo.Rmd | 249 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------------------------------------------------------
  1 file changed, 112 insertions(+), 137 deletions(-)</code></pre>
 <p>Now that master is up to date,</p>
-<pre><code>              vignettes
+<pre class="markdown"><code>              vignettes
              /
 older_commits
              \
               master-master # master has moved up a commit from pull</code></pre>
 <p>we can cherry-pick the commits of interest</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:30] $ git cherry-pick f66aa39^..16f4b6b
 [master 28c7ebe] i don&#39;t want to stash
  Date: Wed Aug 14 10:03:25 2019 -0400
@@ -692,10 +690,10 @@ In my case it would’ve been <code>d5cf9de</code>.</p>
 Since we <code>cherry-pick</code>ed commits on master we’re actually still on master.
 So we need to do update where our branches are pointing to by using `git reset –hard <commit></p>
 <p>First we checkout the <code>vignettes</code> branch,</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:51:46] $ git checkout vignettes 
 Switched to branch &#39;vignettes&#39;</code></pre>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:51:52] $ git l
 * 846bb18 (master) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -719,27 +717,27 @@ Switched to branch &#39;vignettes&#39;</code></pre>
 |/  
 * d5cf9de Doc fixes (#62) and function pruning</code></pre>
 <p>and then set it to the correct commit location.</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:04] $ git reset --hard 846bb18
 HEAD is now at 846bb18 intro to gradethis for learnr docs</code></pre>
 <p>We then repeat the process for the <code>master</code> branch.</p>
 <p>First <code>checkout master</code></p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:52:07] $ git checkout master
 Switched to branch &#39;master&#39;
 Your branch is ahead of &#39;origin/master&#39; by 3 commits.
   (use &quot;git push&quot; to publish your local commits)</code></pre>
 <p>Then <code>reset --hard</code> to the correct location:</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:11] $ git reset --hard a195fa3
 HEAD is now at a195fa3 fix gradethis demo (#70)</code></pre>
 <p>Now everything is in the right place</p>
-<pre><code>older_commits
+<pre class="markdown"><code>older_commits
              \
               master
                     \
                      vignettes</code></pre>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:52:21] $ git l
 * 846bb18 (vignettes) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -761,10 +759,10 @@ HEAD is now at a195fa3 fix gradethis demo (#70)</code></pre>
 * d5cf9de Doc fixes (#62) and function pruning</code></pre>
 <p>Finally, we can update the GitHub remote by force bushing the branch
 (remember to be on the branch before pushing).</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
 [10:53:25] $ git checkout vignettes 
 Switched to branch &#39;vignettes&#39;</code></pre>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:53:30] $ git push -f origin vignettes 
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
@@ -776,7 +774,7 @@ remote: Resolving deltas: 100% (7/7), completed with 1 local object.
 To github.com:rstudio-education/gradethis.git
  + b4e2873...846bb18 vignettes -&gt; vignettes (forced update)</code></pre>
 <p>The final Graph now looks like this</p>
-<pre><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
+<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
 [10:54:13] $ git l
 * 846bb18 (HEAD -&gt; vignettes, origin/vignettes) intro to gradethis for learnr docs
 * 9b84be6 emphasize not to use ==
@@ -802,9 +800,9 @@ and it just makes <code>rebase</code>ing a pain with all the commits and merge c
 and led to fewer merge conflicts.</p>
 <p>Again, the notation for <code>cherry-pick</code> is weird, in that it is <em>left exclusive</em> unless you put in the <code>^</code>,
 i.e.,</p>
-<pre><code>git cherry-pick &lt;commit-start&gt;^..&lt;commit-end&gt;</code></pre>
+<pre class="bash"><code>git cherry-pick &lt;commit-start&gt;^..&lt;commit-end&gt;</code></pre>
 <p>not</p>
-<pre><code>git cherry-pick &lt;commit-start&gt;..&lt;commit-end&gt;</code></pre>
+<pre class="bash"><code>git cherry-pick &lt;commit-start&gt;..&lt;commit-end&gt;</code></pre>
 </div>
 
     </div>
@@ -1049,6 +1047,9 @@ i.e.,</p>
 
     
     
+    
+    <script src="/js/mathjax-config.js"></script>
+    
 
     
     
@@ -1064,9 +1065,15 @@ i.e.,</p>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
         
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
       
 
       
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 
