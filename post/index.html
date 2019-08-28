@@ -409,6 +409,97 @@
 
 
 
+<meta content="2019-08-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-28 02:45:07 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>2019-08-28</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/2019/08/28/r-or-python-which-one-to-learn-first/#disqus_thread"></a>
+  
+
+  
+  
+
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="/2019/08/28/r-or-python-which-one-to-learn-first/" itemprop="url">R or Python, which One to Learn (First)?</a>
+  </h3>
+
+  
+  <div class="article-style" itemprop="articleBody">
+    I’ve been asked a few times lately about whether one should learn R or Python.
+Channeling David Robinson’s post, I’m writing a blog post about it.
+When you’ve written the same code 3 times, write a function
+When you’ve given the same in-person advice 3 times, write a blog post — David Robinson (@drob) November 9, 2017   The only definitive answer I have is if you’re planning to do web deveopment, and you’re somehow only picking between R and Python, pick Python (any of the Python web frameworks, Flask, Django, Pyramid, and then ask yourself why not JavaScript?
+  </div>
+  
+
+  
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
+
+  
+    
+
+
+
 <meta content="2019-08-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
 <meta content="2019-08-27 23:44:25 -0400 EDT" itemprop="dateModified">
 
@@ -1179,96 +1270,6 @@ Project Templates are one way to address this problem. The original post about p
   <div class="article-style" itemprop="articleBody">
     Since I&rsquo;ve joined SDAL, the lab has undergone a few infrastructure related changes, mainly how applications are run on the servers. From what I remember, we started using Virtual Box virtual machines, then moved to LXC Linux containers, and we are now rebuilding our entire infrastructure using Docker containers.
 How we got here The whole point of using these visualization and container technologies is so we did not want to install anything directly on the server.
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
-
-  
-    
-
-
-
-<meta content="2017-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-23 20:45:50 -0400 EDT" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    <time>2019-07-23</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/2017/05/30/project-templates/#disqus_thread"></a>
-  
-
-  
-  
-
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3" itemprop="name">
-    <a href="/2017/05/30/project-templates/" itemprop="url">Project Templates</a>
-  </h3>
-
-  
-  <div class="article-style" itemprop="articleBody">
-    Project templates provide some standardized way to organize files. Our lab uses a template that is based off the Noble 2009 Paper, &ldquo;A Quick Guide to Organizing Computational Biology Projects&rdquo;. I&rsquo;ve created a simple shell script that automatically generates this folder structure here, and there&rsquo;s an rr-init project by the Reproducible Science Curriculum folks.
-The structure we have in our lab looks like this:
-project | |- data # raw and primary data, are not changed once created | | | |- project_data # subfolder that links to an encrypted data storage container | | | | | |- original # raw data, will not be altered | | |- working # intermediate datasets from src code | + +- final # datasets used in analysis | |- src / # any programmatic code | |- user1 # user1 assigned to the project | +- user2 # user2 assigned to the project | |- output # all output and results from workflows and analyses | |- figures/ # graphs, likely designated for manuscript figures | |- pictures/ # diagrams, images, and other non-graph graphics | +- analysis/ # generated reports for (e.
   </div>
   
 

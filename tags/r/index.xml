@@ -7,10 +7,121 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R or Python, which One to Learn (First)?</title>
+      <link>/2019/08/28/r-or-python-which-one-to-learn-first/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/08/28/r-or-python-which-one-to-learn-first/</guid>
+      <description>
+
+
+&lt;p&gt;I’ve been asked a few times lately about whether one should learn R or Python.&lt;/p&gt;
+&lt;p&gt;Channeling
+&lt;a href=&#34;http://varianceexplained.org/r/start-blog/&#34;&gt;David Robinson’s post&lt;/a&gt;,
+I’m writing a blog post about it.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+When you’ve written the same code 3 times, write a function&lt;br&gt;&lt;br&gt;When you’ve given the same in-person advice 3 times, write a blog post
+&lt;/p&gt;
+— David Robinson (&lt;span class=&#34;citation&#34;&gt;@drob&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/drob/status/928447584712253440?ref_src=twsrc%5Etfw&#34;&gt;November 9, 2017&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;The only definitive answer I have is if you’re planning to do web deveopment,
+and you’re somehow only picking between R and Python, pick Python
+(any of the Python web frameworks, Flask, Django, Pyramid, and then ask yourself why not JavaScript?).
+If you’re doing hardward things, also pick Python
+(see &lt;a href=&#34;https://twitter.com/search?q=%23pythonhardware&amp;amp;src=typed_query&amp;amp;f=live&#34;&gt;#pythonhardware&lt;/a&gt;).
+Otherwise, pick what you already know or took a class in,
+or look at a few job postings in your area and pick the one that is most prevelent.
+In the end all the data science and data cleaning skills you learn in one language will
+carry over into the other.&lt;/p&gt;
+&lt;p&gt;I personally perfer R for dashboarding
+(&lt;a href=&#34;https://shiny.rstudio.com/&#34;&gt;shiny&lt;/a&gt;)
+and publication
+(&lt;a href=&#34;https://rmarkdown.rstudio.com/&#34;&gt;RMarkdown + knitr&lt;/a&gt;),
+but that’s mainly because back in 2014, when I was first learning data science skills I was taught in R,
+and there were not good equlivilants in the Python world
+(other than what is now &lt;a href=&#34;https://jupyter.org/&#34;&gt;Jupyter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Also, most data scientists in industry are working in SQL anyway ( :&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;For data science/data cleaning/data analysis programs,
+the best way is to practice working with data.
+Having said that, it’s really hard to find projects,
+or sometimes your own projects are “too big and complicated” so you might be at a loss of where to begin.&lt;/p&gt;
+&lt;p&gt;My first recommendation is take a look at
+&lt;a href=&#34;https://www.kaggle.com/competitions&#34;&gt;Kaggle&lt;/a&gt;.
+You’ll see a lot of datasets there and you might find something interesting to play around with.
+The forums on the competitions are also good place to get ideas on some of the machine learning and model fitting side.
+One of my first exposures to data science was one of those competitions,
+and I learned a lot of web scraping and string parsing skills there.&lt;/p&gt;
+&lt;p&gt;Another great resource where you can practice some of your data skills come from the R community.
+It’s called
+&lt;a href=&#34;https://github.com/rfordatascience/tidytuesday&#34;&gt;Tidy&lt;/a&gt;
+&lt;a href=&#34;https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/&#34;&gt;Tuesday&lt;/a&gt;.
+Every Tuesday a new dataset gets released, and people
+(all over &lt;a href=&#34;https://twitter.com/hashtag/tidytuesday&#34;&gt;twitter&lt;/a&gt;)
+share their findings.
+It does not need to be a fully worked out machine learning pipeline.
+You are just getting a new dataset to explore.
+David Robinson does a
+&lt;a href=&#34;https://www.youtube.com/user/safe4democracy/videos&#34;&gt;1-hour livestream every week&lt;/a&gt;.
+Even though it’s in R, you can do it all in Python as well (maybe try replicating someone’s R work?).
+After you get used to exploring data, and when you get more practice in either R or Python,
+it’s much easier to see how you can apply it in your daily life.
+And that motivation will help you practice and learn more.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/rctatman&#34;&gt;Rachael Tatman&lt;/a&gt;,
+from Kaggle, also does weekly livestreams where
+she also hosts a journal club to discuss an academic paper about
+a machine learning method.&lt;/p&gt;
+&lt;p&gt;If you need some more of the basic programming knowledge,
+take a look at the
+&lt;a href=&#34;https://software-carpentry.org/lessons/&#34;&gt;software-carpentry&lt;/a&gt; and
+&lt;a href=&#34;https://datacarpentry.org/lessons/&#34;&gt;data-carpentry&lt;/a&gt;
+R and Python lessons.
+Jake VanderPlas’ book
+&lt;a href=&#34;https://jakevdp.github.io/PythonDataScienceHandbook/&#34;&gt;“Python Data Science Handbook”&lt;/a&gt;
+is free online as well as
+as Garrett Grolemund and Hadley Wickham’s
+&lt;a href=&#34;https://r4ds.had.co.nz/&#34;&gt;R for Data Science&lt;/a&gt;.
+Hadley Wickham also as a free book on
+&lt;a href=&#34;https://adv-r.hadley.nz/&#34;&gt;Advanced R&lt;/a&gt;,
+but that’s not necessary when getting started.
+I also try to keep a list of free (python)
+&lt;a href=&#34;https://github.com/chendaniely/pandas_for_everyone#other-random-goodies&#34;&gt;resources&lt;/a&gt;
+online as well.&lt;/p&gt;
+&lt;p&gt;Since I work on the data side of most things,
+it’s easy for me to suggest learning things from that point of view.
+All I can say is, that it if you stick with one of the learning paths,
+you will actually pick up bits of knowledge that will help you in others.
+I first learned Python as a normal scriping language, and learned how to do data analysis in R.
+I only started to do data manipulation in Python when I understoon the concept of
+&lt;a href=&#34;https://vita.had.co.nz/papers/tidy-data.pdf&#34;&gt;tidy data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Tidy data is probably the &lt;em&gt;most&lt;/em&gt; important topic when working with data.
+So many of the skills you need to clean and tidy your data involve other aspects of the langage
+(e.g., writing vectorized functions),
+that you’ll learn basic programming concepts by making your data tidy.&lt;/p&gt;
+&lt;p&gt;For example, while learning pandas and data manipulations,
+will get you working with Python classes,
+which is an Object Oriented Programming concept.
+That will all translate if you need to so more software work in Python or if you want to learn Django.
+In R, you learn how to work with dataframes, functions, and how to write your own.&lt;/p&gt;
+&lt;p&gt;In the end, find somewhere to start.
+Because of my background, I say start with loading data and playing with it.
+The more you do it, the more questions you will have on your data,
+and the more skills you’ll acquire to answer those questions.
+Those skills will carry over to other aspects of the language, and even to other languages
+(e.g., R, Python, even Julia!).&lt;/p&gt;
+&lt;p&gt;You’ll always be learning, it never ends, so don’t worry about ever trying to “know it all”.
+I’m constantly finding new things and ways to do things in R and Pandas; I am always googling and stackoverflow-ing…
+Even though I have a book about Pandas and worked as an intern for RStudio! :)&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Inconsistencies with the `==` operator in R</title>

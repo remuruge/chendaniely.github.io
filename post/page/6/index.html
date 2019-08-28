@@ -441,6 +441,99 @@
   
   
   <span class="middot-divider"></span>
+  <a href="/2014/02/04/installing-eclipse-in-ubuntu-13.10/#disqus_thread"></a>
+  
+
+  
+  
+
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="/2014/02/04/installing-eclipse-in-ubuntu-13.10/" itemprop="url">Installing Eclipse in Ubuntu 13.10</a>
+  </h3>
+
+  
+  <div class="article-style" itemprop="articleBody">
+    Adapted answer from Shubhmay and TimD on askubuntu on installing Eclipse.
+ Extract the eclipse.XX.YY.tar.gz file: tar -zxvf eclipse.XX.YY.tar.gz
+ Copy the extracted folder to /opt: sudo cp -r eclipse /opt
+ Create a desktop file gedit eclipse.desktop
+ copy the following to the eclipse.desktop file
+[Desktop Entry] Name=Eclipse Type=Application #Exec=eclipse Exec=env UBUNTU_MENUPROXY=0 eclipse # for menubar bug in 13.10 Terminal=false Icon=eclipse Comment=Integrated Development Environment NoDisplay=false Categories=Development;IDE; Name[en]=Eclipse  Execute the following command to automatically install it in the unity: sudo desktop-file-install eclipse.
+  </div>
+  
+
+  
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
+
+  
+    
+
+
+
+<meta content="2014-02-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-23 20:45:50 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>2019-07-23</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
   <a href="/2014/02/04/setting-up-repast-simphony-2.1-in-linux/#disqus_thread"></a>
   
 

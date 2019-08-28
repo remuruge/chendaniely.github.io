@@ -409,6 +409,96 @@
 
 
 
+<meta content="2017-05-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-23 20:45:50 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>2019-07-23</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/2017/05/30/project-templates/#disqus_thread"></a>
+  
+
+  
+  
+
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3" itemprop="name">
+    <a href="/2017/05/30/project-templates/" itemprop="url">Project Templates</a>
+  </h3>
+
+  
+  <div class="article-style" itemprop="articleBody">
+    Project templates provide some standardized way to organize files. Our lab uses a template that is based off the Noble 2009 Paper, &ldquo;A Quick Guide to Organizing Computational Biology Projects&rdquo;. I&rsquo;ve created a simple shell script that automatically generates this folder structure here, and there&rsquo;s an rr-init project by the Reproducible Science Curriculum folks.
+The structure we have in our lab looks like this:
+project | |- data # raw and primary data, are not changed once created | | | |- project_data # subfolder that links to an encrypted data storage container | | | | | |- original # raw data, will not be altered | | |- working # intermediate datasets from src code | + +- final # datasets used in analysis | |- src / # any programmatic code | |- user1 # user1 assigned to the project | +- user2 # user2 assigned to the project | |- output # all output and results from workflows and analyses | |- figures/ # graphs, likely designated for manuscript figures | |- pictures/ # diagrams, images, and other non-graph graphics | +- analysis/ # generated reports for (e.
+  </div>
+  
+
+  
+
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
+
+  
+    
+
+
+
 <meta content="2017-05-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
 <meta content="2019-07-23 20:45:50 -0400 EDT" itemprop="dateModified">
 
@@ -1179,95 +1269,6 @@ I snowboard. After not going during the 2 years of my master&rsquo;s, I decided 
   <div class="article-style" itemprop="articleBody">
     My previous blog post summarized the main points of the Watts 2002 paper. At the very end of the post I mentioned ways we can extend the Watts model with neural-networks. Here I outline the steps of the neural-network simulation.
 Generally the model goes though an initiation step, a simulation step, and a cleanup step. In the initiation step, the agents are created and connected in a network. Then selected agents are seeded with a value before continuing onto the simulation step.
-  </div>
-  
-
-  
-
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-<div class="card-simple" itemscope itemtype="http://schema.org/BlogPosting">
-
-  
-    
-
-
-
-<meta content="2017-03-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-07-23 20:45:50 -0400 EDT" itemprop="dateModified">
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-          Last updated on
-      
-    
-    <time>2019-07-23</time>
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/2017/03/27/scientific-programming/#disqus_thread"></a>
-  
-
-  
-  
-
-  
-
-</div>
-
-  
-
-  
-  
-  
-
-  <h3 class="article-title mb-1 mt-3" itemprop="name">
-    <a href="/2017/03/27/scientific-programming/" itemprop="url">Scientific Programming</a>
-  </h3>
-
-  
-  <div class="article-style" itemprop="articleBody">
-    Software-Carpentry played an integral part of who I am today. I am always trying to learn and follow best practices in the context of scientific programming, which I think is a neglected area in research.
-The fundamental problem is the incentive structure in academia, where productivity is measured by the number of papers published. The downside of tis pressure is that quality of analytics and code will suffer to get the results for the paper.
   </div>
   
 

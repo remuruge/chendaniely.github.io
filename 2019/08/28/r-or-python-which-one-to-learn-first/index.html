@@ -28,11 +28,13 @@
   
     
   
-  <meta name="description" content="I have a love-hate relationship with Git. It took me years of following cookbooks and following strict set of commands to get a sense of how it works. I still have to spend time wrangling Git at times, but I’ve gotten to the point where I’m just annoyed, instead of scared. Here is the branching-squash-and-merge workflow I’ve been using at RStudio.
-Also, sorry I may be glossing over some of the Git basics in this post…">
+  <meta name="description" content="I’ve been asked a few times lately about whether one should learn R or Python.
+Channeling David Robinson’s post, I’m writing a blog post about it.
+When you’ve written the same code 3 times, write a function
+When you’ve given the same in-person advice 3 times, write a blog post — David Robinson (@drob) November 9, 2017   The only definitive answer I have is if you’re planning to do web deveopment, and you’re somehow only picking between R and Python, pick Python (any of the Python web frameworks, Flask, Django, Pyramid, and then ask yourself why not JavaScript?">
 
   
-  <link rel="alternate" hreflang="en-us" href="/2019/08/27/git-squash-and-merge-workflow/">
+  <link rel="alternate" hreflang="en-us" href="/2019/08/28/r-or-python-which-one-to-learn-first/">
 
   
 
@@ -109,7 +111,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/2019/08/27/git-squash-and-merge-workflow/">
+  <link rel="canonical" href="/2019/08/28/r-or-python-which-one-to-learn-first/">
 
   
   
@@ -124,15 +126,17 @@ Also, sorry I may be glossing over some of the Git basics in this post…">
   <meta property="twitter:creator" content="@chendaniely">
   
   <meta property="og:site_name" content="Daniel Chen">
-  <meta property="og:url" content="/2019/08/27/git-squash-and-merge-workflow/">
-  <meta property="og:title" content="Git Squash and Merge Workflow | Daniel Chen">
-  <meta property="og:description" content="I have a love-hate relationship with Git. It took me years of following cookbooks and following strict set of commands to get a sense of how it works. I still have to spend time wrangling Git at times, but I’ve gotten to the point where I’m just annoyed, instead of scared. Here is the branching-squash-and-merge workflow I’ve been using at RStudio.
-Also, sorry I may be glossing over some of the Git basics in this post…"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:url" content="/2019/08/28/r-or-python-which-one-to-learn-first/">
+  <meta property="og:title" content="R or Python, which One to Learn (First)? | Daniel Chen">
+  <meta property="og:description" content="I’ve been asked a few times lately about whether one should learn R or Python.
+Channeling David Robinson’s post, I’m writing a blog post about it.
+When you’ve written the same code 3 times, write a function
+When you’ve given the same in-person advice 3 times, write a blog post — David Robinson (@drob) November 9, 2017   The only definitive answer I have is if you’re planning to do web deveopment, and you’re somehow only picking between R and Python, pick Python (any of the Python web frameworks, Flask, Django, Pyramid, and then ask yourself why not JavaScript?"><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-27T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-08-28T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-08-27T23:44:25-04:00">
+  <meta property="article:modified_time" content="2019-08-28T02:45:07-04:00">
   
 
   
@@ -170,7 +174,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
 
 
 
-  <title>Git Squash and Merge Workflow | Daniel Chen</title>
+  <title>R or Python, which One to Learn (First)? | Daniel Chen</title>
 
 </head>
 
@@ -371,10 +375,10 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Git Squash and Merge Workflow</h1>
+  <h1 itemprop="name">R or Python, which One to Learn (First)?</h1>
 
   
-  <p class="page-subtitle">Doing gitmastics as an RStudio intern</p>
+  <p class="page-subtitle">Pick one, learn it well, skills will transfer over</p>
   
 
   
@@ -382,8 +386,8 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
 
 
 
-<meta content="2019-08-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2019-08-27 23:44:25 -0400 EDT" itemprop="dateModified">
+<meta content="2019-08-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-08-28 02:45:07 -0400 EDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -398,7 +402,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
           Last updated on
       
     
-    <time>2019-08-27</time>
+    <time>2019-08-28</time>
   </span>
   
 
@@ -407,14 +411,14 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    5 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="/2019/08/27/git-squash-and-merge-workflow/#disqus_thread"></a>
+  <a href="/2019/08/28/r-or-python-which-one-to-learn-first/#disqus_thread"></a>
   
 
   
@@ -433,7 +437,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=/2019/08/27/git-squash-and-merge-workflow/&amp;text=Git%20Squash%20and%20Merge%20Workflow" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/2019/08/28/r-or-python-which-one-to-learn-first/&amp;text=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -446,7 +450,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=/2019/08/27/git-squash-and-merge-workflow/&amp;t=Git%20Squash%20and%20Merge%20Workflow" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/2019/08/28/r-or-python-which-one-to-learn-first/&amp;t=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
       </li>
@@ -459,7 +463,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="mailto:?subject=Git%20Squash%20and%20Merge%20Workflow&amp;body=/2019/08/27/git-squash-and-merge-workflow/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?&amp;body=/2019/08/28/r-or-python-which-one-to-learn-first/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -472,7 +476,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=/2019/08/27/git-squash-and-merge-workflow/&amp;title=Git%20Squash%20and%20Merge%20Workflow" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/2019/08/28/r-or-python-which-one-to-learn-first/&amp;title=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -485,7 +489,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Git%20Squash%20and%20Merge%20Workflow%20/2019/08/27/git-squash-and-merge-workflow/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?%20/2019/08/28/r-or-python-which-one-to-learn-first/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -498,7 +502,7 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=/2019/08/27/git-squash-and-merge-workflow/&amp;title=Git%20Squash%20and%20Merge%20Workflow" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/2019/08/28/r-or-python-which-one-to-learn-first/&amp;title=R%20or%20Python,%20which%20One%20to%20Learn%20%28First%29?" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -537,273 +541,105 @@ Also, sorry I may be glossing over some of the Git basics in this post…"><meta
       
 
 
-<p>I have a love-hate relationship with Git.
-It took me years of following cookbooks and following strict set of commands to
-get a sense of how it works.
-I still have to spend time wrangling Git at times,
-but I’ve gotten to the point where I’m just annoyed, instead of scared.
-Here is the branching-squash-and-merge workflow I’ve been using at RStudio.</p>
-<p>Also, sorry I may be glossing over some of the Git basics in this post…</p>
+<p>I’ve been asked a few times lately about whether one should learn R or Python.</p>
+<p>Channeling
+<a href="http://varianceexplained.org/r/start-blog/">David Robinson’s post</a>,
+I’m writing a blog post about it.</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+When you’ve written the same code 3 times, write a function<br><br>When you’ve given the same in-person advice 3 times, write a blog post
+</p>
+— David Robinson (<span class="citation">@drob</span>) <a href="https://twitter.com/drob/status/928447584712253440?ref_src=twsrc%5Etfw">November 9, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The only definitive answer I have is if you’re planning to do web deveopment,
+and you’re somehow only picking between R and Python, pick Python
+(any of the Python web frameworks, Flask, Django, Pyramid, and then ask yourself why not JavaScript?).
+If you’re doing hardward things, also pick Python
+(see <a href="https://twitter.com/search?q=%23pythonhardware&amp;src=typed_query&amp;f=live">#pythonhardware</a>).
+Otherwise, pick what you already know or took a class in,
+or look at a few job postings in your area and pick the one that is most prevelent.
+In the end all the data science and data cleaning skills you learn in one language will
+carry over into the other.</p>
+<p>I personally perfer R for dashboarding
+(<a href="https://shiny.rstudio.com/">shiny</a>)
+and publication
+(<a href="https://rmarkdown.rstudio.com/">RMarkdown + knitr</a>),
+but that’s mainly because back in 2014, when I was first learning data science skills I was taught in R,
+and there were not good equlivilants in the Python world
+(other than what is now <a href="https://jupyter.org/">Jupyter</a>).</p>
+<p>Also, most data scientists in industry are working in SQL anyway ( :</p>
 <!-- more -->
-<p>At RStudio, I’m using a brancing workflow where I am added directly as a collaborator to a project.
-I still have to create pull requests for review,
-but contrast this with me forking the repository and creating a pull regrest from my copy (<code>origin</code>)
-to the parent repository (<code>upstream</code>).</p>
-<p>Every workflow has benefits and drawbacks.
-The current workflow I’m using is a “squash and merge”.
-Where all the commits in a pull request are “squashed” into a single commit when it it merged into master.
-This means the main commit history is <em>super</em> clean,
-and potentially sets up the repository to create automatic change logs or <code>NEWS</code> reports.
-The downside is if you start branching off other branches (instead of the main <code>master</code>),
-you’ll have to <code>rebase</code> or <code>cherry-pick</code> to update the branches after a branch gets merged.</p>
-<div id="the-general-problem" class="section level1">
-<h1>The general problem</h1>
-<pre class="markdown"><code>m1-m2-m3 # the master branch
-       \
-        x11-x12-x13 # example branch_1
-                  \
-                   y21-y22-y23 # example branch_2 that depends on branch_1</code></pre>
-<p>After a squash and merge the Git DAG looks like this</p>
-<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
-       \
-        x11-x12-x13 # commits from branch_1 still exist
-                  \
-                   y21-y22-y23 # commits from branch_2 still exist</code></pre>
-<p>You can’t simply just squash merge <code>branch_2</code>, becuase the commits from <code>branch_1</code>
-are technically still part of the history of <code>branch_2</code>,
-so a rebase of <code>branch_2</code> against the new master will cause conflicts,
-<em>and</em> I’ll have duplicate messages if I do another squash+merge of <code>branch_2</code>.</p>
-<p>If you did a <code>rebase</code> you’ll end up with this:</p>
-<pre class="bash"><code>git checkout branch_2 # make sure you&#39;re on branch_2
-git rebase master
-# fix conflicts
-# so many conflicts</code></pre>
-<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
-          \
-           x11-x12-x13-y21-y22-y23 # commits from branch_1 and branch_2</code></pre>
-<p>Instead, you need to <code>git cherry-pick</code> the commits against the updated master
-with just the commits from <code>branch_2</code>.</p>
-<pre class="bash"><code>git checkout master # go to master branch so you can cherry-pick commits on top
-git cherry-pick y21^..y23 # this is how to cherry-pick multiple commits
-# (note the ^ to also include commit y21, otherwise it is left exclusive)</code></pre>
-<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
-       \  \
-        \  y21-y22-y23 # cherry-pick commits from branch_2 # this is good
-         \
-          x11-x12-x13 # commits from branch_1 still exist # already in s1</code></pre>
-<p>We don’t need the commits from branch one anymore (<code>x11</code> to <code>x13</code> in the example),
-so we can deleate that branch using <code>git branch -D branch_1</code>,
-note you have to use a force delete with the <code>-D</code> flag,
-because git does not think that <code>branch_1</code> was merged because we did a squash+merge.
-Otherwise you would’ve been able to use the lowercase <code>-d</code> flag to delete the branch.</p>
-<pre class="markdown"><code>m1-m2-m3-s1 # master branch + squash-merge
-          \
-           y21-y22-y23 # cherry-pick commits from branch_2 # yay!</code></pre>
-<p>Now we finally get everthing up to date, and can re-update the pull request for branch 2
-by doing a force push: <code>git push -f origin master</code>.</p>
-</div>
-<div id="in-the-real-world" class="section level1">
-<h1>In the real world</h1>
-<p>The PR process is the same as usual:</p>
-<ol style="list-style-type: decimal">
-<li>Create a branch</li>
-<li>Push the branch to the remote (i.e., Github, in this case)</li>
-<li>Pull request!</li>
-</ol>
-<p>However, Github now gives you an option of which <em>green</em> button you want!
-Specifically, the option to “Squash and merge”</p>
-<p><img src="github_squash_merge.png" /></p>
-<p>This is fine when you have a totally independent PR
-and there’s no other work that is based of the current work on that branch.
-However here’s an example where I created separate branches for each “feature”,
-but they all rely on the previous feature.</p>
-<p>Output of my <code>git log --oneline --graph --decorate --all</code>, which I have aliased as <code>git l</code></p>
-<p>Here’s the current state we’re in after we perform a squash+merge on GitHub</p>
-<pre class="markdown"><code>              vignettes
-             /
-older_commits
-             \
-              master</code></pre>
-<p>Here’s what the actual state of the repository looks like.</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:51:06] $ git l
-* 16f4b6b (HEAD -&gt; vignettes) intro to gradethis for learnr docs
-* b4e2873 (origin/vignettes) emphasize not to use ==
-* f66aa39 i don&#39;t want to stash
-| * feb82b3 (origin/gh-pages) Deploy rstudio-education/gradethis to github.com/rstudio-education/gradethis.git:gh-pages
-| * a195fa3 (origin/master, origin/HEAD) fix gradethis demo (#70)
-| | * 4aaee31 (origin/compare_default_formals, compare_default_formals) call_standarise_formals
-| | * 19354dd refactor is_code_same to is_code_identical
-| | * 5591ae8 rename fxn code_is_same -&gt; is_code_same
-| |/  
-| | * 91cf16e (update_grading_demo) fix gradethis demo
-| |/  
-| * 9083fc8 (me/master, master) rename functions per #65 update docs and tests (#72)
-| * 5ec1144 Docs to markdown per #68 by @andrie + Barret changes (#69)
-| * 9cc3d6d Test result api fixes#60 (#63)
-|/  
-* d5cf9de Doc fixes (#62) and function pruning
-</code></pre>
-<p>What we want is something like this:</p>
-<pre class="markdown"><code>older_commits
-             \
-              master
-                    \
-                     vignettes</code></pre>
-<p>First we pull and update <code>master</code></p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:51:18] $ git pull origin master
-From github.com:rstudio-education/gradethis
- * branch            master     -&gt; FETCH_HEAD
-Updating 9083fc8..a195fa3
-Fast-forward
- inst/tutorials/grading-demo/grading-demo.Rmd | 249 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------------------------------------------------------
- 1 file changed, 112 insertions(+), 137 deletions(-)</code></pre>
-<p>Now that master is up to date,</p>
-<pre class="markdown"><code>              vignettes
-             /
-older_commits
-             \
-              master-master # master has moved up a commit from pull</code></pre>
-<p>we can cherry-pick the commits of interest</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:51:30] $ git cherry-pick f66aa39^..16f4b6b
-[master 28c7ebe] i don&#39;t want to stash
- Date: Wed Aug 14 10:03:25 2019 -0400
- 3 files changed, 72 insertions(+)
- create mode 100644 vignettes/000-introduction_to_gradethis.Rmd
- create mode 100644 vignettes/010-using_equal.Rmd
- create mode 100644 vignettes/990-developers_guide.Rmd
-[master 9b84be6] emphasize not to use ==
- Date: Wed Aug 14 11:44:36 2019 -0400
- 1 file changed, 4 insertions(+), 4 deletions(-)
-[master 846bb18] intro to gradethis for learnr docs
- Date: Tue Aug 27 10:51:06 2019 -0400
- 1 file changed, 151 insertions(+), 9 deletions(-)
-</code></pre>
-<p>Note that I used the <code>&lt;commit&gt;^..&lt;commit&gt;</code> notation while <code>cherry-pick</code>ing.
-The <code>^</code> means to also include that commit, otherwise it will start from that commit,
-but not include it (i.e., left exclusive).</p>
-<p>If you wanted to not use the <code>^</code> you need to pick the previous commit hash.
-In my case it would’ve been <code>d5cf9de</code>.</p>
-<p>Now, we need to clean up the references to our branch.
-Since we <code>cherry-pick</code>ed commits on master we’re actually still on master.
-So we need to do update where our branches are pointing to by using `git reset –hard <commit></p>
-<p>First we checkout the <code>vignettes</code> branch,</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:51:46] $ git checkout vignettes 
-Switched to branch &#39;vignettes&#39;</code></pre>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:51:52] $ git l
-* 846bb18 (master) intro to gradethis for learnr docs
-* 9b84be6 emphasize not to use ==
-* 28c7ebe i don&#39;t want to stash
-* a195fa3 (origin/master, origin/HEAD) fix gradethis demo (#70)
-| * 16f4b6b (HEAD -&gt; vignettes) intro to gradethis for learnr docs
-| * b4e2873 (origin/vignettes) emphasize not to use ==
-| * f66aa39 i don&#39;t want to stash
-| | * feb82b3 (origin/gh-pages) Deploy rstudio-education/gradethis to github.com/rstudio-education/gradethis.git:gh-pages
-| | * 4aaee31 (origin/compare_default_formals, compare_default_formals) call_standarise_formals
-| | * 19354dd refactor is_code_same to is_code_identical
-| | * 5591ae8 rename fxn code_is_same -&gt; is_code_same
-| |/  
-|/|   
-| | * 91cf16e (update_grading_demo) fix gradethis demo
-| |/  
-|/|   
-* | 9083fc8 (me/master) rename functions per #65 update docs and tests (#72)
-* | 5ec1144 Docs to markdown per #68 by @andrie + Barret changes (#69)
-* | 9cc3d6d Test result api fixes#60 (#63)
-|/  
-* d5cf9de Doc fixes (#62) and function pruning</code></pre>
-<p>and then set it to the correct commit location.</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:52:04] $ git reset --hard 846bb18
-HEAD is now at 846bb18 intro to gradethis for learnr docs</code></pre>
-<p>We then repeat the process for the <code>master</code> branch.</p>
-<p>First <code>checkout master</code></p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:52:07] $ git checkout master
-Switched to branch &#39;master&#39;
-Your branch is ahead of &#39;origin/master&#39; by 3 commits.
-  (use &quot;git push&quot; to publish your local commits)</code></pre>
-<p>Then <code>reset --hard</code> to the correct location:</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:52:11] $ git reset --hard a195fa3
-HEAD is now at a195fa3 fix gradethis demo (#70)</code></pre>
-<p>Now everything is in the right place</p>
-<pre class="markdown"><code>older_commits
-             \
-              master
-                    \
-                     vignettes</code></pre>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:52:21] $ git l
-* 846bb18 (vignettes) intro to gradethis for learnr docs
-* 9b84be6 emphasize not to use ==
-* 28c7ebe i don&#39;t want to stash
-* a195fa3 (HEAD -&gt; master, origin/master, origin/HEAD) fix gradethis demo (#70)
-| * feb82b3 (origin/gh-pages) Deploy rstudio-education/gradethis to github.com/rstudio-education/gradethis.git:gh-pages
-| * 4aaee31 (origin/compare_default_formals, compare_default_formals) call_standarise_formals
-| * 19354dd refactor is_code_same to is_code_identical
-| * 5591ae8 rename fxn code_is_same -&gt; is_code_same
-|/  
-| * 91cf16e (update_grading_demo) fix gradethis demo
-|/  
-* 9083fc8 (me/master) rename functions per #65 update docs and tests (#72)
-* 5ec1144 Docs to markdown per #68 by @andrie + Barret changes (#69)
-* 9cc3d6d Test result api fixes#60 (#63)
-| * b4e2873 (origin/vignettes) emphasize not to use ==
-| * f66aa39 i don&#39;t want to stash
-|/  
-* d5cf9de Doc fixes (#62) and function pruning</code></pre>
-<p>Finally, we can update the GitHub remote by force bushing the branch
-(remember to be on the branch before pushing).</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (master) 
-[10:53:25] $ git checkout vignettes 
-Switched to branch &#39;vignettes&#39;</code></pre>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:53:30] $ git push -f origin vignettes 
-Enumerating objects: 15, done.
-Counting objects: 100% (15/15), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (14/14), done.
-Writing objects: 100% (14/14), 3.27 KiB | 3.27 MiB/s, done.
-Total 14 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas: 100% (7/7), completed with 1 local object.
-To github.com:rstudio-education/gradethis.git
- + b4e2873...846bb18 vignettes -&gt; vignettes (forced update)</code></pre>
-<p>The final Graph now looks like this</p>
-<pre class="console"><code>dchen@longclaw [~/git/hub/gradethis]  (vignettes) 
-[10:54:13] $ git l
-* 846bb18 (HEAD -&gt; vignettes, origin/vignettes) intro to gradethis for learnr docs
-* 9b84be6 emphasize not to use ==
-* 28c7ebe i don&#39;t want to stash
-* a195fa3 (origin/master, origin/HEAD, master) fix gradethis demo (#70)
-| * feb82b3 (origin/gh-pages) Deploy rstudio-education/gradethis to github.com/rstudio-education/gradethis.git:gh-pages
-| * 4aaee31 (origin/compare_default_formals, compare_default_formals) call_standarise_formals
-| * 19354dd refactor is_code_same to is_code_identical
-| * 5591ae8 rename fxn code_is_same -&gt; is_code_same
-|/  
-| * 91cf16e (update_grading_demo) fix gradethis demo
-|/  
-* 9083fc8 (me/master) rename functions per #65 update docs and tests (#72)
-* 5ec1144 Docs to markdown per #68 by @andrie + Barret changes (#69)</code></pre>
-</div>
-<div id="conclusion" class="section level1">
-<h1>Conclusion</h1>
-<p>It’s taken me many years to be comfortable with Git.
-My previous go-to method was to <code>rebase</code> one branch on top of the other,
-but with the squash-and-merge method, a lot of commits get repeated,
-and it just makes <code>rebase</code>ing a pain with all the commits and merge conflicts.</p>
-<p>In this particular workflow I found <code>cherry-pick</code> to be way more convenient,
-and led to fewer merge conflicts.</p>
-<p>Again, the notation for <code>cherry-pick</code> is weird, in that it is <em>left exclusive</em> unless you put in the <code>^</code>,
-i.e.,</p>
-<pre class="bash"><code>git cherry-pick &lt;commit-start&gt;^..&lt;commit-end&gt;</code></pre>
-<p>not</p>
-<pre class="bash"><code>git cherry-pick &lt;commit-start&gt;..&lt;commit-end&gt;</code></pre>
-</div>
+<p>For data science/data cleaning/data analysis programs,
+the best way is to practice working with data.
+Having said that, it’s really hard to find projects,
+or sometimes your own projects are “too big and complicated” so you might be at a loss of where to begin.</p>
+<p>My first recommendation is take a look at
+<a href="https://www.kaggle.com/competitions">Kaggle</a>.
+You’ll see a lot of datasets there and you might find something interesting to play around with.
+The forums on the competitions are also good place to get ideas on some of the machine learning and model fitting side.
+One of my first exposures to data science was one of those competitions,
+and I learned a lot of web scraping and string parsing skills there.</p>
+<p>Another great resource where you can practice some of your data skills come from the R community.
+It’s called
+<a href="https://github.com/rfordatascience/tidytuesday">Tidy</a>
+<a href="https://thomasmock.netlify.com/post/tidytuesday-a-weekly-social-data-project-in-r/">Tuesday</a>.
+Every Tuesday a new dataset gets released, and people
+(all over <a href="https://twitter.com/hashtag/tidytuesday">twitter</a>)
+share their findings.
+It does not need to be a fully worked out machine learning pipeline.
+You are just getting a new dataset to explore.
+David Robinson does a
+<a href="https://www.youtube.com/user/safe4democracy/videos">1-hour livestream every week</a>.
+Even though it’s in R, you can do it all in Python as well (maybe try replicating someone’s R work?).
+After you get used to exploring data, and when you get more practice in either R or Python,
+it’s much easier to see how you can apply it in your daily life.
+And that motivation will help you practice and learn more.</p>
+<p><a href="https://twitter.com/rctatman">Rachael Tatman</a>,
+from Kaggle, also does weekly livestreams where
+she also hosts a journal club to discuss an academic paper about
+a machine learning method.</p>
+<p>If you need some more of the basic programming knowledge,
+take a look at the
+<a href="https://software-carpentry.org/lessons/">software-carpentry</a> and
+<a href="https://datacarpentry.org/lessons/">data-carpentry</a>
+R and Python lessons.
+Jake VanderPlas’ book
+<a href="https://jakevdp.github.io/PythonDataScienceHandbook/">“Python Data Science Handbook”</a>
+is free online as well as
+as Garrett Grolemund and Hadley Wickham’s
+<a href="https://r4ds.had.co.nz/">R for Data Science</a>.
+Hadley Wickham also as a free book on
+<a href="https://adv-r.hadley.nz/">Advanced R</a>,
+but that’s not necessary when getting started.
+I also try to keep a list of free (python)
+<a href="https://github.com/chendaniely/pandas_for_everyone#other-random-goodies">resources</a>
+online as well.</p>
+<p>Since I work on the data side of most things,
+it’s easy for me to suggest learning things from that point of view.
+All I can say is, that it if you stick with one of the learning paths,
+you will actually pick up bits of knowledge that will help you in others.
+I first learned Python as a normal scriping language, and learned how to do data analysis in R.
+I only started to do data manipulation in Python when I understoon the concept of
+<a href="https://vita.had.co.nz/papers/tidy-data.pdf">tidy data</a>.</p>
+<p>Tidy data is probably the <em>most</em> important topic when working with data.
+So many of the skills you need to clean and tidy your data involve other aspects of the langage
+(e.g., writing vectorized functions),
+that you’ll learn basic programming concepts by making your data tidy.</p>
+<p>For example, while learning pandas and data manipulations,
+will get you working with Python classes,
+which is an Object Oriented Programming concept.
+That will all translate if you need to so more software work in Python or if you want to learn Django.
+In R, you learn how to work with dataframes, functions, and how to write your own.</p>
+<p>In the end, find somewhere to start.
+Because of my background, I say start with loading data and playing with it.
+The more you do it, the more questions you will have on your data,
+and the more skills you’ll acquire to answer those questions.
+Those skills will carry over to other aspects of the language, and even to other languages
+(e.g., R, Python, even Julia!).</p>
+<p>You’ll always be learning, it never ends, so don’t worry about ever trying to “know it all”.
+I’m constantly finding new things and ways to do things in R and Pandas; I am always googling and stackoverflow-ing…
+Even though I have a book about Pandas and worked as an intern for RStudio! :)</p>
 
     </div>
 
@@ -811,11 +647,9 @@ i.e.,</p>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/rstudio-internship/">rstudio-internship</a>
+  <a class="badge badge-light" href="/tags/r/">R</a>
   
-  <a class="badge badge-light" href="/tags/git/">git</a>
-  
-  <a class="badge badge-light" href="/tags/workflow/">workflow</a>
+  <a class="badge badge-light" href="/tags/python/">python</a>
   
 </div>
 
@@ -984,13 +818,15 @@ i.e.,</p>
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/2019/08/06/inconsistencies-with-in-r/">Inconsistencies with the `==` operator in R</a></li>
-          
-          <li><a href="/2019/07/23/new-website-a-la-blogdown/">New Website a la Blogdown!</a></li>
-          
           <li><a href="/2019/06/18/rstudio-internship-week-2/">RStudio internship week 2</a></li>
           
           <li><a href="/2019/06/10/and-were-off-rstudio-internship-week-1-complete./">And we&#39;re off! RStudio internship week 1, complete.</a></li>
+          
+          <li><a href="/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/">rstatsnyc as told by @brookLYNevery1, @dataandme, and autographs</a></li>
+          
+          <li><a href="/2015/05/05/getting-started-with-data-science-and-analysis/">Getting Started with Data Science and Analysis</a></li>
+          
+          <li><a href="/2015/02/05/open-source-a-python-project-i/">Open Source A Python Project I</a></li>
           
         </ul>
       </div>
@@ -1005,15 +841,8 @@ i.e.,</p>
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/2019/08/28/r-or-python-which-one-to-learn-first/" rel="next">R or Python, which One to Learn (First)?</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/2019/08/06/inconsistencies-with-in-r/" rel="prev">Inconsistencies with the `==` operator in R</a>
+    <a href="/2019/08/27/git-squash-and-merge-workflow/" rel="prev">Git Squash and Merge Workflow</a>
   </div>
   
 </div>
