@@ -81,7 +81,7 @@ Here is one way you can get the current script directory, and then append to the
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+  <link rel="stylesheet" href="/css/academic.min.ec3e5b8e87a37cdb774666dfd1eff331.css">
 
   
 
@@ -533,27 +533,21 @@ Here is one way you can get the current script directory, and then append to the
 
     <div class="article-style" itemprop="articleBody">
       <p>One of the most common tasks (for me at least) is saving or getting data from another directory from where the current python script is running. However, for many of the file I/O functions, it assumes the current directory or you need to give it an absolute directory. Using something like <code>../other_directory</code> will not work.</p>
-
-<!-- more -->
-
+<!-- raw HTML omitted -->
 <p>Here is one way you can get the current script directory, and then append to the string the relative paths.</p>
-
-<p>Adapted from user Al Cramer: <a href="http://stackoverflow.com/questions/4934806/python-how-to-find-scripts-directory" target="_blank">http://stackoverflow.com/questions/4934806/python-how-to-find-scripts-directory</a></p>
-
+<p>Adapted from user Al Cramer: <a href="http://stackoverflow.com/questions/4934806/python-how-to-find-scripts-directory">http://stackoverflow.com/questions/4934806/python-how-to-find-scripts-directory</a></p>
 <p>In this example I have a pandas dataframe I want to save to another folder</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">abs_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>dirname(__file__)
+<span style="color:#66d9ef">print</span> abs_dir
 
-<pre><code class="language-python">abs_dir = os.path.dirname(__file__)
-print abs_dir
+rel_dir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(abs_dir, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">../data</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#66d9ef">print</span> rel_dir
 
-rel_dir = os.path.join(abs_dir, '../data')
-print rel_dir
+data <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>join([rel_dir, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">/nhtsa.csv</span><span style="color:#e6db74">&#39;</span>])
+<span style="color:#66d9ef">print</span> data
 
-data = ''.join([rel_dir, '/nhtsa.csv'])
-print data
-
-df.to_csv(data, sep=',', encoding='utf-8')
-</code></pre>
-
+df<span style="color:#f92672">.</span>to_csv(data, sep<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">,</span><span style="color:#e6db74">&#39;</span>, encoding<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">utf-8</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div>
     </div>
 
     
@@ -909,7 +903,7 @@ df.to_csv(data, sep=',', encoding='utf-8')
   
 
   <p class="powered-by">
-    &copy; Daniel Chen 2019 &middot; 
+    © Daniel Chen 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

@@ -84,7 +84,7 @@ User mijael posted a solution to the Repast Interest Mailing list about creating
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+  <link rel="stylesheet" href="/css/academic.min.ec3e5b8e87a37cdb774666dfd1eff331.css">
 
   
 
@@ -538,28 +538,20 @@ User mijael posted a solution to the Repast Interest Mailing list about creating
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p><a href="http://repast.sourceforge.net/" target="_blank">Repast Simphony</a> is a Java based collection of agent-based modeling and simulation software.</p>
-
-<!-- more -->
-
+      <p>
+<a href="http://repast.sourceforge.net/" target="_blank" rel="noopener">Repast Simphony</a>
+ is a Java based collection of agent-based modeling and simulation software.</p>
+<!-- raw HTML omitted -->
 <p>Repast Simphony 2.1 installs its library files into <code>~/.eclipse/ECLIPSEVERSION/plugins/</code> and <code>features/</code></p>
-
 <p>when you create the model it looks for these files in <code>/opt/eclipse/plugins/</code> and <code>/features</code></p>
-
 <p>This issue has been brought up and added to the issue tracker as of 2013-09-30</p>
-
 <p>User mijael posted a solution to the Repast Interest Mailing list about creating symlinks to the /opt directory:</p>
-
 <pre><code>cd .eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/
 ls | xargs -I targ sudo ln -s ~/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/targ /opt/eclipse/plugins/targ
-</code></pre>
-
-<p>repeat the same for the features directory:</p>
-
+</code></pre><p>repeat the same for the features directory:</p>
 <pre><code>cd .eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/features/
 ls | xargs -I targ sudo ln -s ~/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/features/targ /opt/eclipse/features/targ
 </code></pre>
-
     </div>
 
     
@@ -931,7 +923,7 @@ ls | xargs -I targ sudo ln -s ~/.eclipse/org.eclipse.platform_4.3.0_1473617060_l
   
 
   <p class="powered-by">
-    &copy; Daniel Chen 2019 &middot; 
+    © Daniel Chen 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

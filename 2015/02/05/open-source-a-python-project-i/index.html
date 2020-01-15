@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="I started my first open source project towards the end of summer 2014 I began working at the Social Decision Analytics Laboratory at the Virginia Informatics Institutee. The project involves creating a simulation environment where we can observe how an idea or belief spreads within a social network. The initial thought was to look for and extend an agent-based model package in Python. I did manage to find the pyabm package by Alex Zvoleff, but for simplicity&rsquo;s sake I wrote my own package instead of extending his existing code base.">
+  <meta name="description" content="I started my first open source project towards the end of summer 2014 I began working at the Social Decision Analytics Laboratory at the Virginia Informatics Institutee . The project involves creating a simulation environment where we can observe how an idea or belief spreads within a social network. The initial thought was to look for and extend an agent-based model package in Python. I did manage to find the pyabm package by Alex Zvoleff , but for simplicity&#39;s sake I wrote my own package instead of extending his existing code base.">
 
   
   <link rel="alternate" hreflang="en-us" href="/2015/02/05/open-source-a-python-project-i/">
@@ -80,7 +80,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+  <link rel="stylesheet" href="/css/academic.min.ec3e5b8e87a37cdb774666dfd1eff331.css">
 
   
 
@@ -125,7 +125,7 @@
   <meta property="og:site_name" content="Daniel Chen">
   <meta property="og:url" content="/2015/02/05/open-source-a-python-project-i/">
   <meta property="og:title" content="Open Source A Python Project I | Daniel Chen">
-  <meta property="og:description" content="I started my first open source project towards the end of summer 2014 I began working at the Social Decision Analytics Laboratory at the Virginia Informatics Institutee. The project involves creating a simulation environment where we can observe how an idea or belief spreads within a social network. The initial thought was to look for and extend an agent-based model package in Python. I did manage to find the pyabm package by Alex Zvoleff, but for simplicity&rsquo;s sake I wrote my own package instead of extending his existing code base."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="I started my first open source project towards the end of summer 2014 I began working at the Social Decision Analytics Laboratory at the Virginia Informatics Institutee . The project involves creating a simulation environment where we can observe how an idea or belief spreads within a social network. The initial thought was to look for and extend an agent-based model package in Python. I did manage to find the pyabm package by Alex Zvoleff , but for simplicity&#39;s sake I wrote my own package instead of extending his existing code base."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2015-02-05T00:00:00&#43;00:00">
@@ -530,107 +530,146 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
+      <p>I started my
 
-<p>I started my
-<a href="https://github.com/chendaniely/multi-agent-neural-network" target="_blank">first</a>
+<a href="https://github.com/chendaniely/multi-agent-neural-network" target="_blank" rel="noopener">first</a>
+
 open source project towards the end of summer 2014 I began working at
-the <a href="http://vbi.vt.edu/sdal" target="_blank">Social Decision Analytics Laboratory</a> at
-the <a href="http://www.vbi.vt.edu/" target="_blank">Virginia Informatics Institutee</a>.  The
+the 
+<a href="http://vbi.vt.edu/sdal" target="_blank" rel="noopener">Social Decision Analytics Laboratory</a>
+ at
+the 
+<a href="http://www.vbi.vt.edu/" target="_blank" rel="noopener">Virginia Informatics Institutee</a>
+.  The
 project involves creating a simulation environment where we can
 observe how an idea or belief spreads within a social network.  The
 initial thought was to look for and extend an
-<a href="http://en.wikipedia.org/wiki/Agent-based_model" target="_blank">agent-based model</a>
+
+<a href="http://en.wikipedia.org/wiki/Agent-based_model" target="_blank" rel="noopener">agent-based model</a>
+
 package in Python.  I did manage to find the
-<a href="https://github.com/azvoleff/pyabm" target="_blank">pyabm</a> package by
-<a href="http://azvoleff.com/" target="_blank">Alex Zvoleff</a>, but for simplicity&rsquo;s sake I
+
+<a href="https://github.com/azvoleff/pyabm" target="_blank" rel="noopener">pyabm</a>
+ package by
+
+<a href="http://azvoleff.com/" target="_blank" rel="noopener">Alex Zvoleff</a>
+, but for simplicity's sake I
 wrote my own package instead of extending his existing code base.</p>
-
 <p>I took it as an opportunity to learn and &lsquo;do things right&rsquo;:</p>
-
 <ul>
 <li>Write a module that contains all program logic</li>
 <li>Write functions that only do only one thing, but does it well</li>
 <li>Unit test everything</li>
 <li>Test builds on different versions of Python</li>
 <li>Document your code</li>
-<li>Get it on <a href="https://pypi.python.org/pypi" target="_blank">PyPI</a></li>
-<li><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP8</a></li>
+<li>Get it on 
+<a href="https://pypi.python.org/pypi" target="_blank" rel="noopener">PyPI</a>
+</li>
+<li>
+<a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">PEP8</a>
+</li>
 </ul>
-
 <p>This series of posts are essentially notes to myself, and to other
 programmers who are starting out from where I was.  In this post I
 discuss the background, rational, and inital steps in my open source
 struggles.  In
-<a href="https://github.com/chendaniely/chendaniely.github.io/blob/draft-os-python2/_posts/2015-02-05-open-sourcing-a-python-project-II.md" target="_blank">part II</a>
+
+<a href="https://github.com/chendaniely/chendaniely.github.io/blob/draft-os-python2/_posts/2015-02-05-open-sourcing-a-python-project-II.md" target="_blank" rel="noopener">part II</a>
+
 I discuss automatic project and code documentation.</p>
-
-<!-- more -->
-
+<!-- raw HTML omitted -->
 <h1 id="background">Background</h1>
-
 <p>I had already been involved with
-<a href="http://software-carpentry.org/" target="_blank">Software Carpentry (SWC)</a> for about 8
+
+<a href="http://software-carpentry.org/" target="_blank" rel="noopener">Software Carpentry (SWC)</a>
+ for about 8
 months when I started the project, so many of the concepts I just
 listed were not entirely foreign, just a matter of implementation.
 Thanks to a workshop by
-<a href="http://www.ccpp.nyu.edu/gabriel_perez-giz.html" target="_blank">Gabriel Perez-Giz</a> at
+
+<a href="http://www.ccpp.nyu.edu/gabriel_perez-giz.html" target="_blank" rel="noopener">Gabriel Perez-Giz</a>
+ at
 NYU earlier that summer, I took it upon myself to practice my EMACS
-and setup <a href="https://github.com/jorgenschaefer/elpy" target="_blank">elpy</a> as my IDE.  A
+and setup 
+<a href="https://github.com/jorgenschaefer/elpy" target="_blank" rel="noopener">elpy</a>
+ as my IDE.  A
 development environment that can be used within a terminal was
 especially important, because the simulations I would be running would
 all be on a remote server.</p>
-
 <p>For git, it was getting into the habit of not committing directly to
-master.  For Python, I&rsquo;d write a suite of unit tests for the first
+master.  For Python, I'd write a suite of unit tests for the first
 time, and I figured if I write some comments and docstrings I can get
 a nice document from it (I was wrong about that).  Finally, I wanted
 to get those cool little badges people have on their github repo about
-build status, coverage, etc.  That&rsquo;s when I found an awesome blog post
-by <a href="http://www.jeffknupp.com/" target="_blank">Jeff Knupp</a> titled
-&lsquo;<a href="http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/" target="_blank">Open Sourcing a Python Project the Right Way</a>&rsquo;.</p>
-
-<p>It&rsquo;s an amazing read if you are ready to take your programming
+build status, coverage, etc.  That's when I found an awesome blog post
+by 
+<a href="http://www.jeffknupp.com/" target="_blank" rel="noopener">Jeff Knupp</a>
+ titled
+&lsquo;
+<a href="http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/" target="_blank" rel="noopener">Open Sourcing a Python Project the Right Way</a>
+'.</p>
+<p>It's an amazing read if you are ready to take your programming
 practices to the next step.  Jeff references a
-<a href="https://github.com/audreyr/cookiecutter-pypackage" target="_blank">cookie-cutter</a>
+
+<a href="https://github.com/audreyr/cookiecutter-pypackage" target="_blank" rel="noopener">cookie-cutter</a>
+
 that will setup the python project boilerplate, but I opted to just
 follow the blog post and do everything manually so I can have a better
 understanding as to what is going on in the background.  Plus, this
 lets me slowly add features, rather than have an entire repo loaded
 with unknown files.  More important, I added a few other things to
 make my project &lsquo;better&rsquo;:</p>
-
 <ul>
 <li>Use the
-<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow" target="_blank">git</a>-<a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">flow</a>
+
+<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow" target="_blank" rel="noopener">git</a>
+-
+<a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noopener">flow</a>
+
 paradigm to add new features</li>
 <li>Continuous integration (with
-<a href="https://travis-ci.org/recent" target="_blank">TravisCI</a>)</li>
-<li>Test your package with other versions of Python (using
-<a href="https://tox.readthedocs.org/en/latest/" target="_blank">Tox</a>)</li>
-<li>Code documentation with <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and
-<a href="https://readthedocs.org/" target="_blank">Read the Docs</a></li>
-</ul>
 
+<a href="https://travis-ci.org/recent" target="_blank" rel="noopener">TravisCI</a>
+)</li>
+<li>Test your package with other versions of Python (using
+
+<a href="https://tox.readthedocs.org/en/latest/" target="_blank" rel="noopener">Tox</a>
+)</li>
+<li>Code documentation with 
+<a href="http://sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+ and
+
+<a href="https://readthedocs.org/" target="_blank" rel="noopener">Read the Docs</a>
+</li>
+</ul>
 <p>I opted not to use Tox locally (at least not yet).  TravisCI is
 handling my Python compatibility since I was working with Python 3.4,
 and was not going to have Python 2 support.  I added a build for
 Python 3.4 and 3.3, and called it a day.  Also I opted to use
-<a href="https://nose.readthedocs.org/en/latest/" target="_blank">nosetests</a> instead of
-<a href="http://pytest.org/latest/" target="_blank">pytest</a> since that&rsquo;s what I was shown when
+
+<a href="https://nose.readthedocs.org/en/latest/" target="_blank" rel="noopener">nosetests</a>
+ instead of
+
+<a href="http://pytest.org/latest/" target="_blank" rel="noopener">pytest</a>
+ since that's what I was shown when
 I helped out at the
-<a href="http://geocarpentry.github.io/2014-01-30-mit/" target="_blank">MIT SWC workshop</a>.
+
+<a href="http://geocarpentry.github.io/2014-01-30-mit/" target="_blank" rel="noopener">MIT SWC workshop</a>
+.
 That, plus there was SWC
-<a href="http://software-carpentry.org/v4/test/index.html" target="_blank">material</a>, and
-other <a href="https://github.com/numpy/numpy" target="_blank">big</a> open source projects use
+
+<a href="http://software-carpentry.org/v4/test/index.html" target="_blank" rel="noopener">material</a>
+, and
+other 
+<a href="https://github.com/numpy/numpy" target="_blank" rel="noopener">big</a>
+ open source projects use
 it, was my rational to stick with <code>nosetests</code>.</p>
-
-<hr>
-
+<!-- raw HTML omitted -->
 <h1 id="my-project">My project</h1>
-
 <p>The original
-<a href="https://github.com/chendaniely/multi-agent-neural-network" target="_blank">Multi-Agent Neural Network (MANN)</a>
+
+<a href="https://github.com/chendaniely/multi-agent-neural-network" target="_blank" rel="noopener">Multi-Agent Neural Network (MANN)</a>
+
 project had a <code>main.py</code> script that loaded in my modules for the
 individual agents and the network structure.  Everything was placed
 under the <code>mann</code> folder in the repo, with no subfolders.  When I
@@ -638,12 +677,12 @@ eventually realized that I wanted the project to be PyPI ready, I
 wanted to separate the main program logic (the MANN code) from the
 actual script that sets up the simulation.  I eventually moved the
 <code>main.py</code> script (and all required files) into the
-<a href="https://github.com/chendaniely/multidisciplinary-diffusion-model-experiments" target="_blank">Multidisciplinary Diffusion Model Experiments (MDME)</a>
+
+<a href="https://github.com/chendaniely/multidisciplinary-diffusion-model-experiments" target="_blank" rel="noopener">Multidisciplinary Diffusion Model Experiments (MDME)</a>
+
 repo.</p>
-
 <h1 id="prerequisites">Prerequisites</h1>
-
-<p>I&rsquo;ve realized the more I program in python, the more invaluable
+<p>I've realized the more I program in python, the more invaluable
 virtual environments are when developing packages.  A Virtual
 Environment is a tool to keep dependencies required by different
 projects in separate places while simultaneously keeping your base
@@ -651,76 +690,62 @@ python distribution clean and working should something go awry.  They
 also allow you to flip between Python 2 and Python 3 depending on what
 version a piece of code you are trying to run was written in.  Pretty
 cool stuff.</p>
-
 <p>The Python distribution I use is called
-<a href="http://continuum.io/downloads" target="_blank">Anaconda</a>.</p>
 
+<a href="http://continuum.io/downloads" target="_blank" rel="noopener">Anaconda</a>
+.</p>
 <p>Setting up virtual environments using <code>conda</code>:</p>
-
 <p><code>conda create -n VIRTUAL_ENV_NAME python=3.4</code></p>
-
 <p>You can specify different versions of python and/or pre-create
 environments with a set of modules if needed.</p>
-
 <p>Switching between environments: <code>source activate VIRTUAL_ENV_NAME</code></p>
-
 <p>To exit out of an environment: <code>source deactivate</code>.</p>
-
 <p>You can read up more about creating environments on the conda
 documentation</p>
-
 <ul>
-<li><a href="http://conda.pydata.org/docs/intro.html#creating-python-3-4-or-python-2-6-environments" target="_blank">Createing Python <sup>2</sup>&frasl;<sub>3</sub> environments</a></li>
-<li><a href="http://conda.pydata.org/docs/examples/create.html" target="_blank"><code>conda create</code></a></li>
-<li><a href="http://www.continuum.io/blog/conda" target="_blank">Python Packages and Environments with conda</a></li>
+<li>
+<a href="http://conda.pydata.org/docs/intro.html#creating-python-3-4-or-python-2-6-environments" target="_blank" rel="noopener">Createing Python 2/3 environments</a>
+</li>
+<li>
+<a href="http://conda.pydata.org/docs/examples/create.html" target="_blank" rel="noopener"><code>conda create</code></a>
+</li>
+<li>
+<a href="http://www.continuum.io/blog/conda" target="_blank" rel="noopener">Python Packages and Environments with conda</a>
+</li>
 </ul>
-
 <h1 id="issues">Issues</h1>
-
 <p>Turning a current python project into a &lsquo;module&rsquo; can break a few
 things.  It is as simple as putting a <code>__init__.py</code> into a directory
 to signify that the contents of the folder is now a Python module, but
 there can be some weird side-effects.</p>
-
 <h1 id="unit-tests">Unit tests</h1>
-
 <p>When you turn your project into a package, you will find that if you
 run nosetests it will start running the unit tests for all the modules
 you load (if they have any).</p>
-
 <p>For example I was initially using</p>
-
 <p><code>nosetests --cover-branches --with-coverage</code></p>
-
 <p>to test my code, but I had to add the <code>--cover-package=MODULE_NAME</code> to
 get it to only test the code in my module:</p>
-
-<p><code>nosetests --cover-branches --with-coverage --cover-erase
---cover-package=mann</code></p>
-
+<p><code>nosetests --cover-branches --with-coverage --cover-erase --cover-package=mann</code></p>
 <h1 id="importing-modules">Importing Modules</h1>
-
-<p>Since I&rsquo;ve moved out my simulation code from the code that defines
+<p>Since I've moved out my simulation code from the code that defines
 that MANN module, I had to install the MANN module.  One way to do it
 is to upload the code to PyPI and <code>pip install</code> the package.  The
 problem is when you want to load a module to PyPI you essentially need
 to have a git tag associated with the version you want.  This is
-problematic when you are rapidly prototyping since you&rsquo;ll need to
-either delete tags, or constantly increment the tag.  You&rsquo;ll end up
+problematic when you are rapidly prototyping since you'll need to
+either delete tags, or constantly increment the tag.  You'll end up
 with a v.0.314.0 very quickly.  You can do a local install of your
 module by going to where you have the setup.py file and doing:</p>
-
 <p><code>python setup.py install</code></p>
-
 <p>This is why virtual environments are really helpful.</p>
-
 <ol>
-<li>You won&rsquo;t have to worry about cluttering the base Python
+<li>You won't have to worry about cluttering the base Python
 distribution and modules with your &lsquo;test&rsquo; code.</li>
 <li>You can test your code before uploading it to PyPI (or anywhere
 else).  This is really helpful becuase PyPI requires you to have a
 <code>tag</code>.  Doing a local install allows you to workout any potential
-bugs before submitting a release so you won&rsquo;t have to have 15
+bugs before submitting a release so you won't have to have 15
 release numbers for your first release.</li>
 </ol>
 
@@ -1101,7 +1126,7 @@ release numbers for your first release.</li>
   
 
   <p class="powered-by">
-    &copy; Daniel Chen 2019 &middot; 
+    © Daniel Chen 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

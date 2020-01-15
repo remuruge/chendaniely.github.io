@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="The main topics and events of last week were:
- Much git. Metaprogramming and non-standard evaluation (NSE) in R Four 1-hour workshops by Allison Hill on the summer-of-blogdown  moving things over from jekyll will take some time   So many of the random things I&rsquo;ve tinkered with in the past have come front and center. As an educator, I know seeing these things again make learning and understanding them easier.">
+ Much git. Metaprogramming and non-standard evaluation (NSE) in R Four 1-hour workshops by Allison Hill on the summer-of-blogdown  moving things over from jekyll will take some time    So many of the random things I&#39;ve tinkered with in the past have come front and center. As an educator, I know seeing these things again make learning and understanding them easier.">
 
   
   <link rel="alternate" hreflang="en-us" href="/2019/06/18/rstudio-internship-week-2/">
@@ -81,7 +81,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+  <link rel="stylesheet" href="/css/academic.min.ec3e5b8e87a37cdb774666dfd1eff331.css">
 
   
 
@@ -127,7 +127,7 @@
   <meta property="og:url" content="/2019/06/18/rstudio-internship-week-2/">
   <meta property="og:title" content="RStudio internship week 2 | Daniel Chen">
   <meta property="og:description" content="The main topics and events of last week were:
- Much git. Metaprogramming and non-standard evaluation (NSE) in R Four 1-hour workshops by Allison Hill on the summer-of-blogdown  moving things over from jekyll will take some time   So many of the random things I&rsquo;ve tinkered with in the past have come front and center. As an educator, I know seeing these things again make learning and understanding them easier."><meta property="og:image" content="/img/icon-192.png">
+ Much git. Metaprogramming and non-standard evaluation (NSE) in R Four 1-hour workshops by Allison Hill on the summer-of-blogdown  moving things over from jekyll will take some time    So many of the random things I&#39;ve tinkered with in the past have come front and center. As an educator, I know seeing these things again make learning and understanding them easier."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-06-18T00:00:00&#43;00:00">
@@ -534,210 +534,217 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<p>The main topics and events of last week were:</p>
-
+      <p>The main topics and events of last week were:</p>
 <ol>
 <li>Much git.</li>
 <li>Metaprogramming and non-standard evaluation (NSE) in R</li>
-<li>Four 1-hour workshops by Allison Hill on the <a href="https://summer-of-blogdown.netlify.com" target="_blank">summer-of-blogdown</a>
+<li>Four 1-hour workshops by Allison Hill on the 
+<a href="https://summer-of-blogdown.netlify.com" target="_blank" rel="noopener">summer-of-blogdown</a>
 
 <ul>
 <li>moving things over from jekyll will take some time</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-
-<p>So many of the random things I&rsquo;ve tinkered with in the past have come front and center.
+<p>So many of the random things I've tinkered with in the past have come front and center.
 As an educator,
 I know seeing these things again make learning and understanding them easier.
 You build on your previous knowledge to solidify, fix, and fill in gaps in your mental model.
 The process repeats until you get an understanding about a topic.</p>
-
-<p>For me, I&rsquo;m getting a better foundation to how NSE works and how it all plays together within the Tidyverse.</p>
-
-<!-- more -->
-
+<p>For me, I'm getting a better foundation to how NSE works and how it all plays together within the Tidyverse.</p>
+<!-- raw HTML omitted -->
 <h3 id="git">Git</h3>
-
 <p>I got some things merged!</p>
-
-<p>The <a href="https://github.com/rstudio-education/grader/pull/10" target="_blank">pull-request</a> that was broken and merged on my first day finally was <a href="https://github.com/rstudio-education/grader/pull/14" target="_blank">fixed and merged</a>.
-I also got to work with the <a href="https://github.com/jimhester/lintr" target="_blank">lintr</a> package and <a href="https://github.com/rstudio-education/grader/pull/17" target="_blank">merged it into <code>grader</code></a> too.</p>
-
-<p>This week was probably the first time I&rsquo;ve used <code>git amend</code> in a long time (if ever?).
-I&rsquo;ve typically always just made the commit, and run <code>git rebase -i</code> to squash and/or amend my commits.
+<p>The 
+<a href="https://github.com/rstudio-education/grader/pull/10" target="_blank" rel="noopener">pull-request</a>
+ that was broken and merged on my first day finally was 
+<a href="https://github.com/rstudio-education/grader/pull/14" target="_blank" rel="noopener">fixed and merged</a>
+.
+I also got to work with the 
+<a href="https://github.com/jimhester/lintr" target="_blank" rel="noopener">lintr</a>
+ package and 
+<a href="https://github.com/rstudio-education/grader/pull/17" target="_blank" rel="noopener">merged it into <code>grader</code></a>
+ too.</p>
+<p>This week was probably the first time I've used <code>git amend</code> in a long time (if ever?).
+I've typically always just made the commit, and run <code>git rebase -i</code> to squash and/or amend my commits.
 I can see why common operations like making changes to the previous commit would have a shortcut.
-I typically don&rsquo;t use these features because it&rsquo;s another thing to teach, and understanding <code>git rebase -i</code> is more general than <code>git commit --amend</code>.</p>
-
+I typically don't use these features because it's another thing to teach, and understanding <code>git rebase -i</code> is more general than <code>git commit --amend</code>.</p>
 <p>What <code>--amend</code> allows you to do is replace the previous git commit with another one.
 You can fix the commit message, or add/fix file you missed.
 Theses are all ways to make the commit history cleaner.</p>
-
 <p>The recipe looks like this:</p>
-
-<pre><code class="language-bash">git add &lt;file&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add &lt;file&gt;
 git commit --amend
 
 &lt;Fix/modify the commit message&gt;
 
 git push -f origin master
-</code></pre>
-
-<p>The last line does a <code>-f</code> force <code>push</code>, because the commit is actually different from the one before you <code>--amend</code>ed.</p>
-
+</code></pre></div><p>The last line does a <code>-f</code> force <code>push</code>, because the commit is actually different from the one before you <code>--amend</code>ed.</p>
 <h3 id="r-package-versions">R package versions</h3>
-
-<p>There&rsquo;s a convention about version numbering adding a <code>.9000</code>+ after the patch (e.g., v0.1.4.9000) to show a
+<p>There's a convention about version numbering adding a <code>.9000</code>+ after the patch (e.g., v0.1.4.9000) to show a
 a development version number.
 You can couple this with the <code>DESCRIPTION</code> file by forcing a particular version to make sure you and the team
 all have access to the same development features.</p>
-
-<p><a href="https://github.com/rstudio-education/grader/blob/master/DESCRIPTION" target="_blank">I came across this in <code>grader</code></a> that has a <code>Imports</code> for <code>learnr (&gt;= 0.9.2.9001)</code>.</p>
-
+<p>
+<a href="https://github.com/rstudio-education/grader/blob/master/DESCRIPTION" target="_blank" rel="noopener">I came across this in <code>grader</code></a>
+ that has a <code>Imports</code> for <code>learnr (&gt;= 0.9.2.9001)</code>.</p>
 <h3 id="grader-progress"><code>grader</code> progress</h3>
-
-<p>We&rsquo;re probably <a href="[https://github.com/rstudio-education/grader/issues/18]" target="_blank">going to change the name of the package</a> to
+<p>We're probably 
+<a href="[https://github.com/rstudio-education/grader/issues/18]">going to change the name of the package</a>
+ to
 <code>gradethis</code> because the package <code>gradeR</code> (note capital R) was submitted to CRAN right as I started.</p>
-
-<p>Here&rsquo;s what I learned about the library I&rsquo;m working on this week:</p>
-
+<p>Here's what I learned about the library I'm working on this week:</p>
 <ul>
-<li><code>learnr</code> set&rsquo;s the <code>checker</code> function
-
+<li><code>learnr</code> set's the <code>checker</code> function
 <ul>
 <li>In the knitr chunk <code>exercise.checker</code> specifies the <code>checker</code> function
-
 <ul>
 <li><code>tutorial_options(exercise.timelimit = 60, exercise.checker = grade_learnr)</code></li>
-</ul></li>
+</ul>
+</li>
 <li>In this example, <code>grade_learnr</code> is the main entrypoint from <code>learnr</code> to <code>grader</code> and my work starts with this function.</li>
-</ul></li>
-<li><code>checker</code> is called on <a href="https://github.com/rstudio/learnr/blob/master/R/exercise.R#L129" target="_blank">line 129 in <code>exercise.R</code> in <code>learnr</code></a>
+</ul>
+</li>
+<li><code>checker</code> is called on 
+<a href="https://github.com/rstudio/learnr/blob/master/R/exercise.R#L129" target="_blank" rel="noopener">line 129 in <code>exercise.R</code> in <code>learnr</code></a>
 
 <ul>
 <li>the <code>checker</code> function (i.e., <code>grade_learnr</code>) returns a value depending on what is passed into it
-
 <ul>
 <li>if missing: returns a <code>list()</code> with <code>message</code>, <code>correct</code>, <code>type</code>, and <code>location</code> keys</li>
 <li>if error: <code>graded</code> object (named <code>checked_result</code> of class <code>grader_graded</code>) with <code>correct</code> and <code>message</code></li>
 <li>or evaluated code</li>
-</ul></li>
-</ul></li>
 </ul>
-
-<p>There&rsquo;s a bunch of stuff within the <code>exercise.R</code> function in <code>learnr</code> that captures information from shiny,
+</li>
+</ul>
+</li>
+</ul>
+<p>There's a bunch of stuff within the <code>exercise.R</code> function in <code>learnr</code> that captures information from shiny,
 sets up the <code>knitr</code> environment, and inserts the output and results into the correct place in the DOM.
-That&rsquo;ll be a separate writeup when I leave the <code>grader</code> world.</p>
-
-<p>For the next week or so the goal is to update the <a href="https://github.com/rstudio-education/grader/issues/11" target="_blank"><code>check_result</code> API</a>,
-which got me down the rabbit hole of non-standard evaluation in R (I&rsquo;ll talk about it in a separate set of posts).</p>
-
+That'll be a separate writeup when I leave the <code>grader</code> world.</p>
+<p>For the next week or so the goal is to update the 
+<a href="https://github.com/rstudio-education/grader/issues/11" target="_blank" rel="noopener"><code>check_result</code> API</a>
+,
+which got me down the rabbit hole of non-standard evaluation in R (I'll talk about it in a separate set of posts).</p>
 <h3 id="non-standard-evaluation-nse">Non-standard Evaluation (NSE)</h3>
-
-<p>I gave <a href="https://github.com/chendaniely/satRdays-dc2018-functions" target="_blank">a talk</a> about writing functions in R which touched on NSE but it was pretty superficial.
-Since NSE is so crucial to <code>grader</code> I&rsquo;ll write a series of posts about this topic and eventually turn it into a talk.</p>
-
-<p>In the meantime, here are the materials (in no particular order) I&rsquo;ll be reading to:</p>
-
+<p>I gave 
+<a href="https://github.com/chendaniely/satRdays-dc2018-functions" target="_blank" rel="noopener">a talk</a>
+ about writing functions in R which touched on NSE but it was pretty superficial.
+Since NSE is so crucial to <code>grader</code> I'll write a series of posts about this topic and eventually turn it into a talk.</p>
+<p>In the meantime, here are the materials (in no particular order) I'll be reading to:</p>
 <ul>
-<li><a href="https://dplyr.tidyverse.org/articles/programming.html" target="_blank">https://dplyr.tidyverse.org/articles/programming.html</a></li>
-<li><a href="https://tidyeval.tidyverse.org/" target="_blank">https://tidyeval.tidyverse.org/</a></li>
-<li><a href="https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function" target="_blank">https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function</a></li>
-<li><a href="https://adv-r.hadley.nz/" target="_blank">https://adv-r.hadley.nz/</a></li>
+<li>
+<a href="https://dplyr.tidyverse.org/articles/programming.html" target="_blank" rel="noopener">https://dplyr.tidyverse.org/articles/programming.html</a>
+</li>
+<li>
+<a href="https://tidyeval.tidyverse.org/" target="_blank" rel="noopener">https://tidyeval.tidyverse.org/</a>
+</li>
+<li>
+<a href="https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function" target="_blank" rel="noopener">https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function</a>
+</li>
+<li>
+<a href="https://adv-r.hadley.nz/" target="_blank" rel="noopener">https://adv-r.hadley.nz/</a>
+</li>
 </ul>
-
 <h3 id="misc">Misc</h3>
-
-<p>Other random things I&rsquo;ve discovered this week</p>
-
-<h4 id="dplyr-count-vs-dplyr-tally"><code>dplyr::count</code> vs <code>dplyr::tally</code></h4>
-
+<p>Other random things I've discovered this week</p>
+<h4 id="dplyrcount-vs-dplyrtally"><code>dplyr::count</code> vs <code>dplyr::tally</code></h4>
 <p>From the docs:</p>
-
 <blockquote>
-<p>tally() is a convenient wrapper for summarise that will either call n() or sum(n) depending on whether you&rsquo;re tallying for the first time, or re-tallying.
+<p>tally() is a convenient wrapper for summarise that will either call n() or sum(n) depending on whether you're tallying for the first time, or re-tallying.
 count() is similar but calls group_by() before and ungroup() after. If the data is already grouped, count() adds an additional group that is removed afterwards.</p>
 </blockquote>
-
 <p><code>dplyr::count</code> can count observations with 0 counts (useful for group_by operations) with the <code>.drop</code> argument</p>
-
-<h4 id="pryr-standarise-call"><code>pryr::standarise_call</code></h4>
-
+<h4 id="pryrstandarise_call"><code>pryr::standarise_call</code></h4>
 <p>Manipulating the function call is black magic NSE voodoo.
 This is the stuff that is happening within <code>grader</code> that gets student code, solution code, <code>learnr</code> and <code>grader</code> arguments
 that are all passed into <code>grade_learnr</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># code below was copy/pasted from the console</span>
 
-<pre><code class="language-r"># code below was copy/pasted from the console
-
-my_add &lt;- function(x, y) {
-  x + y
+my_add <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(x, y) {
+  x <span style="color:#f92672">+</span> y
 }
 
-# pass in part of an expression
-call &lt;- pryr::standardise_call(quote(my_add(x = 3)))
+<span style="color:#75715e"># pass in part of an expression</span>
+call <span style="color:#f92672">&lt;-</span> pryr<span style="color:#f92672">::</span><span style="color:#a6e22e">standardise_call</span>(<span style="color:#a6e22e">quote</span>(<span style="color:#a6e22e">my_add</span>(x <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>)))
 
-# on the fly add more parameters!
-call$y &lt;- 10 
+<span style="color:#75715e"># on the fly add more parameters!</span>
+call<span style="color:#f92672">$</span>y <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">10</span> 
 
-# evaluate the thing
-eval(call) 
+<span style="color:#75715e"># evaluate the thing</span>
+<span style="color:#a6e22e">eval</span>(call) 
 
-## [1] 13
-</code></pre>
-
-<p>This all uses the global environment,
+<span style="color:#75715e">## [1] 13</span>
+</code></pre></div><p>This all uses the global environment,
 but <code>grader</code> will be doing this type of thing with separate environments for each exercise that will be checked.</p>
-
 <p>Also, this is all how <code>match.call</code> works in base R.</p>
-
 <h4 id="checkmate-package"><code>checkmate</code> package</h4>
-
-<p>There is a <a href="https://mllg.github.io/checkmate/index.html" target="_blank">package called <code>checkmate</code></a> that is unit testing (e.g., <code>testthat</code>) on steroids.
+<p>There is a 
+<a href="https://mllg.github.io/checkmate/index.html" target="_blank" rel="noopener">package called <code>checkmate</code></a>
+ that is unit testing (e.g., <code>testthat</code>) on steroids.
 It allows you to more specific type and argument checking in R.
-I haven&rsquo;t work with the package personally yet, but it does seem to be like <a href="https://docs.python.org/3/library/typing.html" target="_blank">type hints in Python</a>
+I haven't work with the package personally yet, but it does seem to be like 
+<a href="https://docs.python.org/3/library/typing.html" target="_blank" rel="noopener">type hints in Python</a>
+
 and allows more specific checks into what objects in R contain.</p>
-
 <h4 id="credentials">Credentials</h4>
-
 <p>One of the coolest things about being an intern at RStudio is being on the slack channel!
 I try to keep my questions reserved but one of the things that have always bothered me was how store and access credentials for R.
-Putting in API keys in <code>.Renviron</code> are common practice, but I piggy-backed on another intern&rsquo;s question by asking about
+Putting in API keys in <code>.Renviron</code> are common practice, but I piggy-backed on another intern's question by asking about
 storing passwords more securely than in a plain text file.</p>
-
-<p>I&rsquo;ve used the <a href="https://cran.rstudio.com/web/packages/rstudioapi/index.html" target="_blank"><code>rstudioapi</code></a>, <a href="https://cran.r-project.org/web/packages/secret/vignettes/secrets.html" target="_blank"><code>secret</code></a>, and <a href="https://cran.r-project.org/web/packages/getPass/index.html" target="_blank"><code>getPass</code></a> libraries <a href="https://github.com/bi-sdal/sdalr" target="_blank">before</a>,
-but as <a href="https://twitter.com/raymondh" target="_blank">Raymond Hettinger</a> always says: There must be a better way.</p>
-
-<p>The resource I was given was to look at how database credentials are stored: <a href="https://db.rstudio.com/best-practices/managing-credentials/" target="_blank">https://db.rstudio.com/best-practices/managing-credentials/</a></p>
-
+<p>I've used the 
+<a href="https://cran.rstudio.com/web/packages/rstudioapi/index.html" target="_blank" rel="noopener"><code>rstudioapi</code></a>
+, 
+<a href="https://cran.r-project.org/web/packages/secret/vignettes/secrets.html" target="_blank" rel="noopener"><code>secret</code></a>
+, and 
+<a href="https://cran.r-project.org/web/packages/getPass/index.html" target="_blank" rel="noopener"><code>getPass</code></a>
+ libraries 
+<a href="https://github.com/bi-sdal/sdalr" target="_blank" rel="noopener">before</a>
+,
+but as 
+<a href="https://twitter.com/raymondh" target="_blank" rel="noopener">Raymond Hettinger</a>
+ always says: There must be a better way.</p>
+<p>The resource I was given was to look at how database credentials are stored: <a href="https://db.rstudio.com/best-practices/managing-credentials/">https://db.rstudio.com/best-practices/managing-credentials/</a></p>
 <h3 id="summer-of-blog-down">Summer of blog down</h3>
-
 <p>Lastly,
-the great Allison Hill hosted a series of blogdown workshops for people who were interested, <a href="https://summer-of-blogdown.netlify.com" target="_blank">summer-of-blogdown</a>.
+the great Allison Hill hosted a series of blogdown workshops for people who were interested, 
+<a href="https://summer-of-blogdown.netlify.com" target="_blank" rel="noopener">summer-of-blogdown</a>
+.
 It was a total of 4 days and we covered
 the basics of blogdown,
-how to pick (the <a href="https://themes.gohugo.io/academic/" target="_blank">academic</a>) themes,
-<a href="https://chendaniely.netlify.com/" target="_blank">deploying it on netlify</a>,
+how to pick (the 
+<a href="https://themes.gohugo.io/academic/" target="_blank" rel="noopener">academic</a>
+) themes,
+
+<a href="https://chendaniely.netlify.com/" target="_blank" rel="noopener">deploying it on netlify</a>
+,
 and best ways to maintain the site.</p>
+<p>I didn't realize how amazingly flexible the 
+<a href="https://themes.gohugo.io/academic/" target="_blank" rel="noopener">academic</a>
+ theme was until this workshop.
+I'll be sure to move 
+<a href="https://chendaniely.github.io/" target="_blank" rel="noopener">my own website</a>
+ over to blogdown + academic one of these days.</p>
+<p>I'm currently trying to find out how to save urls in a common location so they can be maintained in one place and be used in links throughout the site.
+The ongoing search for how to use variables in an <code>md</code> document (tl;dr: you can't, but you might still be able to do what I want):
+<a href="https://discourse.gohugo.io/t/variables-in-markdown/7113/12">https://discourse.gohugo.io/t/variables-in-markdown/7113/12</a>.
+It almost seemed that 
+<a href="https://gohugo.io/variables/site/" target="_blank" rel="noopener">site variables</a>
 
-<p>I didn&rsquo;t realize how amazingly flexible the <a href="https://themes.gohugo.io/academic/" target="_blank">academic</a> theme was until this workshop.
-I&rsquo;ll be sure to move <a href="https://chendaniely.github.io/" target="_blank">my own website</a> over to blogdown + academic one of these days.</p>
-
-<p>I&rsquo;m currently trying to find out how to save urls in a common location so they can be maintained in one place and be used in links throughout the site.
-The ongoing search for how to use variables in an <code>md</code> document (tl;dr: you can&rsquo;t, but you might still be able to do what I want):
-<a href="https://discourse.gohugo.io/t/variables-in-markdown/7113/12" target="_blank">https://discourse.gohugo.io/t/variables-in-markdown/7113/12</a>.
-It almost seemed that <a href="https://gohugo.io/variables/site/" target="_blank">site variables</a>
 were going to be the way to go, but that ended up in a dead end.</p>
-
-<p>What I&rsquo;m most excited about is the ability to write posts in <code>Rmd</code> and <code>jupyter notebooks</code> for R and Python posts.</p>
-
-<p>Things I&rsquo;ve learned the 4 days:</p>
-
+<p>What I'm most excited about is the ability to write posts in <code>Rmd</code> and <code>jupyter notebooks</code> for R and Python posts.</p>
+<p>Things I've learned the 4 days:</p>
 <ul>
 <li>Each folder in content is a &ldquo;section&rdquo; and each &ldquo;section&rdquo; has a &ldquo;page&rdquo;</li>
 <li><code>/content/home/</code> contain widgets</li>
-<li><a href="https://learnxinyminutes.com" target="_blank">Learn x in y minutes</a> website for <a href="https://learnxinyminutes.com/docs/toml/" target="_blank">TOML</a></li>
-<li>From Greg Wilson: Put a <code>LICENSE</code> and <code>CITATION</code> + <a href="https://orcid.org/0000-0003-3857-1741" target="_blank">orcid</a> on your website. Make the librarians happy.</li>
+<li>
+<a href="https://learnxinyminutes.com" target="_blank" rel="noopener">Learn x in y minutes</a>
+ website for 
+<a href="https://learnxinyminutes.com/docs/toml/" target="_blank" rel="noopener">TOML</a>
+</li>
+<li>From Greg Wilson: Put a <code>LICENSE</code> and <code>CITATION</code> + 
+<a href="https://orcid.org/0000-0003-3857-1741" target="_blank" rel="noopener">orcid</a>
+ on your website. Make the librarians happy.</li>
 </ul>
 
     </div>
@@ -1105,7 +1112,7 @@ were going to be the way to go, but that ended up in a dead end.</p>
   
 
   <p class="powered-by">
-    &copy; Daniel Chen 2019 &middot; 
+    © Daniel Chen 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

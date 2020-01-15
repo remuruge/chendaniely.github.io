@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/hobbies/photography/</guid>
-      <description>&lt;p&gt;Here&amp;rsquo;s a link to an old photo blog album: &lt;a href=&#34;https://dan.aminus3.com/&#34; target=&#34;_blank&#34;&gt;https://dan.aminus3.com/&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Here&#39;s a link to an old photo blog album: &lt;a href=&#34;https://dan.aminus3.com/&#34;&gt;https://dan.aminus3.com/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -28,44 +28,59 @@
       
       <guid>/hobbies/scuba/</guid>
       <description>&lt;p&gt;The underwater world is an unique and amazing place.
-For me, it&amp;rsquo;s one of the few moments where I can tune everything out and just focus on the experience,
+For me, it&#39;s one of the few moments where I can tune everything out and just focus on the experience,
 and take long slow deep medative breaths.&lt;/p&gt;
-
 &lt;p&gt;One of my fellow scuba instructor candidates,
-&lt;a href=&#34;http://www.vetmed.vt.edu/people/bios/nappier.asp&#34; target=&#34;_blank&#34;&gt;Michael Nappier&lt;/a&gt;,
+
+&lt;a href=&#34;http://www.vetmed.vt.edu/people/bios/nappier.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Michael Nappier&lt;/a&gt;
+,
 is a veterinarian who is using SCUBA diving to address the disproportionately high suicide rates in the profession.
 Self-care has been a growing topic within the data science community,
 and I aim to bring the same passion and awe I have of diving to them,
 as a newly minted
-&lt;a href=&#34;https://www.tdisdi.com/sdi/get-certified/instructor-course/&#34; target=&#34;_blank&#34;&gt;SDI Open Water Scuba Diver Instructor (OWSDI)&lt;/a&gt;.&lt;/p&gt;
 
+&lt;a href=&#34;https://www.tdisdi.com/sdi/get-certified/instructor-course/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SDI Open Water Scuba Diver Instructor (OWSDI)&lt;/a&gt;
+.&lt;/p&gt;
 &lt;p&gt;Most of my dive training is by Scott Sanders and Mark Guenther from
-&lt;a href=&#34;https://www.submergedscuba.com/&#34; target=&#34;_blank&#34;&gt;Submerged Scuba&lt;/a&gt;, based out of
-&lt;a href=&#34;https://goo.gl/maps/hv9JuJyau8L4cRaV8&#34; target=&#34;_blank&#34;&gt;Christiansburg, VA&lt;/a&gt; in the
-&lt;a href=&#34;https://en.wikipedia.org/wiki/New_River_Valley&#34; target=&#34;_blank&#34;&gt;New River Valley&lt;/a&gt;.
+
+&lt;a href=&#34;https://www.submergedscuba.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Submerged Scuba&lt;/a&gt;
+, based out of
+
+&lt;a href=&#34;https://goo.gl/maps/hv9JuJyau8L4cRaV8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Christiansburg, VA&lt;/a&gt;
+ in the
+
+&lt;a href=&#34;https://en.wikipedia.org/wiki/New_River_Valley&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New River Valley&lt;/a&gt;
+.
 I also dive a lot with the
-&lt;a href=&#34;http://www.scuba.org.vt.edu/&#34; target=&#34;_blank&#34;&gt;Scuba Club at Virginia Tech&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;./img/submerged.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
+&lt;a href=&#34;http://www.scuba.org.vt.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scuba Club at Virginia Tech&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/submerged.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;I am a
-&lt;a href=&#34;https://www.tdisdi.com/tdi/get-certified/intro-to-cave-diver/&#34; target=&#34;_blank&#34;&gt;TDI Intro to Cave Diver&lt;/a&gt;.
+
+&lt;a href=&#34;https://www.tdisdi.com/tdi/get-certified/intro-to-cave-diver/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TDI Intro to Cave Diver&lt;/a&gt;
+.
 One of the most amazing feelings you get from cave diving is the sense of flying as you are foating though air-clear water.
-Photos of my training dives can be found &lt;a href=&#34;https://www.facebook.com/pg/DiveSubmerged/photos/?tab=album&amp;amp;album_id=2107886025914392&amp;amp;__tn__=-UC-R&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;./img/daniel_ginnie_cave_1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;./img/daniel_ginnie_cave_2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+Photos of my training dives can be found 
+&lt;a href=&#34;https://www.facebook.com/pg/DiveSubmerged/photos/?tab=album&amp;amp;album_id=2107886025914392&amp;amp;__tn__=-UC-R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/daniel_ginnie_cave_1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/daniel_ginnie_cave_2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the meantime check out my first cave dives in
-&lt;a href=&#34;https://www.floridastateparks.org/parks-and-trails/wes-skiles-peacock-springs-state-park&#34; target=&#34;_blank&#34;&gt;Peacock Springs&lt;/a&gt;
-in May where I stayed at
-&lt;a href=&#34;http://www.diveoutpost.com/&#34; target=&#34;_blank&#34;&gt;Dive Outpost&lt;/a&gt; with
-&lt;a href=&#34;https://www.submergedscuba.com/&#34; target=&#34;_blank&#34;&gt;Submerged Scuba&lt;/a&gt; and my buddy
-&lt;a href=&#34;https://www.youtube.com/channel/UCREnYpjz-KH4_51GixTr_Zw&#34; target=&#34;_blank&#34;&gt;Tyler&lt;/a&gt;.&lt;/p&gt;
 
+&lt;a href=&#34;https://www.floridastateparks.org/parks-and-trails/wes-skiles-peacock-springs-state-park&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peacock Springs&lt;/a&gt;
+
+in May where I stayed at
+
+&lt;a href=&#34;http://www.diveoutpost.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dive Outpost&lt;/a&gt;
+ with
+
+&lt;a href=&#34;https://www.submergedscuba.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Submerged Scuba&lt;/a&gt;
+ and my buddy
+
+&lt;a href=&#34;https://www.youtube.com/channel/UCREnYpjz-KH4_51GixTr_Zw&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Tyler&lt;/a&gt;
+.&lt;/p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/US-20dk-u3k&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;

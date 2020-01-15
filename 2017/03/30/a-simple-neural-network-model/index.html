@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="My previous blog post summarized the main points of the Watts 2002 paper. At the very end of the post I mentioned ways we can extend the Watts model with neural-networks. Here I outline the steps of the neural-network simulation.
+  <meta name="description" content="My previous blog post summarized the main points of the Watts 2002 paper . At the very end of the post I mentioned ways we can extend the Watts model with neural-networks. Here I outline the steps of the neural-network simulation.
 Generally the model goes though an initiation step, a simulation step, and a cleanup step. In the initiation step, the agents are created and connected in a network. Then selected agents are seeded with a value before continuing onto the simulation step.">
 
   
@@ -81,7 +81,7 @@ Generally the model goes though an initiation step, a simulation step, and a cle
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+  <link rel="stylesheet" href="/css/academic.min.ec3e5b8e87a37cdb774666dfd1eff331.css">
 
   
 
@@ -126,7 +126,7 @@ Generally the model goes though an initiation step, a simulation step, and a cle
   <meta property="og:site_name" content="Daniel Chen">
   <meta property="og:url" content="/2017/03/30/a-simple-neural-network-model/">
   <meta property="og:title" content="A &#39;Simple&#39; Neural-Network Model | Daniel Chen">
-  <meta property="og:description" content="My previous blog post summarized the main points of the Watts 2002 paper. At the very end of the post I mentioned ways we can extend the Watts model with neural-networks. Here I outline the steps of the neural-network simulation.
+  <meta property="og:description" content="My previous blog post summarized the main points of the Watts 2002 paper . At the very end of the post I mentioned ways we can extend the Watts model with neural-networks. Here I outline the steps of the neural-network simulation.
 Generally the model goes though an initiation step, a simulation step, and a cleanup step. In the initiation step, the agents are created and connected in a network. Then selected agents are seeded with a value before continuing onto the simulation step."><meta property="og:image" content="/img/icon-192.png">
   <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
   
@@ -532,14 +532,14 @@ Generally the model goes though an initiation step, a simulation step, and a cle
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<p>My previous <a href="http://chendaniely.github.io/research/2016/09/29/expanding_watts_to_lens/" target="_blank">blog post</a> summarized the main points of the <a href="https://www.ncbi.nlm.nih.gov/pubmed/16578874" target="_blank">Watts 2002 paper</a>.
+      <p>My previous 
+<a href="http://chendaniely.github.io/research/2016/09/29/expanding_watts_to_lens/" target="_blank" rel="noopener">blog post</a>
+ summarized the main points of the 
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/16578874" target="_blank" rel="noopener">Watts 2002 paper</a>
+.
 At the very end of the post I mentioned ways we can extend the Watts model with neural-networks.
 Here I outline the steps of the neural-network simulation.</p>
-
-<!-- more -->
-
+<!-- raw HTML omitted -->
 <p>Generally the model goes though an initiation step, a simulation step, and a cleanup step.
 In the initiation step, the agents are created and connected in a network.
 Then selected agents are seeded with a value before continuing onto the simulation step.
@@ -550,27 +550,25 @@ Agent states in teach time tick is saved to be written to a (CSV) file.
 The cleanup step is mainly there when programming the model.
 It saves any unwritten states to the file, and
 any other related tasks of that nature.</p>
-
 <h1 id="mann">MANN</h1>
-
-<p>The neural networks used in MANN use the <a href="http://web.stanford.edu/group/mbc/LENSManual/" target="_blank">&ldquo;the light, efficient network simulator&rdquo; (LENS)</a>.
-I created a (inefficient) python wrapper around LENS, <a href="https://github.com/chendaniely/pylens" target="_blank">pylens</a>.
+<p>The neural networks used in MANN use the 
+<a href="http://web.stanford.edu/group/mbc/LENSManual/" target="_blank" rel="noopener">&ldquo;the light, efficient network simulator&rdquo; (LENS)</a>
+.
+I created a (inefficient) python wrapper around LENS, 
+<a href="https://github.com/chendaniely/pylens" target="_blank" rel="noopener">pylens</a>
+.
 This mainly stems from the fact my advisor used LENS for his work in the past,
 and interface with it via the command line with input files.
 The inefficient stems from the fact that I am having python write our the necessary input files for the neural network,
 and making command-line <code>subprocess</code> calls to LENS.</p>
-
 <h2 id="initiation">Initiation</h2>
-
 <p>$n$ agents are created for the model.
 When an agent is created, a feed-forward neural network with randomized weights to represent its state.
 A prototype that will be used to train the neural network is assigned to the agent.</p>
-
-<p>The agent&rsquo;s will all be connected to a network.
+<p>The agent's will all be connected to a network.
 For example in the <code>networkx</code> list of graph generators,
 the [<code>fast_gnp_random_graph</code>][5] takes the number of agents, $n$,
 and a probability, $p$, of an edge being created.</p>
-
 <p>To train the neural network, it needs a set of example files to train.
 The example file consists of $k$ (50) examples.
 Each example is a randomized form of the prototype.
@@ -578,46 +576,36 @@ The amount of randomization is determined by parameter $\delta$.
 To incorporate heterogeneity in the model,
 we also mutate the prototype that is used to create the example files.
 This mutation rate is designated as $\epsilon$.</p>
-
 <p>How well the agent gets trained is parameterized with the <em>criterion</em> variable.
 It is analogous to the amount of error the neural network can make before it finishes training.
 That is, the smaller the criterion, the smaller the error, the more accurate it can represent the training set.
 All agents stop training after 1000 epochs (training cycles for the neural network).</p>
-
 <p>Once the neural network is trained, its weights are output to a file to be loaded during the simulation step.</p>
-
 <p>All agents begin with a state of 0.
 That is the first layer of the neural network all have values of 0.
 We then select agents to be seeded.
 The seeded agent is presented (via an example file) the non-$\epsilon$-mutated prototype.
 We cycle this value through the neural network with one epoch,
-and the output of the neural network is assigned to the agent&rsquo;s state.</p>
-
+and the output of the neural network is assigned to the agent's state.</p>
 <p>We then begin the simulation part of the model.</p>
-
 <h2 id="simulation">Simulation</h2>
-
 <p>The simulation runs in <em>steps</em>.
 These steps designate the amount of <em>time ticks</em> the simulation runs for.
 The same process occurs during each time tick until the simulation ends.</p>
-
 <p>All agents will be randomly selected (without replacement) to undergo an update process.
-The update process looks at all the agent&rsquo;s neighbors with a directed edge coming <em>into</em> the selected agent
+The update process looks at all the agent's neighbors with a directed edge coming <em>into</em> the selected agent
 (i.e., neighbors or predecessors),
 and randomly selects one of the agents to be the <em>influencer</em>.</p>
-
 <p>The influencer writes our its current state as an example file.
-This example file is used by the agent&rsquo;s neural network and the output is assigned as the agent&rsquo;s new state.</p>
-
+This example file is used by the agent's neural network and the output is assigned as the agent's new state.</p>
 <p>In a sequential update process,
-the agent&rsquo;s new state is assigned as described above.
+the agent's new state is assigned as described above.
 However, during simultaneous updating,
 the new state will be stored into a temporary state value,
 so that if the agent is used as an influencer to another agent,
 the original agent state value will be written out to the example file.
 In simultaneous updating, only after all agents have undergone the update process will they
 assign the temporary state as their new state.</p>
-
 <p>The agent states are saved to a file at the end of the initiation step and the
 end of each simulation time tick.</p>
 
@@ -996,7 +984,7 @@ end of each simulation time tick.</p>
   
 
   <p class="powered-by">
-    &copy; Daniel Chen 2019 &middot; 
+    © Daniel Chen 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
