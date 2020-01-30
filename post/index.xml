@@ -12,6 +12,200 @@
     
     
     <item>
+      <title>My time as an RStudio Intern</title>
+      <link>/2020/01/29/my-time-as-an-rstudio-intern/</link>
+      <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/29/my-time-as-an-rstudio-intern/</guid>
+      <description>
+
+
+&lt;p&gt;I’ve had a lot of time to think about my time as an RStudio intern.
+When I do,
+I usually end up with a few words in my head before I’m flooded with
+(good) emotions and struggle with finding the words to convey my thoughts.
+The last time I tried to write something like this went a little like
+&lt;a href=&#34;https://software-carpentry.org/blog/2016/10/what_swc_means_to_me.html&#34;&gt;this&lt;/a&gt;.
+What I can say is this:
+whatever you thought it was like working at RStudio,
+is (probably) true.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;From a technical perspective,
+the most jarring part of the work was transitioning from a user of the R language
+to a developer.
+I’ve taught workshops and written R packages,
+but nothing came close to the type of code I had to write for my internship.
+I think my only saving grace was I was familiar enough with Git,
+so I didn’t have to deal with
+&lt;a href=&#34;https://daniel.rbind.io/2019/08/27/git-squash-and-merge-workflow/&#34;&gt;workflow&lt;/a&gt;
+issues.&lt;/p&gt;
+&lt;div id=&#34;the-project&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;The project&lt;/h3&gt;
+&lt;p&gt;I was on the
+&lt;a href=&#34;https://education.rstudio.com/&#34;&gt;education team&lt;/a&gt;
+and worked with worked with
+&lt;a href=&#34;https://twitter.com/statgarrett&#34;&gt;Garrett Grolemund&lt;/a&gt;
+and
+&lt;a href=&#34;https://twitter.com/schloerke&#34;&gt;Barret Schloerke&lt;/a&gt;
+(I can never spell their names properly without looking it up, and it didn’t help one of the other interns was
+&lt;a href=&#34;https://twitter.com/malco_barrett&#34;&gt;Malcolm Barrett&lt;/a&gt;
+)
+on &lt;a href=&#34;https://github.com/rstudio-education/gradethis&#34;&gt;&lt;code&gt;gradethis&lt;/code&gt;&lt;/a&gt;.
+The package tries to grade code in a
+&lt;a href=&#34;https://rstudio.github.io/learnr/&#34;&gt;&lt;code&gt;learnr&lt;/code&gt; document&lt;/a&gt;,
+but the real magic of the package isn’t just reporting a correct or incorrect answer,
+it’s the ability to provide meaningful feedback to the learner.
+For example, if the solution to a question was &lt;code&gt;sqrt(log(1))&lt;/code&gt; and the student provided &lt;code&gt;sqrt(log(2))&lt;/code&gt;,
+it would report the answer as “incorrect” but also return something along the lines of
+“I expected 1 where you wrote 2. Try it again; next time’s the charm!”.
+Isn’t that way nicer than a giant red box telling you the answer is wrong?
+Now if you think about it, isn’t this a really difficult problem to solve???
+(Hint: yes.)&lt;/p&gt;
+&lt;p&gt;Luckily, I didn’t have to write this package from scratch.
+Garrett did write the initial working code base for me to improve,
+but it also essentially meant working with legacy code and
+learning new R programming paradigms at the same time.
+“R programming paradigms” what’s that? you might ask.
+I mean
+&lt;a href=&#34;https://adv-r.hadley.nz/expressions.html&#34;&gt;expressions&lt;/a&gt;,
+&lt;a href=&#34;https://adv-r.hadley.nz/expressions.html&#34;&gt;rlang&lt;/a&gt;, and
+&lt;a href=&#34;https://tidyeval.tidyverse.org/&#34;&gt;tidyeval&lt;/a&gt;
+… :x&lt;/p&gt;
+&lt;p&gt;How does one go about leaning how all this works in the package?
+Well…
+by &lt;a href=&#34;https://github.com/rstudio-education/gradethis/pull/10&#34;&gt;merging a PR that breaks everything&lt;/a&gt;,
+then trying to &lt;a href=&#34;https://github.com/rstudio-education/gradethis/issues/11&#34;&gt;understand an issue&lt;/a&gt;
+that took &lt;a href=&#34;https://github.com/rstudio-education/gradethis/pull/21&#34;&gt;a month to fix&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I spent a better part of that month reading and not understanding &lt;a href=&#34;https://adv-r.hadley.nz/expressions.html&#34;&gt;expressions&lt;/a&gt;,
+and pretty much being guided by a series of pair-programming sessions with Barret.
+By “guided” I mean he pretty much did the work I just typed characters and acted as a scribe.&lt;/p&gt;
+&lt;p&gt;I’ve done pair-programming with my own students,
+but I never had anyone pair-program with me where I was the one learning.
+There was so many new things going on during each session that I couldn’t retain every detail,
+but things got easier towards the end.
+It made me think about all the times I’d help my students and really got to empathize with their confusion.&lt;/p&gt;
+&lt;p&gt;The single most important package development skill that made my work possible were &lt;strong&gt;unit tests&lt;/strong&gt;.
+Since I was working with an already existing code base,
+all the 100s of unit tests that were there needed to pass as I made changes.
+I can’t emphasize how much time and sanity was saved from running the unit test suite.
+Seemingly small changes would cause some tests to fail where I’d have to either fix my code or fix the test.
+As the package started to stabilize and I started testing it out on a mock &lt;code&gt;learnr&lt;/code&gt; tutorial,
+I even discovered &lt;a href=&#34;https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/&#34;&gt;a bug in the &lt;code&gt;==&lt;/code&gt; operator&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Even though everyone was in a remote position, there was so much ancillary learning going on.
+I
+&lt;a href=&#34;https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./&#34;&gt;tried&lt;/a&gt;
+to keep a
+&lt;a href=&#34;https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/&#34;&gt;list&lt;/a&gt;
+as I was going though the
+&lt;a href=&#34;https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/&#34;&gt;internship&lt;/a&gt;,
+but it got impractical.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hanging-out&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hanging out&lt;/h3&gt;
+&lt;p&gt;Every one of my fellow &lt;a href=&#34;https://blog.rstudio.com/2019/03/25/summer-interns-2019/&#34;&gt;interns&lt;/a&gt;
+are amazing.
+Since RStudio is a remote company,
+we tried to hold a weekly “virtual coffee” meeting so we can all see and talk to one another.
+It really made the distance and time zone differences between all of us seem much smaller.
+As I’m typing this blog post at rstudio::conf,
+it felt like we already knew each other,
+even though most of us haven’t seen the other in person before.&lt;/p&gt;
+&lt;p&gt;Due to my conference and travel schedule over the summer,
+I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
+&lt;div id=&#34;therese-and-malcolm-in-los-angeles-ca&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Therese and Malcolm in Los Angeles, CA&lt;/h4&gt;
+&lt;p&gt;I got to meet Therese and Malcolm when I was in LA staying at a friend’s place for another friends wedding.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;julia-in-san-francisco-ca&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Julia in San Francisco, CA&lt;/h4&gt;
+&lt;p&gt;I got the tour of Julia’s lab when I was in San Francisco for the
+&lt;a href=&#34;https://pybay.com/&#34;&gt;PyBay conference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;More of Julia’s lab at the bottom of the post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;joyce-in-raleigh-nc.&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Joyce in Raleigh, NC.&lt;/h4&gt;
+&lt;p&gt;My dad’s job relocated him to Carry, NC so I was visiting him when a Data Science Happy Hour was announced in Raleigh and got to meet Joyce.&lt;/p&gt;
+&lt;center&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;📣 Raleigh data science folks (and ambitious Durham folks): &lt;br&gt;&lt;br&gt;🗓 Data science happy hour at &lt;a href=&#34;https://twitter.com/lynnwoodbrewing?ref_src=twsrc%5Etfw&#34;&gt;@lynnwoodbrewing&lt;/a&gt; (on Whitaker Mill) on Tuesday 9/24 at 5:30 PM with the inimitable &lt;a href=&#34;https://twitter.com/CMastication?ref_src=twsrc%5Etfw&#34;&gt;@CMastication&lt;/a&gt;. &lt;br&gt;&lt;br&gt;(You can also buy food there or bring your own.)&lt;/p&gt;&amp;mdash; Tim Hopper (@tdhopper) &lt;a href=&#34;https://twitter.com/tdhopper/status/1171456421595996160?ref_src=twsrc%5Etfw&#34;&gt;September 10, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/center&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;education-and-shiny-teams&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Education and Shiny teams&lt;/h3&gt;
+&lt;p&gt;I met with the Shiny team for daily stand-ups, and the education team about every week.
+The sheer amount of people I could ask for help is absolutely &lt;strong&gt;insane&lt;/strong&gt;.&lt;/p&gt;
+&lt;center&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen @ rstudio::conf 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/center&gt;
+&lt;/div&gt;
+&lt;div id=&#34;everyone-else&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Everyone else&lt;/h3&gt;
+&lt;p&gt;A lot of effort goes into making a remote company feel less isolating.
+Many of us signed up for the virtual donut bot on Slack
+that randomly pairs you up with someone else in the company to have a conference call to get to know each other.&lt;/p&gt;
+&lt;p&gt;We also had an opportunity to signup/attend lightning talk sessions where people from the company talked about
+current projects they’re working on for work/home.
+Some people even talked about their hobbies!&lt;/p&gt;
+&lt;p&gt;Even crazier, was we sat in on meetings with the President and CEO of the company on multiple occasions.
+For a company that has such a wide global reach with employees geographically scattered around the world,
+the community that RStudio has internally is &lt;strong&gt;genuinely&lt;/strong&gt; mirrored in the amazing community they have created
+externally for the rest of us.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;more-than-technical-training&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;More than technical training&lt;/h3&gt;
+&lt;p&gt;My time with the education group at rstudio really help me find my way.
+I’m pretty much on my third iteration of a PhD dissertation topic,
+and working with the education group helped me realize that I can apply all the lessons I’ve learned
+through
+&lt;a href=&#34;https://carpentries.org/&#34;&gt;The Carpentries&lt;/a&gt;,
+teaching on my own,
+and working on educational tools
+towards my dissertation topic.
+For the first time in a long while I finally have a sense of direction
+and feel in control of my own degree.&lt;/p&gt;
+&lt;p&gt;Not only that, but being in intern was &lt;em&gt;so&lt;/em&gt; validating.
+I’ve felt like I was spinning my wheels since starting graduate school,
+and it’s nice to know I’ve been doing &lt;strong&gt;something&lt;/strong&gt; right these past few years.
+I’m not going to lie,
+there is a certain amount of “street cred” involved with being an intern,
+but let me assure you,
+I still barely grasp a lot of the internals of R.
+If anything, I feel &lt;em&gt;even more&lt;/em&gt; impostor syndrome,
+now that I’m back out in the wild.&lt;/p&gt;
+&lt;p&gt;For now,
+the best thing I can do is pay it forward.
+And for those who don’t know,
+my new dissertation topic is on the
+education and pedagogy of data science in medicine.&lt;/p&gt;
+&lt;p&gt;I hope to hear form everyone in the future!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;appendix&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Appendix&lt;/h3&gt;
+&lt;p&gt;The other intern final blog posts (list is ongoing):&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/tools-for-teaching-yaml-with-ymlthis/&#34;&gt;Malcolm Barrett&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://jcahoon.netlify.com/post/2019/08/23/reflection/&#34;&gt;Joyce&lt;/a&gt;
+&lt;a href=&#34;https://education.rstudio.com/blog/2019/11/my-first-software-engineering-internship/&#34;&gt;Cahoon&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://fishandwhistle.netlify.com/post/2019/a-summer-of-rstudio-and-ggplot2/&#34;&gt;Dewey Dunnington&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/12/this-is-not-like-the-others/&#34;&gt;Marly Gotti&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/my-javascript-internship-at-rstudio/&#34;&gt;Maya Gans&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/what-it-was-like-interning-for-rstudio/&#34;&gt;Yim Register&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/twelve-weeks/&#34;&gt;Desirée De Leon&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Picture’s around Julia’s lab.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Table of Model Results using kable and kableExtra</title>
       <link>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</link>
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>

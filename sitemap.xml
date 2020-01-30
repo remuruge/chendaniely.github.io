@@ -44,7 +44,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-13T11:11:22-04:00</lastmod>
+    <lastmod>2020-01-29T17:21:15-08:00</lastmod>
   </url>
   
   <url>
@@ -53,8 +53,23 @@
   </url>
   
   <url>
+    <loc>/2020/01/29/my-time-as-an-rstudio-intern/</loc>
+    <lastmod>2020-01-29T17:21:15-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/r/</loc>
-    <lastmod>2019-09-13T11:11:22-04:00</lastmod>
+    <lastmod>2020-01-29T17:21:15-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rstudio-internship/</loc>
+    <lastmod>2020-01-29T17:21:15-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-29T17:21:15-08:00</lastmod>
   </url>
   
   <url>
@@ -64,11 +79,6 @@
   
   <url>
     <loc>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</loc>
-    <lastmod>2019-09-13T11:11:22-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-09-13T11:11:22-04:00</lastmod>
   </url>
   
@@ -89,11 +99,6 @@
   
   <url>
     <loc>/2019/08/27/git-squash-and-merge-workflow/</loc>
-    <lastmod>2019-08-27T23:44:25-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rstudio-internship/</loc>
     <lastmod>2019-08-27T23:44:25-04:00</lastmod>
   </url>
   
