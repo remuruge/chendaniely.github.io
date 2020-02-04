@@ -12,6 +12,134 @@
     
     
     <item>
+      <title>R Hex Bowtie</title>
+      <link>/2020/01/30/r-hex-bowtie/</link>
+      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/30/r-hex-bowtie/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;conference_tag_labeled.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Yes. That’s the #rstats hex bowtie.
+Yes, I lost it when Hadley was wearing it for the conference opening notes.&lt;/p&gt;
+&lt;center&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-theme=&#34;dark&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Thanks to Daniel Chen for the awesome &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; bow tie! &lt;a href=&#34;https://t.co/OPnawWrltG&#34;&gt;https://t.co/OPnawWrltG&lt;/a&gt; &lt;a href=&#34;https://t.co/XZUj5z7Ox4&#34;&gt;pic.twitter.com/XZUj5z7Ox4&lt;/a&gt;
+&lt;/p&gt;
+— Hadley Wickham (&lt;span class=&#34;citation&#34;&gt;@hadleywickham&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/hadleywickham/status/1222568304088252416?ref_src=twsrc%5Etfw&#34;&gt;January 29, 2020&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/center&gt;
+&lt;div id=&#34;bow-ties-are-cool&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bow Ties are Cool&lt;/h2&gt;
+&lt;p&gt;The R hex fabric is by Amelia McNamara,
+which you can get on the
+&lt;a href=&#34;https://github.com/AmeliaMN/hexfabric&#34;&gt;GitHub repo&lt;/a&gt;
+or buy directly on her
+&lt;a href=&#34;https://www.spoonflower.com/profiles/ameliamn&#34;&gt;Spoonflower page&lt;/a&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34; data-theme=&#34;dark&#34;&gt;
+&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;
+Now that the cat’s out of the bag 😻… Yes, I made myself an &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;/&lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; dress! &lt;br&gt;&lt;br&gt;📸 &lt;a href=&#34;https://twitter.com/alexandrabyrne?ref_src=twsrc%5Etfw&#34;&gt;&lt;span class=&#34;citation&#34;&gt;@alexandrabyrne&lt;/span&gt;&lt;/a&gt; with the angles &lt;a href=&#34;https://t.co/6m1nJotIwN&#34;&gt;pic.twitter.com/6m1nJotIwN&lt;/a&gt;
+&lt;/p&gt;
+— AmeliaMN (&lt;span class=&#34;citation&#34;&gt;@AmeliaMN&lt;/span&gt;) &lt;a href=&#34;https://twitter.com/AmeliaMN/status/1162359039784673282?ref_src=twsrc%5Etfw&#34;&gt;August 16, 2019&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/center&gt;
+&lt;p&gt;For my particular use case,
+I needed smaller hexes because bow ties are just smaller than dresses.
+Here’s my modified
+&lt;a href=&#34;https://www.spoonflower.com/designs/9530930-r-hex-fabric-1-hexes-by-chendaniely&#34;&gt;1-inch r hex fabirc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I knew I wanted to make bowties since
+I gave a lightning talk during
+&lt;a href=&#34;https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/&#34;&gt;RStudio&lt;/a&gt;
+&lt;a href=&#34;https://education.rstudio.com/blog/2020/02/gestalt-internship/&#34;&gt;internship&lt;/a&gt;.
+And Hadley is a bow tie aficionado.
+After talking to a few people,
+I was directed to get them made on
+&lt;a href=&#34;https://www.etsy.com/&#34;&gt;Etsy&lt;/a&gt;,
+and so the hunt to find someone began in November.&lt;/p&gt;
+&lt;p&gt;The tricky part about finding custom bow ties on Etsy is that many of the
+sellers don’t make &lt;em&gt;adjustable&lt;/em&gt; bow ties.
+I eventually found
+&lt;a href=&#34;https://www.etsy.com/shop/OddsandHens&#34;&gt;Megan’s&lt;/a&gt;
+&lt;a href=&#34;https://www.etsy.com/listing/121450912/custom-bow-ties&#34;&gt;Shop&lt;/a&gt;,
+which allowed me to get adjustable bowties and use custom fabric.
+I placed an order for 20 with the only constraint of one of the bow ties
+must have &lt;code&gt;ggplot2&lt;/code&gt; and &lt;code&gt;tidyverse&lt;/code&gt; visiable when it is tied (for Hadley).
+This is when Megan told me about the original hex size needed to be smaller
+for the bow tie.
+I also got a few pocket squares in my order too.&lt;/p&gt;
+&lt;p&gt;I went though the process of creating the smaller hex pattern on
+&lt;a href=&#34;https://www.spoonflower.com/designs/9530930-r-hex-fabric-1-hexes-by-chendaniely&#34;&gt;Spoonflower&lt;/a&gt;
+and shipeed 6 yards of the pattern for my order in the “Petal Signature Cotton”.
+I had to ship Megan the fabric directly since you need to order a test sample
+before other people can purchace the pattern.
+It was a gamble,
+but it was the holiday season,
+and the conference was coming up fast.&lt;/p&gt;
+&lt;p&gt;Megan was great, I got a series of photos about the entire process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;etsy_01.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The fabric is thicker than what I have used previously as spoonflower recently changed to the ‘petal cotton’. I’m just retooling the pattern and interfacing a bit to accommodate it. :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;etsy_02.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;etsy_03.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Also- here is how the one tie with the prominent ggplotand tidyverse was cut out.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I got the order 2 weeks before the conference and it all turned out wonderfully.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;bowties.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;Here’s the link to her
+&lt;a href=&#34;https://www.etsy.com/shop/OddsandHens&#34;&gt;shop&lt;/a&gt;
+and
+&lt;a href=&#34;https://twitter.com/OddsandHens&#34;&gt;twitter&lt;/a&gt;.
+I even convinced her to write a
+&lt;a href=&#34;https://oddsandhens.com/2020/01/29/bow-ties-make-everything-better/&#34;&gt;blog post of her own&lt;/a&gt;
+.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pybadge-name-badge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;PyBadge Name Badge&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;pybadge.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;I went to PyCon for the first time in 2019.
+And the
+&lt;a href=&#34;https://twitter.com/hashtag/PythonHardware&#34;&gt;#pythonhardware&lt;/a&gt;
+community is amazing.
+The conference was filled with people with their own name tags.
+I though I’d introduce this to the R community.
+And also, gives a way for people to say hello to me,
+instead of the other way around :)&lt;/p&gt;
+&lt;p&gt;I got the bigger
+&lt;a href=&#34;https://www.adafruit.com/product/4200&#34;&gt;PyBadge&lt;/a&gt;
+(they also make a
+&lt;a href=&#34;https://www.adafruit.com/product/3939&#34;&gt;smaller one&lt;/a&gt;
+).
+I really like how Adafruit put python on their circuit boards using
+CircuitPython.
+It makes programming way more accessiable than using an Arduino,
+since you can do all the programming in Python!&lt;/p&gt;
+&lt;p&gt;In my case I dragged my picture into a folder and it just goes through them in a slide show.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-rest&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The Rest&lt;/h2&gt;
+&lt;p&gt;I
+&lt;a href=&#34;https://blog.rstudio.com/2019/03/25/summer-interns-2019/&#34;&gt;interned&lt;/a&gt;
+for Rstudio over the summer,
+where I was on the
+&lt;a href=&#34;https://education.rstudio.com/&#34;&gt;Education Team&lt;/a&gt;.
+During rstudio::conf, I TA’ed for the
+&lt;a href=&#34;https://github.com/rstudio-conf-2020/intro-to-ml-tidy&#34;&gt;Introduction to Machine Learning with the Tidyverse&lt;/a&gt;
+workshop.&lt;/p&gt;
+&lt;p&gt;I started teaching as an instructor for
+&lt;a href=&#34;https://carpentries.org/&#34;&gt;The Carpentries&lt;/a&gt;.
+Which eventually led me to writing my book,
+&lt;a href=&#34;https://www.amazon.com/Pandas-Everyone-Analysis-Addison-Wesley-Analytics-ebook/dp/B0789WKTKJ%60&#34;&gt;Pandas for Everyone&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Hope you enjoyed reading about my conference badge!
+I look forward to seeing people in the R community add flair to the badges in the future!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>My time as an RStudio Intern</title>
       <link>/2020/01/29/my-time-as-an-rstudio-intern/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
