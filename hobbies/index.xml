@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hobbies on Daniel Chen</title>
-    <link>/hobbies/</link>
+    <link>https://daniel.rbind.io/hobbies/</link>
     <description>Recent content in Hobbies on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     
-	    <atom:link href="/hobbies/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/hobbies/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Photography</title>
-      <link>/hobbies/photography/</link>
+      <link>https://daniel.rbind.io/hobbies/photography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/hobbies/photography/</guid>
+      <guid>https://daniel.rbind.io/hobbies/photography/</guid>
       <description>&lt;p&gt;Here&#39;s a link to an old photo blog album: &lt;a href=&#34;https://dan.aminus3.com/&#34;&gt;https://dan.aminus3.com/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>SCUBA Diving</title>
-      <link>/hobbies/scuba/</link>
+      <link>https://daniel.rbind.io/hobbies/scuba/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/hobbies/scuba/</guid>
+      <guid>https://daniel.rbind.io/hobbies/scuba/</guid>
       <description>&lt;p&gt;The underwater world is an unique and amazing place.
 For me, it&#39;s one of the few moments where I can tune everything out and just focus on the experience,
 and take long slow deep medative breaths.&lt;/p&gt;

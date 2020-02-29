@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Daniel Chen</title>
-    <link>/courses/git/</link>
+    <link>https://daniel.rbind.io/courses/git/</link>
     <description>Recent content in Git on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/courses/git/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/courses/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git Essentials LiveLessons</title>
-      <link>/courses/git/git_essentials/</link>
+      <link>https://daniel.rbind.io/courses/git/git_essentials/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/git/git_essentials/</guid>
+      <guid>https://daniel.rbind.io/courses/git/git_essentials/</guid>
       <description>&lt;p&gt;Git Essentials LiveLessons&lt;br&gt;
 by Daniel Y. Chen&lt;br&gt;
 Publisher: Addison-Wesley Professional&lt;br&gt;

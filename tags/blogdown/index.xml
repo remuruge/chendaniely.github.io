@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blogdown on Daniel Chen</title>
-    <link>/tags/blogdown/</link>
+    <link>https://daniel.rbind.io/tags/blogdown/</link>
     <description>Recent content in blogdown on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 23 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Website a la Blogdown!</title>
-      <link>/2019/07/23/new-website-a-la-blogdown/</link>
+      <link>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/07/23/new-website-a-la-blogdown/</guid>
+      <guid>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</guid>
       <description>&lt;p&gt;I finally got everything moved over to 
 &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;
 

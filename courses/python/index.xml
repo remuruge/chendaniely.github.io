@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Daniel Chen</title>
-    <link>/courses/python/</link>
+    <link>https://daniel.rbind.io/courses/python/</link>
     <description>Recent content in Python on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Sun, 09 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/courses/python/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/courses/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pandas Data Analysis with Python Fundamentals</title>
-      <link>/courses/python/python_pandas_video/</link>
+      <link>https://daniel.rbind.io/courses/python/python_pandas_video/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/python/python_pandas_video/</guid>
+      <guid>https://daniel.rbind.io/courses/python/python_pandas_video/</guid>
       <description>&lt;p&gt;Pandas Data Analysis with Python Fundamentals&lt;br&gt;
 by Daniel Y. Chen&lt;br&gt;
 Publisher: Addison-Wesley Professional&lt;br&gt;
@@ -62,10 +62,10 @@ Some familiarity with basic data analysis&lt;/p&gt;
     
     <item>
       <title>Pandas Data Cleaning and Modeling with Python</title>
-      <link>/courses/python/pandas_ml_video/</link>
+      <link>https://daniel.rbind.io/courses/python/pandas_ml_video/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/python/pandas_ml_video/</guid>
+      <guid>https://daniel.rbind.io/courses/python/pandas_ml_video/</guid>
       <description>&lt;p&gt;Pandas Data Cleaning and Modeling with Python&lt;br&gt;
 by Daniel Y. Chen&lt;br&gt;
 Publisher: Addison-Wesley Professional&lt;br&gt;
@@ -109,10 +109,10 @@ Model data&lt;/p&gt;
     
     <item>
       <title>Cleaning Data in Python</title>
-      <link>/courses/python/dc_cleaning_data_python/</link>
+      <link>https://daniel.rbind.io/courses/python/dc_cleaning_data_python/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/python/dc_cleaning_data_python/</guid>
+      <guid>https://daniel.rbind.io/courses/python/dc_cleaning_data_python/</guid>
       <description>&lt;p&gt;This course will equip you with all the skills you need to clean your data in Python.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.datacamp.com/courses/cleaning-data-in-python&#34;&gt;https://www.datacamp.com/courses/cleaning-data-in-python&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;course-description&#34;&gt;Course Description&lt;/h1&gt;

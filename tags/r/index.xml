@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>r on Daniel Chen</title>
-    <link>/tags/r/</link>
+    <link>https://daniel.rbind.io/tags/r/</link>
     <description>Recent content in r on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>R Hex Bowtie</title>
-      <link>/2020/01/30/r-hex-bowtie/</link>
+      <link>https://daniel.rbind.io/2020/01/30/r-hex-bowtie/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/01/30/r-hex-bowtie/</guid>
+      <guid>https://daniel.rbind.io/2020/01/30/r-hex-bowtie/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;conference_tag_labeled.jpg&#34; width=&#34;540&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yes. That’s the #rstats hex bowtie.
 Yes, I lost it when Hadley was wearing it for the conference opening notes.&lt;/p&gt;
@@ -142,11 +142,12 @@ I look forward to seeing people in the R community add flair to the badges in th
     
     <item>
       <title>My time as an RStudio Intern</title>
-      <link>/2020/01/29/my-time-as-an-rstudio-intern/</link>
+      <link>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/01/29/my-time-as-an-rstudio-intern/</guid>
+      <guid>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’ve had a lot of time to think about my time as an RStudio intern.
@@ -244,13 +245,13 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;div id=&#34;therese-and-malcolm-in-los-angeles-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Therese and Malcolm in Los Angeles, CA&lt;/h4&gt;
 &lt;p&gt;I got to meet Therese and Malcolm when I was in LA staying at a friend’s place for another friends wedding.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; width=&#34;1632&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;julia-in-san-francisco-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Julia in San Francisco, CA&lt;/h4&gt;
 &lt;p&gt;I got the tour of Julia’s lab when I was in San Francisco for the
 &lt;a href=&#34;https://pybay.com/&#34;&gt;PyBay conference&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;More of Julia’s lab at the bottom of the post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;joyce-in-raleigh-nc.&#34; class=&#34;section level4&#34;&gt;
@@ -261,7 +262,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;education-and-shiny-teams&#34; class=&#34;section level3&#34;&gt;
@@ -269,7 +270,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;p&gt;I met with the Shiny team for daily stand-ups, and the education team about every week.
 The sheer amount of people I could ask for help is absolutely &lt;strong&gt;insane&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen @ rstudio::conf 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
@@ -329,19 +330,20 @@ education and pedagogy of data science in medicine.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/twelve-weeks/&#34;&gt;Desirée De Leon&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Picture’s around Julia’s lab.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; width=&#34;2024&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Table of Model Results using kable and kableExtra</title>
-      <link>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</link>
+      <link>https://daniel.rbind.io/2019/09/13/table-of-model-results-using-kable-and-kableextra/</link>
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</guid>
+      <guid>https://daniel.rbind.io/2019/09/13/table-of-model-results-using-kable-and-kableextra/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’m at the &lt;a href=&#34;https://r-medicine.com/&#34;&gt;R/Medicine&lt;/a&gt; conference (no it’s not a Reddit thing) and
@@ -465,10 +467,10 @@ collapse_rows_dt &amp;lt;- data.frame(C1 = c(rep(&amp;quot;a&amp;quot;, 3), rep(
 collapse_rows_dt&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   C1 C2 C3 C4
 ## 1  a  c  1  1
-## 2  a  c  2  1
+## 2  a  c  2  0
 ## 3  a  d  3  0
-## 4  b  c  4  0
-## 5  b  d  5  0&lt;/code&gt;&lt;/pre&gt;
+## 4  b  c  4  1
+## 5  b  d  5  1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kable(collapse_rows_dt, align = &amp;quot;c&amp;quot;) %&amp;gt;%
   kable_styling(full_width = F) %&amp;gt;%
   column_spec(1, bold = T) %&amp;gt;%
@@ -510,7 +512,7 @@ c
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-1
+0
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -535,7 +537,7 @@ c
 4
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0
+1
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -546,7 +548,7 @@ d
 5
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0
+1
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -961,11 +963,12 @@ std.error
     
     <item>
       <title>R or Python, which One to Learn (First)?</title>
-      <link>/2019/08/28/r-or-python-which-one-to-learn-first/</link>
+      <link>https://daniel.rbind.io/2019/08/28/r-or-python-which-one-to-learn-first/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/28/r-or-python-which-one-to-learn-first/</guid>
+      <guid>https://daniel.rbind.io/2019/08/28/r-or-python-which-one-to-learn-first/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’ve been asked a few times lately about whether one should learn R or Python.&lt;/p&gt;
@@ -1072,11 +1075,12 @@ Even though I have a book about Pandas and worked as an intern for RStudio! :)&l
     
     <item>
       <title>Inconsistencies with the `==` operator in R</title>
-      <link>/2019/08/06/inconsistencies-with-in-r/</link>
+      <link>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</link>
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/06/inconsistencies-with-in-r/</guid>
+      <guid>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;One of the cool things about working on &lt;a href=&#34;https://github.com/rstudio-education/gradethis&#34;&gt;&lt;code&gt;gradethis&lt;/code&gt;&lt;/a&gt;
@@ -1206,10 +1210,10 @@ identical(u, s)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>New Website a la Blogdown!</title>
-      <link>/2019/07/23/new-website-a-la-blogdown/</link>
+      <link>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/07/23/new-website-a-la-blogdown/</guid>
+      <guid>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</guid>
       <description>&lt;p&gt;I finally got everything moved over to 
 &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;
 
@@ -1267,10 +1271,10 @@ and I have to push using that remote instead of the &lt;code&gt;origin&lt;/code&
     
     <item>
       <title>RStudio internship week 2</title>
-      <link>/2019/06/18/rstudio-internship-week-2/</link>
+      <link>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/18/rstudio-internship-week-2/</guid>
+      <guid>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</guid>
       <description>&lt;p&gt;The main topics and events of last week were:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Much git.&lt;/li&gt;
@@ -1488,10 +1492,10 @@ were going to be the way to go, but that ended up in a dead end.&lt;/p&gt;
     
     <item>
       <title>And we&#39;re off! RStudio internship week 1, complete.</title>
-      <link>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
+      <link>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
+      <guid>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
       <description>&lt;p&gt;I&#39;m still pinching myself about being one of the 
 &lt;a href=&#34;https://blog.rstudio.com/2019/03/25/summer-interns-2019/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio interns this year&lt;/a&gt;
 .
@@ -1651,10 +1655,10 @@ but also show what components are used for a given action
     
     <item>
       <title>rstatsnyc as told by @brookLYNevery1, @dataandme, and autographs</title>
-      <link>/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</link>
+      <link>https://daniel.rbind.io/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</link>
       <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</guid>
+      <guid>https://daniel.rbind.io/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</guid>
       <description>&lt;p&gt;EDIT: I&#39;ve added the notes from 
 &lt;a href=&#34;https://twitter.com/dataandme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@dataandme&lt;/a&gt;
  and linked to people&#39;s twitter and slides (if I found them). This is probably going to be an ongoing process&amp;hellip;&lt;/p&gt;
@@ -1825,10 +1829,10 @@ So I&#39;ve just linked to all her tweets (after the break).&lt;/p&gt;
     
     <item>
       <title>Getting Started with Data Science and Analysis</title>
-      <link>/2015/05/05/getting-started-with-data-science-and-analysis/</link>
+      <link>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
+      <guid>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
       <description>&lt;p&gt;I&#39;ve been an instructor for 
 &lt;a href=&#34;http://software-carpentry.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry (SWC)&lt;/a&gt;
  over a year now.

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dspg17 on Daniel Chen</title>
-    <link>/tags/dspg17/</link>
+    <link>https://daniel.rbind.io/tags/dspg17/</link>
     <description>Recent content in dspg17 on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/dspg17/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/dspg17/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Analysis-Based Project Templates</title>
-      <link>/2018/01/23/analysis-based-project-templates/</link>
+      <link>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/23/analysis-based-project-templates/</guid>
+      <guid>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</guid>
       <description>&lt;p&gt;One of the most annoying things you hear people say when they are working with some common code base is
 &amp;ldquo;It works on my machine&amp;hellip;&amp;quot;.
 Conversely, one of the more satisfying things is running a script that you are not actively working on and
@@ -158,10 +158,10 @@ But even in this small example, the three code bases are conceptually incompatib
     
     <item>
       <title>From VMs to LXC Containers to Docker Containers</title>
-      <link>/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</link>
+      <link>https://daniel.rbind.io/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</guid>
+      <guid>https://daniel.rbind.io/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</guid>
       <description>&lt;p&gt;Since I&#39;ve joined 
 &lt;a href=&#34;https://www.bi.vt.edu/sdal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SDAL&lt;/a&gt;
 ,
@@ -338,10 +338,10 @@ or kubernetes, who knows.&lt;/p&gt;
     
     <item>
       <title>Project Templates</title>
-      <link>/2017/05/30/project-templates/</link>
+      <link>https://daniel.rbind.io/2017/05/30/project-templates/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/30/project-templates/</guid>
+      <guid>https://daniel.rbind.io/2017/05/30/project-templates/</guid>
       <description>&lt;p&gt;Project templates provide some standardized way to organize files.
 Our lab uses a template that is based off the 
 &lt;a href=&#34;http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noble 2009 Paper, &amp;ldquo;A Quick Guide to Organizing Computational Biology Projects&amp;rdquo;&lt;/a&gt;

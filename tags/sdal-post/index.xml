@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sdal-post on Daniel Chen</title>
-    <link>/tags/sdal-post/</link>
+    <link>https://daniel.rbind.io/tags/sdal-post/</link>
     <description>Recent content in sdal-post on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 23 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/sdal-post/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/sdal-post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Analysis-Based Project Templates</title>
-      <link>/2018/01/23/analysis-based-project-templates/</link>
+      <link>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/23/analysis-based-project-templates/</guid>
+      <guid>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</guid>
       <description>&lt;p&gt;One of the most annoying things you hear people say when they are working with some common code base is
 &amp;ldquo;It works on my machine&amp;hellip;&amp;quot;.
 Conversely, one of the more satisfying things is running a script that you are not actively working on and

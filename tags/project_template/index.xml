@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>project_template on Daniel Chen</title>
-    <link>/tags/project_template/</link>
+    <link>https://daniel.rbind.io/tags/project_template/</link>
     <description>Recent content in project_template on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 30 May 2017 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/project_template/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/project_template/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Project Templates</title>
-      <link>/2017/05/30/project-templates/</link>
+      <link>https://daniel.rbind.io/2017/05/30/project-templates/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/30/project-templates/</guid>
+      <guid>https://daniel.rbind.io/2017/05/30/project-templates/</guid>
       <description>&lt;p&gt;Project templates provide some standardized way to organize files.
 Our lab uses a template that is based off the 
 &lt;a href=&#34;http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noble 2009 Paper, &amp;ldquo;A Quick Guide to Organizing Computational Biology Projects&amp;rdquo;&lt;/a&gt;

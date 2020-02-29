@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>teaching on Daniel Chen</title>
-    <link>/tags/teaching/</link>
+    <link>https://daniel.rbind.io/tags/teaching/</link>
     <description>Recent content in teaching on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Changes in Higher Education</title>
-      <link>/2017/05/01/changes-in-higher-education/</link>
+      <link>https://daniel.rbind.io/2017/05/01/changes-in-higher-education/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/01/changes-in-higher-education/</guid>
+      <guid>https://daniel.rbind.io/2017/05/01/changes-in-higher-education/</guid>
       <description>&lt;p&gt;As a PhD student who already has a Master&#39;s degree, it&#39;s safe to say that I&#39;ve been in school for a long time.
 One of the things in higher education that I started to dislike over the years are the ways professors assess students in the classroom.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -42,10 +42,10 @@ I have bounded books of old class notes and homeworks that I constantly referenc
     
     <item>
       <title>NYC R Conference</title>
-      <link>/2017/04/24/nyc-r-conference/</link>
+      <link>https://daniel.rbind.io/2017/04/24/nyc-r-conference/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/24/nyc-r-conference/</guid>
+      <guid>https://daniel.rbind.io/2017/04/24/nyc-r-conference/</guid>
       <description>&lt;p&gt;Just got back from the 3rd annual 
 &lt;a href=&#34;http://www.rstats.nyc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NYC R Conference&lt;/a&gt;
  this past weekend.
@@ -73,10 +73,10 @@ That has to be a good sign, right?&lt;/p&gt;
     
     <item>
       <title>Preparing for the Summer</title>
-      <link>/2017/04/24/preparing-for-the-summer/</link>
+      <link>https://daniel.rbind.io/2017/04/24/preparing-for-the-summer/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/24/preparing-for-the-summer/</guid>
+      <guid>https://daniel.rbind.io/2017/04/24/preparing-for-the-summer/</guid>
       <description>&lt;p&gt;As the semester comes to an end,
 preparing for my lab&#39;s 
 &lt;a href=&#34;https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Science for the Public Good Program&lt;/a&gt;
@@ -132,10 +132,10 @@ and pretty much finish up my book that will be the basis for my
     
     <item>
       <title>Working While Pursuing a PhD</title>
-      <link>/2017/04/17/working-while-pursuing-a-phd/</link>
+      <link>https://daniel.rbind.io/2017/04/17/working-while-pursuing-a-phd/</link>
       <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/17/working-while-pursuing-a-phd/</guid>
+      <guid>https://daniel.rbind.io/2017/04/17/working-while-pursuing-a-phd/</guid>
       <description>&lt;p&gt;My lab has extended me an opportunity to be a research scientist and helping out our current senior data scientist
 with the daily analytics and IT support the lab needs.
 It&#39;s a very enticing opportunity, but I need to stop and think about my options&lt;/p&gt;
@@ -161,10 +161,10 @@ We&#39;ll discuss this further then.&lt;/p&gt;
     
     <item>
       <title>Education in the United States</title>
-      <link>/2017/04/10/education-in-the-united-states/</link>
+      <link>https://daniel.rbind.io/2017/04/10/education-in-the-united-states/</link>
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/10/education-in-the-united-states/</guid>
+      <guid>https://daniel.rbind.io/2017/04/10/education-in-the-united-states/</guid>
       <description>&lt;p&gt;As people start sharing their educational experiences from around the world,
 I realized how lucky I am to have been educated in New York City,
 and how much less the United States focuses on education when compared to many other countries around the world.&lt;/p&gt;
@@ -173,10 +173,10 @@ and how much less the United States focuses on education when compared to many o
     
     <item>
       <title>Open Access</title>
-      <link>/2017/04/10/open-access/</link>
+      <link>https://daniel.rbind.io/2017/04/10/open-access/</link>
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/10/open-access/</guid>
+      <guid>https://daniel.rbind.io/2017/04/10/open-access/</guid>
       <description>&lt;p&gt;&amp;ldquo;Open&amp;rdquo; has played in important role in my life the last few years.
 It all began when I was an attendee at a 
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry&lt;/a&gt;
@@ -230,10 +230,10 @@ potentially losing publications is enough of a detractor for many to not pursuit
     
     <item>
       <title>Tech &amp; Innovation in Higher Ed</title>
-      <link>/2017/04/03/tech-innovation-in-higher-ed/</link>
+      <link>https://daniel.rbind.io/2017/04/03/tech-innovation-in-higher-ed/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/03/tech-innovation-in-higher-ed/</guid>
+      <guid>https://daniel.rbind.io/2017/04/03/tech-innovation-in-higher-ed/</guid>
       <description>&lt;p&gt;How faculty (higher education) are using and/or reacting to social media, MOOCs, and/or other &amp;ldquo;disruptive&amp;rdquo; technologies.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;One of my favorite talks is the one given by 
@@ -289,10 +289,10 @@ This allows companies to purchase bulk subscriptions for their employees to give
     
     <item>
       <title>The People that Keep Me Sane</title>
-      <link>/2017/04/03/the-people-that-keep-me-sane/</link>
+      <link>https://daniel.rbind.io/2017/04/03/the-people-that-keep-me-sane/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/03/the-people-that-keep-me-sane/</guid>
+      <guid>https://daniel.rbind.io/2017/04/03/the-people-that-keep-me-sane/</guid>
       <description>&lt;p&gt;Coming from CUNY Hunter College, I never really had the typical &amp;lsquo;college experience&amp;rsquo;.
 Going to college for me was almost no different than going to high school since so many people
 were commuters; there was no campus, especially when compared to Virginia Tech.&lt;/p&gt;
@@ -324,10 +324,10 @@ and the calm weightless feeling while diving is meditative.&lt;/p&gt;
     
     <item>
       <title>Scientific Programming</title>
-      <link>/2017/03/27/scientific-programming/</link>
+      <link>https://daniel.rbind.io/2017/03/27/scientific-programming/</link>
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/27/scientific-programming/</guid>
+      <guid>https://daniel.rbind.io/2017/03/27/scientific-programming/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry&lt;/a&gt;
  played an 
@@ -355,10 +355,10 @@ and can also explain why science has a reproducibility problem.&lt;/p&gt;
     
     <item>
       <title>Should You Attend Grad School?</title>
-      <link>/2017/03/27/should-you-attend-grad-school/</link>
+      <link>https://daniel.rbind.io/2017/03/27/should-you-attend-grad-school/</link>
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/27/should-you-attend-grad-school/</guid>
+      <guid>https://daniel.rbind.io/2017/03/27/should-you-attend-grad-school/</guid>
       <description>&lt;p&gt;I&#39;ve been asked a few times about whether one should attend graduate school.
 I usually follow up by asking whether they are planning to do a Master&#39;s or a Doctorate.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -385,10 +385,10 @@ and there&#39;s a reason why
     
     <item>
       <title>From NYC to Blacksburg, VA</title>
-      <link>/2017/03/20/from-nyc-to-blacksburg-va/</link>
+      <link>https://daniel.rbind.io/2017/03/20/from-nyc-to-blacksburg-va/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/20/from-nyc-to-blacksburg-va/</guid>
+      <guid>https://daniel.rbind.io/2017/03/20/from-nyc-to-blacksburg-va/</guid>
       <description>&lt;p&gt;I&#39;m from New York City.
 Born and raised in Queens, and went to school in Manhattan for high school, college, and masters.
 So, coming down to rural Blacksburg, VA has been a big change in scenery.&lt;/p&gt;
@@ -411,10 +411,10 @@ The 30-60 minutes to cook and eat is a nice distraction from the daily stress fr
     
     <item>
       <title>My Story</title>
-      <link>/2017/03/20/my-story/</link>
+      <link>https://daniel.rbind.io/2017/03/20/my-story/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/20/my-story/</guid>
+      <guid>https://daniel.rbind.io/2017/03/20/my-story/</guid>
       <description>&lt;p&gt;How did I get to where I am today.&lt;/p&gt;
 &lt;p&gt;This is my story.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -453,20 +453,20 @@ guacamole on my Chipotle.&lt;/p&gt;
     
     <item>
       <title>What You Call Yourself is Important</title>
-      <link>/2017/03/13/what-you-call-yourself-is-important/</link>
+      <link>https://daniel.rbind.io/2017/03/13/what-you-call-yourself-is-important/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/13/what-you-call-yourself-is-important/</guid>
+      <guid>https://daniel.rbind.io/2017/03/13/what-you-call-yourself-is-important/</guid>
       <description>&lt;p&gt;I am a PhD &lt;em&gt;Student&lt;/em&gt;, not a candidate&amp;hellip; yet.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Research Ethics</title>
-      <link>/2017/03/12/research-ethics/</link>
+      <link>https://daniel.rbind.io/2017/03/12/research-ethics/</link>
       <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/12/research-ethics/</guid>
+      <guid>https://daniel.rbind.io/2017/03/12/research-ethics/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The 
 &lt;a href=&#34;https://ori.hhs.gov/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Office of Research Integrity&lt;/a&gt;
@@ -513,10 +513,10 @@ Additionally, all papers related needed to be retracted or corrected.&lt;/p&gt;
     
     <item>
       <title>How Learning Works</title>
-      <link>/2017/03/06/how-learning-works/</link>
+      <link>https://daniel.rbind.io/2017/03/06/how-learning-works/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/06/how-learning-works/</guid>
+      <guid>https://daniel.rbind.io/2017/03/06/how-learning-works/</guid>
       <description>&lt;p&gt;Susan Ambrose&#39;s book 
 &lt;a href=&#34;https://www.amazon.com/How-Learning-Works-Research-Based-Principles/dp/0470484101&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;How Learning Works&amp;rdquo;&lt;/a&gt;
  is probably one of the best investments for people who teach.
@@ -534,10 +534,10 @@ and is well worth the listen.&lt;/p&gt;
     
     <item>
       <title>Some Modest Advice for Graduate Students</title>
-      <link>/2017/03/06/some-modest-advice-for-graduate-students/</link>
+      <link>https://daniel.rbind.io/2017/03/06/some-modest-advice-for-graduate-students/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/06/some-modest-advice-for-graduate-students/</guid>
+      <guid>https://daniel.rbind.io/2017/03/06/some-modest-advice-for-graduate-students/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;http://stearnslab.yale.edu/some-modest-advice-graduate-students&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Some Modest Advice for Graduate Students&lt;/a&gt;
 
@@ -574,10 +574,10 @@ The first step of solving a problem is acknowledging the problem:&lt;/p&gt;
     
     <item>
       <title>Teaching and Mentoring</title>
-      <link>/2017/02/27/teaching-and-mentoring/</link>
+      <link>https://daniel.rbind.io/2017/02/27/teaching-and-mentoring/</link>
       <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/27/teaching-and-mentoring/</guid>
+      <guid>https://daniel.rbind.io/2017/02/27/teaching-and-mentoring/</guid>
       <description>&lt;p&gt;Software-Carpentry
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;
  has made be a better teacher because of the way we collect feedback during our workshops.
@@ -607,10 +607,10 @@ that helped shaped the person I am today.&lt;/p&gt;
     
     <item>
       <title>Where Do I Fit in Academia?</title>
-      <link>/2017/02/20/where-do-i-fit-in-academia/</link>
+      <link>https://daniel.rbind.io/2017/02/20/where-do-i-fit-in-academia/</link>
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/20/where-do-i-fit-in-academia/</guid>
+      <guid>https://daniel.rbind.io/2017/02/20/where-do-i-fit-in-academia/</guid>
       <description>&lt;p&gt;It&#39;s always a good idea to take a break and think about all that&#39;s going on in life in perspective.
 As I approach the end of the coursework phase of my PhD program,
 I need to think about what&#39;s next.&lt;/p&gt;
@@ -635,10 +635,10 @@ or my love for teaching has directed me into looking into Professor of Practice 
     
     <item>
       <title>Communicating Science</title>
-      <link>/2017/02/13/communicating-science/</link>
+      <link>https://daniel.rbind.io/2017/02/13/communicating-science/</link>
       <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/13/communicating-science/</guid>
+      <guid>https://daniel.rbind.io/2017/02/13/communicating-science/</guid>
       <description>&lt;p&gt;The communication science workshop at class reminds me of the various acting warm-up exercise I did when I took an acting class in high school.
 The drills require individuals to coordinate and communicate with other people in the room,
 but also serves as an icebreaker by doing &amp;lsquo;silly&amp;rsquo; things.&lt;/p&gt;
@@ -663,10 +663,10 @@ being asked.&lt;/p&gt;
     
     <item>
       <title>Accessible Education in the United States</title>
-      <link>/2017/02/06/accessible-education-in-the-united-states/</link>
+      <link>https://daniel.rbind.io/2017/02/06/accessible-education-in-the-united-states/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/06/accessible-education-in-the-united-states/</guid>
+      <guid>https://daniel.rbind.io/2017/02/06/accessible-education-in-the-united-states/</guid>
       <description>&lt;p&gt;In the United States,
 higher education aims to be accessible to everyone.
 Although historically, college and university degrees were mainly for privileged, white males,
@@ -682,10 +682,10 @@ to Community Colleges, each `type&amp;rsquo; of College/University was aimed to 
     
     <item>
       <title>Impostor Syndrome: Am I Qualified?</title>
-      <link>/2017/02/06/impostor-syndrome-am-i-qualified/</link>
+      <link>https://daniel.rbind.io/2017/02/06/impostor-syndrome-am-i-qualified/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/06/impostor-syndrome-am-i-qualified/</guid>
+      <guid>https://daniel.rbind.io/2017/02/06/impostor-syndrome-am-i-qualified/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Impostor syndrome (also known as impostor phenomenon or fraud syndrome) is a concept describing high-achieving individuals who are marked by an inability to internalize their accomplishments and a persistent fear of being exposed as a &amp;ldquo;fraud&amp;rdquo;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -739,10 +739,10 @@ we see people doing things that they are good at and we are not.&lt;/p&gt;
     
     <item>
       <title>Journal: Why am I Journaling?</title>
-      <link>/2017/01/30/journal-why-am-i-journaling/</link>
+      <link>https://daniel.rbind.io/2017/01/30/journal-why-am-i-journaling/</link>
       <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/30/journal-why-am-i-journaling/</guid>
+      <guid>https://daniel.rbind.io/2017/01/30/journal-why-am-i-journaling/</guid>
       <description>&lt;p&gt;I&#39;m taking 
 &lt;a href=&#34;https://blogs.lt.vt.edu/grad5104/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Preparing the Future Professoriate&amp;rdquo;&lt;/a&gt;
  this semester at Virginia Tech,
@@ -761,10 +761,10 @@ then focus on tailoring my voice towards different audiences.&lt;/p&gt;
     
     <item>
       <title>Mission Statements</title>
-      <link>/2017/01/30/mission-statements/</link>
+      <link>https://daniel.rbind.io/2017/01/30/mission-statements/</link>
       <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/30/mission-statements/</guid>
+      <guid>https://daniel.rbind.io/2017/01/30/mission-statements/</guid>
       <description>&lt;p&gt;Mission statements and reflections on higher education institutions (plus one high school) that I&#39;ve attended.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;reflection&#34;&gt;Reflection&lt;/h1&gt;

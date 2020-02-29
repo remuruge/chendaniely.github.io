@@ -2,21 +2,436 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Daniel Chen</title>
-    <link>/post/</link>
+    <link>https://daniel.rbind.io/post/</link>
     <description>Recent content in Posts on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     
-	    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Python Environments with Conda</title>
+      <link>https://daniel.rbind.io/2020/02/29/python-environments-with-conda/</link>
+      <pubDate>Sat, 29 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://daniel.rbind.io/2020/02/29/python-environments-with-conda/</guid>
+      <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34;&gt;Anaconda&lt;/a&gt;
+(and these days
+&lt;a href=&#34;https://docs.conda.io/en/latest/miniconda.html&#34;&gt;miniconda&lt;/a&gt;)
+has been my go-to for getting Python and the scientific/data science software stack
+installed on my computer
+(even on my Arch linux machine!).&lt;/p&gt;
+&lt;p&gt;When it first came out it was the first time I was able to install and use
+&lt;code&gt;pandas&lt;/code&gt; and the rest of the scipy stack.
+I’ve stuck with it ever since.&lt;/p&gt;
+&lt;p&gt;It was also the first time I used (and understood) virtual environments.&lt;/p&gt;
+&lt;p&gt;In this post I’m hoping to show you a quick guide to using virtual environments with &lt;code&gt;conda&lt;/code&gt;.
+You can find more details on how to
+&lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&#34;&gt;manage your &lt;code&gt;conda&lt;/code&gt; environment&lt;/a&gt;
+here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&#34; class=&#34;uri&#34;&gt;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;div id=&#34;problem&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Here are some situations virtual environments solve:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;You have code that needs to run in a different version of python than the version you have on your computer (e.g., I have Python (3) and need to run a script in Legacy Python (2))&lt;/li&gt;
+&lt;li&gt;The code I want to run uses a different version of package(s) than what I have installed (e.g., you need an older or newer version of &lt;code&gt;pandas&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;You can’t install and/or &lt;code&gt;import&lt;/code&gt; a package because of package dependency conflicts&lt;/li&gt;
+&lt;li&gt;All the code and packages work on your computer, and you want a way to give someone else the same set of packages so they can run your code&lt;/li&gt;
+&lt;li&gt;You want to install an experimental package and do not want to mess up your current environment.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-are-virtual-environments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What are virtual environments&lt;/h2&gt;
+&lt;p&gt;A virtual environment allows you to create an isolated (i.e., virtual) “environment”
+for your software, in this case, Python packages.
+This allows you to “activate” different python environments on your computer
+without having to uninstall everything just to run code from different projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-conda-environments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Creating conda environments&lt;/h2&gt;
+&lt;p&gt;We’ll be talking about &lt;code&gt;conda&lt;/code&gt; environments in this post.
+Depending on how you installed anaconda/miniconda/conda make sure you’re in an environment
+that can run &lt;code&gt;conda&lt;/code&gt; commands&lt;/p&gt;
+&lt;div id=&#34;getting-in-the-right-place&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Getting in the right place&lt;/h3&gt;
+&lt;p&gt;You should see &lt;code&gt;(base)&lt;/code&gt; in the beginning of a prompt. This is what it looks like on my computer, the &lt;code&gt;(base)&lt;/code&gt; tells me I am in the “base” conda environment.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see here the default python is the one installed in my miniconda directory.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ which python
+/home/dchen/miniconda3/bin/python&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can run &lt;code&gt;conda info --envs&lt;/code&gt; to get a list of all the environments we have&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ conda info --envs
+# conda environments:
+#
+base                  *  /home/dchen/miniconda3&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-an-environment&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Creating an environment&lt;/h3&gt;
+&lt;p&gt;I’m currently using Python 3.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ python --version
+Python 3.7.6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s create another environment named &lt;code&gt;py27&lt;/code&gt; that’s Legacy Python (i.e., Python 2).
+We do this with the &lt;code&gt;conda create&lt;/code&gt; command.
+We pass in the &lt;code&gt;--name&lt;/code&gt; or &lt;code&gt;-n&lt;/code&gt; flag to give a name to the new environment.
+We can also pass in &lt;code&gt;python=2.7&lt;/code&gt; to put Python 2.7 in this environment.
+Here you can specify any version of Python you want.
+For example, it can be another Python 3.7 environment for another Python 3 project.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ conda create -n py27 python=2.7&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’ll will build the plan for you, all you need to do is hit &lt;code&gt;enter&lt;/code&gt; (it defaults to &lt;code&gt;y&lt;/code&gt;)&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;Collecting package metadata (current_repodata.json): done
+Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/dchen/miniconda3/envs/py27
+
+  added / updated specs:
+    - python=2.7
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    certifi-2019.11.28         |           py27_0         149 KB  conda-forge
+    pip-20.0.2                 |             py_2         1.0 MB  conda-forge
+    python-2.7.15              |    h5a48372_1009        12.7 MB  conda-forge
+    setuptools-44.0.0          |           py27_0         663 KB  conda-forge
+    wheel-0.34.2               |             py_1          24 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        14.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      conda-forge/linux-64::_libgcc_mutex-0.1-conda_forge
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-0_gnu
+  ca-certificates    conda-forge/linux-64::ca-certificates-2019.11.28-hecc5488_0
+  certifi            conda-forge/linux-64::certifi-2019.11.28-py27_0
+  libffi             conda-forge/linux-64::libffi-3.2.1-he1b5a44_1006
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-9.2.0-h24d8f2e_2
+  libgomp            conda-forge/linux-64::libgomp-9.2.0-h24d8f2e_2
+  libstdcxx-ng       conda-forge/linux-64::libstdcxx-ng-9.2.0-hdf63c60_2
+  ncurses            conda-forge/linux-64::ncurses-6.1-hf484d3e_1002
+  openssl            conda-forge/linux-64::openssl-1.1.1d-h516909a_0
+  pip                conda-forge/noarch::pip-20.0.2-py_2
+  python             conda-forge/linux-64::python-2.7.15-h5a48372_1009
+  readline           conda-forge/linux-64::readline-8.0-hf8c457e_0
+  setuptools         conda-forge/linux-64::setuptools-44.0.0-py27_0
+  sqlite             conda-forge/linux-64::sqlite-3.30.1-hcee41ef_0
+  tk                 conda-forge/linux-64::tk-8.6.10-hed695b0_0
+  wheel              conda-forge/noarch::wheel-0.34.2-py_1
+  zlib               conda-forge/linux-64::zlib-1.2.11-h516909a_1006
+
+
+Proceed ([y]/n)?&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When it’s done you’ll actually see a message on how to “activate” your new environment.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;Downloading and Extracting Packages
+setuptools-44.0.0    | 663 KB    | ######################################################################## | 100%
+wheel-0.34.2         | 24 KB     | ######################################################################## | 100%
+pip-20.0.2           | 1.0 MB    | ######################################################################## | 100%
+python-2.7.15        | 12.7 MB   | ######################################################################## | 100%
+certifi-2019.11.28   | 149 KB    | ######################################################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate py27
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can run &lt;code&gt;conda activate py27&lt;/code&gt; to “activate” (i.e., enable) our new environment.
+Do “deactivate” (i.e., exit) the environment we can use &lt;code&gt;conda deactivate&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;activate-i.e.-enter-the-new-environment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Activate (i.e., “enter”) the new environment&lt;/h2&gt;
+&lt;p&gt;We can see our new environment when we list our &lt;code&gt;envs&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ conda info --envs
+# conda environments:
+#
+base                  *  /home/dchen/miniconda3
+py27                     /home/dchen/miniconda3/envs/py27&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To activate the &lt;code&gt;py27&lt;/code&gt; environment we just created we run &lt;code&gt;conda activate py27&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(base) $ conda activate py27
+(py27) $&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can see when we activate the environment, we get a new prompt.
+The &lt;code&gt;(base)&lt;/code&gt; now changed to let us know which environment we’re in, &lt;code&gt;(py27)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now when we run Python commands, it’s actually an entirely different Python from
+what we were using before.&lt;/p&gt;
+&lt;p&gt;Here’s the location of the Python binary&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ which python
+/home/dchen/miniconda3/envs/py27/bin/python&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The version is different from before
+(because we used &lt;code&gt;python=2.7&lt;/code&gt; when we created this &lt;code&gt;py27&lt;/code&gt; environment).&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ python --version
+Python 2.7.15&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-packages-into-environment-conda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing packages into environment (conda)&lt;/h2&gt;
+&lt;p&gt;I’ll write a separate post about setting up
+&lt;a href=&#34;https://conda-forge.org/&#34;&gt;&lt;code&gt;conda-forge&lt;/code&gt;&lt;/a&gt; for installing packages
+(the commands to run are on the website).&lt;/p&gt;
+&lt;p&gt;In general, I try to &lt;code&gt;conda install&lt;/code&gt; as many packages as I can.
+If the package I’m trying to install does not exist on &lt;code&gt;conda&lt;/code&gt;,
+then I &lt;code&gt;pip install&lt;/code&gt; the package.&lt;/p&gt;
+&lt;p&gt;This is a brand new Legacy Python environment, without any packages.
+In this example we’ll try to install the &lt;code&gt;networkx&lt;/code&gt; package.
+You can see we currently do not have this package in this environment.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ python
+Python 2.7.15 | packaged by conda-forge | (default, Jul  2 2019, 00:39:44)
+[GCC 7.3.0] on linux2
+Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
+&amp;gt;&amp;gt;&amp;gt; import networkx as nx
+Traceback (most recent call last):
+  File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt;
+ImportError: No module named networkx
+&amp;gt;&amp;gt;&amp;gt; quit()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can install &lt;code&gt;networkx&lt;/code&gt; with &lt;code&gt;conda install networkx&lt;/code&gt;.
+If you need a specific version of a package, this is where you will install it.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ conda install networkx
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /home/dchen/miniconda3/envs/py27
+
+  added / updated specs:
+    - networkx
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    networkx-2.1               |           py27_0         1.8 MB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         1.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  decorator          conda-forge/noarch::decorator-4.4.1-py_0
+  networkx           conda-forge/linux-64::networkx-2.1-py27_0
+
+
+Proceed ([y]/n)?
+
+
+Downloading and Extracting Packages
+networkx-2.1         | 1.8 MB    | ######################################################################## | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have the package in our environment!&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ python
+Python 2.7.15 | packaged by conda-forge | (default, Jul  2 2019, 00:39:44)
+[GCC 7.3.0] on linux2
+Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
+&amp;gt;&amp;gt;&amp;gt; import networkx as nx
+&amp;gt;&amp;gt;&amp;gt; G = nx.Graph()
+&amp;gt;&amp;gt;&amp;gt; quit()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Just to show that the package is in an entirely different environment,
+we can &lt;code&gt;deativate&lt;/code&gt; our current environment to go back into &lt;code&gt;(base)&lt;/code&gt;,
+and can see we don’t have &lt;code&gt;networkx&lt;/code&gt; installed in our &lt;code&gt;base&lt;/code&gt; Python 3 environment.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ conda deactivate
+(base) $ python
+Python 3.7.6 | packaged by conda-forge | (default, Jan  7 2020, 22:33:48)
+[GCC 7.3.0] on linux
+Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information.
+&amp;gt;&amp;gt;&amp;gt; import networkx as nx
+Traceback (most recent call last):
+  File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt;
+ModuleNotFoundError: No module named &amp;#39;networkx&amp;#39;
+&amp;gt;&amp;gt;&amp;gt; quit()
+(base) $&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducing-and-sharing-environments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Reproducing and sharing environments&lt;/h2&gt;
+&lt;p&gt;Now that you have all the packages you need in an environment and all your code is working,
+next is to document your work.
+Even if you’re working on your own,
+you may be working on your laptop and on a remote server,
+and need to replicate your environment in both locations.
+Another scenario is if you need to share your code with another person and want to make
+sure your code is executed in the same environment on their machine.&lt;/p&gt;
+&lt;p&gt;We can use the &lt;code&gt;conda env export&lt;/code&gt; command to generate all the packages in the current environment.
+So if we’re in the &lt;code&gt;py27&lt;/code&gt; environment we created,
+you can get a list of all the packages in it.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ conda env export
+name: py27
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=0_gnu
+  - ca-certificates=2019.11.28=hecc5488_0
+  - certifi=2019.11.28=py27_0
+  - decorator=4.4.1=py_0
+  - libffi=3.2.1=he1b5a44_1006
+  - libgcc-ng=9.2.0=h24d8f2e_2
+  - libgomp=9.2.0=h24d8f2e_2
+  - libstdcxx-ng=9.2.0=hdf63c60_2
+  - ncurses=6.1=hf484d3e_1002
+  - networkx=2.1=py27_0
+  - openssl=1.1.1d=h516909a_0
+  - pip=20.0.2=py_2
+  - python=2.7.15=h5a48372_1009
+  - readline=8.0=hf8c457e_0
+  - setuptools=44.0.0=py27_0
+  - sqlite=3.30.1=hcee41ef_0
+  - tk=8.6.10=hed695b0_0
+  - wheel=0.34.2=py_1
+  - zlib=1.2.11=h516909a_1006
+prefix: /home/dchen/miniconda3/envs/py27&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can export this to an &lt;code&gt;environment.yml&lt;/code&gt; file so all the packages are saved and documented.
+You can do this by copying and pasting the results in to a file called &lt;code&gt;environment.yml&lt;/code&gt; manually,
+or you can pipe the output into the file &lt;code&gt;conda env export &amp;gt; environment.yml&lt;/code&gt;.
+If your python code is in a
+&lt;a href=&#34;https://daniel.rbind.io/2017/05/30/project-templates/&#34;&gt;project&lt;/a&gt;
+&lt;a href=&#34;https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/&#34;&gt;structure&lt;/a&gt;
+you would run this command to put the &lt;code&gt;environment.yml&lt;/code&gt; file in the root project directory.&lt;/p&gt;
+&lt;p&gt;Now you can send your Python project to another person or to another computer.
+To reproduce the environment, you can run &lt;code&gt;conda env create -f environment.yml&lt;/code&gt;
+to use the &lt;code&gt;environment.yml&lt;/code&gt; file to automatically recreate the environment.
+The &lt;code&gt;name&lt;/code&gt; field in the first line will be used as the environment name.&lt;/p&gt;
+&lt;p&gt;In this example let’s edit the name to &lt;code&gt;py27copy&lt;/code&gt; since we already have a &lt;code&gt;py27&lt;/code&gt; environment.&lt;/p&gt;
+&lt;p&gt;Now if we run &lt;code&gt;conda env create -f environment.yml&lt;/code&gt;,
+it will “reinstall” all the packages needed as specified in the &lt;code&gt;environment.yml&lt;/code&gt; file,
+and we can activate/deactivate just like before&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ conda env create -f ~/Desktop/environment.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate py27dup
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-packages-into-environment-pip&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing packages into environment (pip)&lt;/h2&gt;
+&lt;p&gt;Not every package will be &lt;code&gt;conda&lt;/code&gt; installable,
+for those packages we can &lt;code&gt;pip install&lt;/code&gt; them just like normal.
+Here we’ll install the &lt;code&gt;flask&lt;/code&gt; package for web development into our &lt;code&gt;py27&lt;/code&gt; environment.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ pip install flask
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Collecting flask
+  Using cached Flask-1.1.1-py2.py3-none-any.whl (94 kB)
+Collecting Werkzeug&amp;gt;=0.15
+  Downloading Werkzeug-1.0.0-py2.py3-none-any.whl (298 kB)
+     |████████████████████████████████| 298 kB 1.1 MB/s
+Collecting itsdangerous&amp;gt;=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting click&amp;gt;=5.1
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+     |████████████████████████████████| 81 kB 2.0 MB/s
+Collecting Jinja2&amp;gt;=2.10.1
+  Downloading Jinja2-2.11.1-py2.py3-none-any.whl (126 kB)
+     |████████████████████████████████| 126 kB 306 kB/s
+Collecting MarkupSafe&amp;gt;=0.23
+  Downloading MarkupSafe-1.1.1-cp27-cp27mu-manylinux1_x86_64.whl (24 kB)
+Installing collected packages: Werkzeug, itsdangerous, click, MarkupSafe, Jinja2, flask
+Successfully installed Jinja2-2.11.1 MarkupSafe-1.1.1 Werkzeug-1.0.0 click-7.0 flask-1.1.1 itsdangerous-1.1.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now if you want to export the enviornment to the &lt;code&gt;environment.yml&lt;/code&gt;
+you’ll notice that &lt;code&gt;pip&lt;/code&gt; will be part of the installation,
+and also a new &lt;code&gt;pip&lt;/code&gt; section that describes the packages that will be installed via
+&lt;code&gt;pip&lt;/code&gt; instead of &lt;code&gt;conda&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;shell&#34;&gt;&lt;code&gt;(py27) $ conda env export
+name: py27
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=0_gnu
+  - ca-certificates=2019.11.28=hecc5488_0
+  - certifi=2019.11.28=py27_0
+  - decorator=4.4.1=py_0
+  - libffi=3.2.1=he1b5a44_1006
+  - libgcc-ng=9.2.0=h24d8f2e_2
+  - libgomp=9.2.0=h24d8f2e_2
+  - libstdcxx-ng=9.2.0=hdf63c60_2
+  - ncurses=6.1=hf484d3e_1002
+  - networkx=2.1=py27_0
+  - openssl=1.1.1d=h516909a_0
+  - pip=20.0.2=py_2
+  - python=2.7.15=h5a48372_1009
+  - readline=8.0=hf8c457e_0
+  - setuptools=44.0.0=py27_0
+  - sqlite=3.30.1=hcee41ef_0
+  - tk=8.6.10=hed695b0_0
+  - wheel=0.34.2=py_1
+  - zlib=1.2.11=h516909a_1006
+  - pip:
+    - click==7.0
+    - flask==1.1.1
+    - itsdangerous==1.1.0
+    - jinja2==2.11.1
+    - markupsafe==1.1.1
+    - werkzeug==1.0.0
+prefix: /home/dchen/miniconda3/envs/py27&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Creating environments with the
+&lt;code&gt;conda create -n &amp;lt;name&amp;gt; python=&amp;lt;version&amp;gt;&lt;/code&gt;
+is an easy way to create new environments with a specified version of Python.
+You can then &lt;code&gt;activate&lt;/code&gt; the environment with
+&lt;code&gt;conda activate &amp;lt;name&amp;gt;&lt;/code&gt;
+and proceed to install packages with
+&lt;code&gt;conda install &amp;lt;package&amp;gt;&lt;/code&gt; or &lt;code&gt;pip install &amp;lt;package&lt;/code&gt;.
+When you’re ready to document and share your environment with another person
+or on another machine,
+you can run
+&lt;code&gt;conda env export &amp;gt; environment.yml&lt;/code&gt;
+to save the current environment
+to a &lt;code&gt;environment.yml&lt;/code&gt;.
+This file can be used to create a new environment with
+&lt;code&gt;conda env create -f environment.yml&lt;/code&gt;
+and now you can replicate your environment across multiple machines!&lt;/p&gt;
+&lt;p&gt;You don’t need to use &lt;code&gt;conda&lt;/code&gt; to create your Python environments.
+If you’re not using &lt;code&gt;conda&lt;/code&gt; for your environments,
+you can create a &lt;code&gt;requirements.txt&lt;/code&gt; file
+instead of an &lt;code&gt;environment.yml&lt;/code&gt; with
+&lt;code&gt;pip freeze &amp;gt; requirements.txt&lt;/code&gt;
+and install everything into the current environment with
+&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;.
+Just know you need to create the environment first as &lt;code&gt;pip&lt;/code&gt; will
+not create the environment for you.&lt;/p&gt;
+&lt;p&gt;Hope this helps people get started with environments and getting their code working
+on multiple computers.
+You can checkout the main documentation page on &lt;code&gt;conda&lt;/code&gt; environment management here:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&#34; class=&#34;uri&#34;&gt;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>R Hex Bowtie</title>
-      <link>/2020/01/30/r-hex-bowtie/</link>
+      <link>https://daniel.rbind.io/2020/01/30/r-hex-bowtie/</link>
       <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/01/30/r-hex-bowtie/</guid>
+      <guid>https://daniel.rbind.io/2020/01/30/r-hex-bowtie/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;conference_tag_labeled.jpg&#34; width=&#34;540&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yes. That’s the #rstats hex bowtie.
 Yes, I lost it when Hadley was wearing it for the conference opening notes.&lt;/p&gt;
@@ -141,11 +556,12 @@ I look forward to seeing people in the R community add flair to the badges in th
     
     <item>
       <title>My time as an RStudio Intern</title>
-      <link>/2020/01/29/my-time-as-an-rstudio-intern/</link>
+      <link>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/01/29/my-time-as-an-rstudio-intern/</guid>
+      <guid>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’ve had a lot of time to think about my time as an RStudio intern.
@@ -243,13 +659,13 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;div id=&#34;therese-and-malcolm-in-los-angeles-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Therese and Malcolm in Los Angeles, CA&lt;/h4&gt;
 &lt;p&gt;I got to meet Therese and Malcolm when I was in LA staying at a friend’s place for another friends wedding.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; width=&#34;1632&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;julia-in-san-francisco-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Julia in San Francisco, CA&lt;/h4&gt;
 &lt;p&gt;I got the tour of Julia’s lab when I was in San Francisco for the
 &lt;a href=&#34;https://pybay.com/&#34;&gt;PyBay conference&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;More of Julia’s lab at the bottom of the post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;joyce-in-raleigh-nc.&#34; class=&#34;section level4&#34;&gt;
@@ -260,7 +676,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;education-and-shiny-teams&#34; class=&#34;section level3&#34;&gt;
@@ -268,7 +684,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;p&gt;I met with the Shiny team for daily stand-ups, and the education team about every week.
 The sheer amount of people I could ask for help is absolutely &lt;strong&gt;insane&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen @ rstudio::conf 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
@@ -328,19 +744,20 @@ education and pedagogy of data science in medicine.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/twelve-weeks/&#34;&gt;Desirée De Leon&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Picture’s around Julia’s lab.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; width=&#34;2024&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Table of Model Results using kable and kableExtra</title>
-      <link>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</link>
+      <link>https://daniel.rbind.io/2019/09/13/table-of-model-results-using-kable-and-kableextra/</link>
       <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/09/13/table-of-model-results-using-kable-and-kableextra/</guid>
+      <guid>https://daniel.rbind.io/2019/09/13/table-of-model-results-using-kable-and-kableextra/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’m at the &lt;a href=&#34;https://r-medicine.com/&#34;&gt;R/Medicine&lt;/a&gt; conference (no it’s not a Reddit thing) and
@@ -464,10 +881,10 @@ collapse_rows_dt &amp;lt;- data.frame(C1 = c(rep(&amp;quot;a&amp;quot;, 3), rep(
 collapse_rows_dt&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   C1 C2 C3 C4
 ## 1  a  c  1  1
-## 2  a  c  2  1
+## 2  a  c  2  0
 ## 3  a  d  3  0
-## 4  b  c  4  0
-## 5  b  d  5  0&lt;/code&gt;&lt;/pre&gt;
+## 4  b  c  4  1
+## 5  b  d  5  1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;kable(collapse_rows_dt, align = &amp;quot;c&amp;quot;) %&amp;gt;%
   kable_styling(full_width = F) %&amp;gt;%
   column_spec(1, bold = T) %&amp;gt;%
@@ -509,7 +926,7 @@ c
 2
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-1
+0
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -534,7 +951,7 @@ c
 4
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0
+1
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -545,7 +962,7 @@ d
 5
 &lt;/td&gt;
 &lt;td style=&#34;text-align:center;&#34;&gt;
-0
+1
 &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -960,11 +1377,12 @@ std.error
     
     <item>
       <title>R or Python, which One to Learn (First)?</title>
-      <link>/2019/08/28/r-or-python-which-one-to-learn-first/</link>
+      <link>https://daniel.rbind.io/2019/08/28/r-or-python-which-one-to-learn-first/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/28/r-or-python-which-one-to-learn-first/</guid>
+      <guid>https://daniel.rbind.io/2019/08/28/r-or-python-which-one-to-learn-first/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’ve been asked a few times lately about whether one should learn R or Python.&lt;/p&gt;
@@ -1071,11 +1489,12 @@ Even though I have a book about Pandas and worked as an intern for RStudio! :)&l
     
     <item>
       <title>Git Squash and Merge Workflow</title>
-      <link>/2019/08/27/git-squash-and-merge-workflow/</link>
+      <link>https://daniel.rbind.io/2019/08/27/git-squash-and-merge-workflow/</link>
       <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/27/git-squash-and-merge-workflow/</guid>
+      <guid>https://daniel.rbind.io/2019/08/27/git-squash-and-merge-workflow/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I have a love-hate relationship with Git.
@@ -1350,11 +1769,12 @@ i.e.,&lt;/p&gt;
     
     <item>
       <title>Inconsistencies with the `==` operator in R</title>
-      <link>/2019/08/06/inconsistencies-with-in-r/</link>
+      <link>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</link>
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/06/inconsistencies-with-in-r/</guid>
+      <guid>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;One of the cool things about working on &lt;a href=&#34;https://github.com/rstudio-education/gradethis&#34;&gt;&lt;code&gt;gradethis&lt;/code&gt;&lt;/a&gt;
@@ -1484,11 +1904,12 @@ identical(u, s)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Mounting Oclus Rift Sensors on the Wall</title>
-      <link>/2019/08/03/mounting-oclus-rift-sensors-on-the-wall/</link>
+      <link>https://daniel.rbind.io/2019/08/03/mounting-oclus-rift-sensors-on-the-wall/</link>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/03/mounting-oclus-rift-sensors-on-the-wall/</guid>
+      <guid>https://daniel.rbind.io/2019/08/03/mounting-oclus-rift-sensors-on-the-wall/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I was initially going to get some small bookshelves to put my Oculus sensors on,
@@ -1582,10 +2003,10 @@ the &lt;a href=&#34;https://www.autonomous.ai/&#34;&gt;Autonomous.ai Home Editio
     
     <item>
       <title>New Website a la Blogdown!</title>
-      <link>/2019/07/23/new-website-a-la-blogdown/</link>
+      <link>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/07/23/new-website-a-la-blogdown/</guid>
+      <guid>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</guid>
       <description>&lt;p&gt;I finally got everything moved over to 
 &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;
 
@@ -1643,10 +2064,10 @@ and I have to push using that remote instead of the &lt;code&gt;origin&lt;/code&
     
     <item>
       <title>RStudio internship week 2</title>
-      <link>/2019/06/18/rstudio-internship-week-2/</link>
+      <link>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/18/rstudio-internship-week-2/</guid>
+      <guid>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</guid>
       <description>&lt;p&gt;The main topics and events of last week were:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Much git.&lt;/li&gt;
@@ -1864,10 +2285,10 @@ were going to be the way to go, but that ended up in a dead end.&lt;/p&gt;
     
     <item>
       <title>And we&#39;re off! RStudio internship week 1, complete.</title>
-      <link>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
+      <link>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
+      <guid>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
       <description>&lt;p&gt;I&#39;m still pinching myself about being one of the 
 &lt;a href=&#34;https://blog.rstudio.com/2019/03/25/summer-interns-2019/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio interns this year&lt;/a&gt;
 .
@@ -2027,10 +2448,10 @@ but also show what components are used for a given action
     
     <item>
       <title>rstatsnyc as told by @brookLYNevery1, @dataandme, and autographs</title>
-      <link>/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</link>
+      <link>https://daniel.rbind.io/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</link>
       <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</guid>
+      <guid>https://daniel.rbind.io/2018/04/22/rstatsnyc-as-told-by-brooklynevery1-dataandme-and-autographs/</guid>
       <description>&lt;p&gt;EDIT: I&#39;ve added the notes from 
 &lt;a href=&#34;https://twitter.com/dataandme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@dataandme&lt;/a&gt;
  and linked to people&#39;s twitter and slides (if I found them). This is probably going to be an ongoing process&amp;hellip;&lt;/p&gt;
@@ -2201,10 +2622,10 @@ So I&#39;ve just linked to all her tweets (after the break).&lt;/p&gt;
     
     <item>
       <title>Analysis-Based Project Templates</title>
-      <link>/2018/01/23/analysis-based-project-templates/</link>
+      <link>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</link>
       <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/23/analysis-based-project-templates/</guid>
+      <guid>https://daniel.rbind.io/2018/01/23/analysis-based-project-templates/</guid>
       <description>&lt;p&gt;One of the most annoying things you hear people say when they are working with some common code base is
 &amp;ldquo;It works on my machine&amp;hellip;&amp;quot;.
 Conversely, one of the more satisfying things is running a script that you are not actively working on and
@@ -2345,10 +2766,10 @@ But even in this small example, the three code bases are conceptually incompatib
     
     <item>
       <title>From VMs to LXC Containers to Docker Containers</title>
-      <link>/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</link>
+      <link>https://daniel.rbind.io/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</link>
       <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</guid>
+      <guid>https://daniel.rbind.io/2017/07/07/from-vms-to-lxc-containers-to-docker-containers/</guid>
       <description>&lt;p&gt;Since I&#39;ve joined 
 &lt;a href=&#34;https://www.bi.vt.edu/sdal&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SDAL&lt;/a&gt;
 ,
@@ -2525,10 +2946,10 @@ or kubernetes, who knows.&lt;/p&gt;
     
     <item>
       <title>Project Templates</title>
-      <link>/2017/05/30/project-templates/</link>
+      <link>https://daniel.rbind.io/2017/05/30/project-templates/</link>
       <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/30/project-templates/</guid>
+      <guid>https://daniel.rbind.io/2017/05/30/project-templates/</guid>
       <description>&lt;p&gt;Project templates provide some standardized way to organize files.
 Our lab uses a template that is based off the 
 &lt;a href=&#34;http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Noble 2009 Paper, &amp;ldquo;A Quick Guide to Organizing Computational Biology Projects&amp;rdquo;&lt;/a&gt;
@@ -2636,10 +3057,10 @@ things become easier to find because everything is not simply placed in the same
     
     <item>
       <title>Changes in Higher Education</title>
-      <link>/2017/05/01/changes-in-higher-education/</link>
+      <link>https://daniel.rbind.io/2017/05/01/changes-in-higher-education/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/05/01/changes-in-higher-education/</guid>
+      <guid>https://daniel.rbind.io/2017/05/01/changes-in-higher-education/</guid>
       <description>&lt;p&gt;As a PhD student who already has a Master&#39;s degree, it&#39;s safe to say that I&#39;ve been in school for a long time.
 One of the things in higher education that I started to dislike over the years are the ways professors assess students in the classroom.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -2664,10 +3085,10 @@ I have bounded books of old class notes and homeworks that I constantly referenc
     
     <item>
       <title>NYC R Conference</title>
-      <link>/2017/04/24/nyc-r-conference/</link>
+      <link>https://daniel.rbind.io/2017/04/24/nyc-r-conference/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/24/nyc-r-conference/</guid>
+      <guid>https://daniel.rbind.io/2017/04/24/nyc-r-conference/</guid>
       <description>&lt;p&gt;Just got back from the 3rd annual 
 &lt;a href=&#34;http://www.rstats.nyc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NYC R Conference&lt;/a&gt;
  this past weekend.
@@ -2695,10 +3116,10 @@ That has to be a good sign, right?&lt;/p&gt;
     
     <item>
       <title>Preparing for the Summer</title>
-      <link>/2017/04/24/preparing-for-the-summer/</link>
+      <link>https://daniel.rbind.io/2017/04/24/preparing-for-the-summer/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/24/preparing-for-the-summer/</guid>
+      <guid>https://daniel.rbind.io/2017/04/24/preparing-for-the-summer/</guid>
       <description>&lt;p&gt;As the semester comes to an end,
 preparing for my lab&#39;s 
 &lt;a href=&#34;https://www.bi.vt.edu/sdal/projects/data-science-for-the-public-good-program&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Science for the Public Good Program&lt;/a&gt;
@@ -2754,10 +3175,10 @@ and pretty much finish up my book that will be the basis for my
     
     <item>
       <title>Working While Pursuing a PhD</title>
-      <link>/2017/04/17/working-while-pursuing-a-phd/</link>
+      <link>https://daniel.rbind.io/2017/04/17/working-while-pursuing-a-phd/</link>
       <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/17/working-while-pursuing-a-phd/</guid>
+      <guid>https://daniel.rbind.io/2017/04/17/working-while-pursuing-a-phd/</guid>
       <description>&lt;p&gt;My lab has extended me an opportunity to be a research scientist and helping out our current senior data scientist
 with the daily analytics and IT support the lab needs.
 It&#39;s a very enticing opportunity, but I need to stop and think about my options&lt;/p&gt;
@@ -2783,10 +3204,10 @@ We&#39;ll discuss this further then.&lt;/p&gt;
     
     <item>
       <title>Education in the United States</title>
-      <link>/2017/04/10/education-in-the-united-states/</link>
+      <link>https://daniel.rbind.io/2017/04/10/education-in-the-united-states/</link>
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/10/education-in-the-united-states/</guid>
+      <guid>https://daniel.rbind.io/2017/04/10/education-in-the-united-states/</guid>
       <description>&lt;p&gt;As people start sharing their educational experiences from around the world,
 I realized how lucky I am to have been educated in New York City,
 and how much less the United States focuses on education when compared to many other countries around the world.&lt;/p&gt;
@@ -2795,10 +3216,10 @@ and how much less the United States focuses on education when compared to many o
     
     <item>
       <title>Open Access</title>
-      <link>/2017/04/10/open-access/</link>
+      <link>https://daniel.rbind.io/2017/04/10/open-access/</link>
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/10/open-access/</guid>
+      <guid>https://daniel.rbind.io/2017/04/10/open-access/</guid>
       <description>&lt;p&gt;&amp;ldquo;Open&amp;rdquo; has played in important role in my life the last few years.
 It all began when I was an attendee at a 
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry&lt;/a&gt;
@@ -2852,10 +3273,10 @@ potentially losing publications is enough of a detractor for many to not pursuit
     
     <item>
       <title>Tech &amp; Innovation in Higher Ed</title>
-      <link>/2017/04/03/tech-innovation-in-higher-ed/</link>
+      <link>https://daniel.rbind.io/2017/04/03/tech-innovation-in-higher-ed/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/03/tech-innovation-in-higher-ed/</guid>
+      <guid>https://daniel.rbind.io/2017/04/03/tech-innovation-in-higher-ed/</guid>
       <description>&lt;p&gt;How faculty (higher education) are using and/or reacting to social media, MOOCs, and/or other &amp;ldquo;disruptive&amp;rdquo; technologies.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;One of my favorite talks is the one given by 
@@ -2911,10 +3332,10 @@ This allows companies to purchase bulk subscriptions for their employees to give
     
     <item>
       <title>The People that Keep Me Sane</title>
-      <link>/2017/04/03/the-people-that-keep-me-sane/</link>
+      <link>https://daniel.rbind.io/2017/04/03/the-people-that-keep-me-sane/</link>
       <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/04/03/the-people-that-keep-me-sane/</guid>
+      <guid>https://daniel.rbind.io/2017/04/03/the-people-that-keep-me-sane/</guid>
       <description>&lt;p&gt;Coming from CUNY Hunter College, I never really had the typical &amp;lsquo;college experience&amp;rsquo;.
 Going to college for me was almost no different than going to high school since so many people
 were commuters; there was no campus, especially when compared to Virginia Tech.&lt;/p&gt;
@@ -2946,10 +3367,10 @@ and the calm weightless feeling while diving is meditative.&lt;/p&gt;
     
     <item>
       <title>A &#39;Simple&#39; Neural-Network Model</title>
-      <link>/2017/03/30/a-simple-neural-network-model/</link>
+      <link>https://daniel.rbind.io/2017/03/30/a-simple-neural-network-model/</link>
       <pubDate>Thu, 30 Mar 2017 00:10:00 +0000</pubDate>
       
-      <guid>/2017/03/30/a-simple-neural-network-model/</guid>
+      <guid>https://daniel.rbind.io/2017/03/30/a-simple-neural-network-model/</guid>
       <description>&lt;p&gt;My previous 
 &lt;a href=&#34;http://chendaniely.github.io/research/2016/09/29/expanding_watts_to_lens/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
  summarized the main points of the 
@@ -3031,10 +3452,10 @@ end of each simulation time tick.&lt;/p&gt;
     
     <item>
       <title>Scientific Programming</title>
-      <link>/2017/03/27/scientific-programming/</link>
+      <link>https://daniel.rbind.io/2017/03/27/scientific-programming/</link>
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/27/scientific-programming/</guid>
+      <guid>https://daniel.rbind.io/2017/03/27/scientific-programming/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry&lt;/a&gt;
  played an 
@@ -3062,10 +3483,10 @@ and can also explain why science has a reproducibility problem.&lt;/p&gt;
     
     <item>
       <title>Should You Attend Grad School?</title>
-      <link>/2017/03/27/should-you-attend-grad-school/</link>
+      <link>https://daniel.rbind.io/2017/03/27/should-you-attend-grad-school/</link>
       <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/27/should-you-attend-grad-school/</guid>
+      <guid>https://daniel.rbind.io/2017/03/27/should-you-attend-grad-school/</guid>
       <description>&lt;p&gt;I&#39;ve been asked a few times about whether one should attend graduate school.
 I usually follow up by asking whether they are planning to do a Master&#39;s or a Doctorate.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -3092,10 +3513,10 @@ and there&#39;s a reason why
     
     <item>
       <title>From NYC to Blacksburg, VA</title>
-      <link>/2017/03/20/from-nyc-to-blacksburg-va/</link>
+      <link>https://daniel.rbind.io/2017/03/20/from-nyc-to-blacksburg-va/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/20/from-nyc-to-blacksburg-va/</guid>
+      <guid>https://daniel.rbind.io/2017/03/20/from-nyc-to-blacksburg-va/</guid>
       <description>&lt;p&gt;I&#39;m from New York City.
 Born and raised in Queens, and went to school in Manhattan for high school, college, and masters.
 So, coming down to rural Blacksburg, VA has been a big change in scenery.&lt;/p&gt;
@@ -3118,10 +3539,10 @@ The 30-60 minutes to cook and eat is a nice distraction from the daily stress fr
     
     <item>
       <title>My Story</title>
-      <link>/2017/03/20/my-story/</link>
+      <link>https://daniel.rbind.io/2017/03/20/my-story/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/20/my-story/</guid>
+      <guid>https://daniel.rbind.io/2017/03/20/my-story/</guid>
       <description>&lt;p&gt;How did I get to where I am today.&lt;/p&gt;
 &lt;p&gt;This is my story.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
@@ -3160,20 +3581,20 @@ guacamole on my Chipotle.&lt;/p&gt;
     
     <item>
       <title>What You Call Yourself is Important</title>
-      <link>/2017/03/13/what-you-call-yourself-is-important/</link>
+      <link>https://daniel.rbind.io/2017/03/13/what-you-call-yourself-is-important/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/13/what-you-call-yourself-is-important/</guid>
+      <guid>https://daniel.rbind.io/2017/03/13/what-you-call-yourself-is-important/</guid>
       <description>&lt;p&gt;I am a PhD &lt;em&gt;Student&lt;/em&gt;, not a candidate&amp;hellip; yet.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Research Ethics</title>
-      <link>/2017/03/12/research-ethics/</link>
+      <link>https://daniel.rbind.io/2017/03/12/research-ethics/</link>
       <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/12/research-ethics/</guid>
+      <guid>https://daniel.rbind.io/2017/03/12/research-ethics/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;The 
 &lt;a href=&#34;https://ori.hhs.gov/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Office of Research Integrity&lt;/a&gt;
@@ -3220,10 +3641,10 @@ Additionally, all papers related needed to be retracted or corrected.&lt;/p&gt;
     
     <item>
       <title>How Learning Works</title>
-      <link>/2017/03/06/how-learning-works/</link>
+      <link>https://daniel.rbind.io/2017/03/06/how-learning-works/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/06/how-learning-works/</guid>
+      <guid>https://daniel.rbind.io/2017/03/06/how-learning-works/</guid>
       <description>&lt;p&gt;Susan Ambrose&#39;s book 
 &lt;a href=&#34;https://www.amazon.com/How-Learning-Works-Research-Based-Principles/dp/0470484101&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;How Learning Works&amp;rdquo;&lt;/a&gt;
  is probably one of the best investments for people who teach.
@@ -3241,10 +3662,10 @@ and is well worth the listen.&lt;/p&gt;
     
     <item>
       <title>Some Modest Advice for Graduate Students</title>
-      <link>/2017/03/06/some-modest-advice-for-graduate-students/</link>
+      <link>https://daniel.rbind.io/2017/03/06/some-modest-advice-for-graduate-students/</link>
       <pubDate>Mon, 06 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/03/06/some-modest-advice-for-graduate-students/</guid>
+      <guid>https://daniel.rbind.io/2017/03/06/some-modest-advice-for-graduate-students/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;http://stearnslab.yale.edu/some-modest-advice-graduate-students&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Some Modest Advice for Graduate Students&lt;/a&gt;
 
@@ -3281,10 +3702,10 @@ The first step of solving a problem is acknowledging the problem:&lt;/p&gt;
     
     <item>
       <title>Teaching and Mentoring</title>
-      <link>/2017/02/27/teaching-and-mentoring/</link>
+      <link>https://daniel.rbind.io/2017/02/27/teaching-and-mentoring/</link>
       <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/27/teaching-and-mentoring/</guid>
+      <guid>https://daniel.rbind.io/2017/02/27/teaching-and-mentoring/</guid>
       <description>&lt;p&gt;Software-Carpentry
 &lt;a href=&#34;https://software-carpentry.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1&lt;/a&gt;
  has made be a better teacher because of the way we collect feedback during our workshops.
@@ -3314,10 +3735,10 @@ that helped shaped the person I am today.&lt;/p&gt;
     
     <item>
       <title>Where Do I Fit in Academia?</title>
-      <link>/2017/02/20/where-do-i-fit-in-academia/</link>
+      <link>https://daniel.rbind.io/2017/02/20/where-do-i-fit-in-academia/</link>
       <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/20/where-do-i-fit-in-academia/</guid>
+      <guid>https://daniel.rbind.io/2017/02/20/where-do-i-fit-in-academia/</guid>
       <description>&lt;p&gt;It&#39;s always a good idea to take a break and think about all that&#39;s going on in life in perspective.
 As I approach the end of the coursework phase of my PhD program,
 I need to think about what&#39;s next.&lt;/p&gt;
@@ -3342,10 +3763,10 @@ or my love for teaching has directed me into looking into Professor of Practice 
     
     <item>
       <title>Communicating Science</title>
-      <link>/2017/02/13/communicating-science/</link>
+      <link>https://daniel.rbind.io/2017/02/13/communicating-science/</link>
       <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/13/communicating-science/</guid>
+      <guid>https://daniel.rbind.io/2017/02/13/communicating-science/</guid>
       <description>&lt;p&gt;The communication science workshop at class reminds me of the various acting warm-up exercise I did when I took an acting class in high school.
 The drills require individuals to coordinate and communicate with other people in the room,
 but also serves as an icebreaker by doing &amp;lsquo;silly&amp;rsquo; things.&lt;/p&gt;
@@ -3370,10 +3791,10 @@ being asked.&lt;/p&gt;
     
     <item>
       <title>Accessible Education in the United States</title>
-      <link>/2017/02/06/accessible-education-in-the-united-states/</link>
+      <link>https://daniel.rbind.io/2017/02/06/accessible-education-in-the-united-states/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/06/accessible-education-in-the-united-states/</guid>
+      <guid>https://daniel.rbind.io/2017/02/06/accessible-education-in-the-united-states/</guid>
       <description>&lt;p&gt;In the United States,
 higher education aims to be accessible to everyone.
 Although historically, college and university degrees were mainly for privileged, white males,
@@ -3389,10 +3810,10 @@ to Community Colleges, each `type&amp;rsquo; of College/University was aimed to 
     
     <item>
       <title>Impostor Syndrome: Am I Qualified?</title>
-      <link>/2017/02/06/impostor-syndrome-am-i-qualified/</link>
+      <link>https://daniel.rbind.io/2017/02/06/impostor-syndrome-am-i-qualified/</link>
       <pubDate>Mon, 06 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/02/06/impostor-syndrome-am-i-qualified/</guid>
+      <guid>https://daniel.rbind.io/2017/02/06/impostor-syndrome-am-i-qualified/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Impostor syndrome (also known as impostor phenomenon or fraud syndrome) is a concept describing high-achieving individuals who are marked by an inability to internalize their accomplishments and a persistent fear of being exposed as a &amp;ldquo;fraud&amp;rdquo;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3446,10 +3867,10 @@ we see people doing things that they are good at and we are not.&lt;/p&gt;
     
     <item>
       <title>Journal: Why am I Journaling?</title>
-      <link>/2017/01/30/journal-why-am-i-journaling/</link>
+      <link>https://daniel.rbind.io/2017/01/30/journal-why-am-i-journaling/</link>
       <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/30/journal-why-am-i-journaling/</guid>
+      <guid>https://daniel.rbind.io/2017/01/30/journal-why-am-i-journaling/</guid>
       <description>&lt;p&gt;I&#39;m taking 
 &lt;a href=&#34;https://blogs.lt.vt.edu/grad5104/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Preparing the Future Professoriate&amp;rdquo;&lt;/a&gt;
  this semester at Virginia Tech,
@@ -3468,10 +3889,10 @@ then focus on tailoring my voice towards different audiences.&lt;/p&gt;
     
     <item>
       <title>Mission Statements</title>
-      <link>/2017/01/30/mission-statements/</link>
+      <link>https://daniel.rbind.io/2017/01/30/mission-statements/</link>
       <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/01/30/mission-statements/</guid>
+      <guid>https://daniel.rbind.io/2017/01/30/mission-statements/</guid>
       <description>&lt;p&gt;Mission statements and reflections on higher education institutions (plus one high school) that I&#39;ve attended.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;reflection&#34;&gt;Reflection&lt;/h1&gt;
@@ -3552,20 +3973,20 @@ and creative expression, and give back to it through our service and citizenship
     
     <item>
       <title>SWC: What the Carpentries Mean To Me</title>
-      <link>/2016/10/26/swc-what-the-carpentries-mean-to-me/</link>
+      <link>https://daniel.rbind.io/2016/10/26/swc-what-the-carpentries-mean-to-me/</link>
       <pubDate>Wed, 26 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/10/26/swc-what-the-carpentries-mean-to-me/</guid>
+      <guid>https://daniel.rbind.io/2016/10/26/swc-what-the-carpentries-mean-to-me/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2016/10/what_swc_means_to_me.html&#34;&gt;https://software-carpentry.org/blog/2016/10/what_swc_means_to_me.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Expanding the Watts Model</title>
-      <link>/2016/09/29/expanding-the-watts-model/</link>
+      <link>https://daniel.rbind.io/2016/09/29/expanding-the-watts-model/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/09/29/expanding-the-watts-model/</guid>
+      <guid>https://daniel.rbind.io/2016/09/29/expanding-the-watts-model/</guid>
       <description>&lt;p&gt;I wrote a 
 &lt;a href=&#34;http://chendaniely.github.io/research/2016/08/31/a_simple_model_of_global_cascades_on_random_networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
  and
@@ -3712,10 +4133,10 @@ and have each node use a random 1 neighbor&#39;s state (i.e., output) and its in
     
     <item>
       <title>A Simple Model of Global Cascades on Random Networks</title>
-      <link>/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</link>
+      <link>https://daniel.rbind.io/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</guid>
+      <guid>https://daniel.rbind.io/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://twitter.com/duncanjwatts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Duncan J Watts&lt;/a&gt;
  wrote a paper that
@@ -3929,10 +4350,10 @@ This is an analytical solution, not a simulated solution&lt;/p&gt;
     
     <item>
       <title>Scientific &#39;Purity&#39; in the &#39;Connected Age&#39;</title>
-      <link>/2016/03/14/scientific-purity-in-the-connected-age/</link>
+      <link>https://daniel.rbind.io/2016/03/14/scientific-purity-in-the-connected-age/</link>
       <pubDate>Mon, 14 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/03/14/scientific-purity-in-the-connected-age/</guid>
+      <guid>https://daniel.rbind.io/2016/03/14/scientific-purity-in-the-connected-age/</guid>
       <description>&lt;p&gt;I just started reading
 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Six Degrees: The Science of a Connected Age&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; by Duncan J. Watts.
 It&#39;s a book on network theory and related to the
@@ -3981,40 +4402,40 @@ I now have greater appreciation for purer disciplines and a drive to learn them.
     
     <item>
       <title>SWC: Software Carpentry as a University Course</title>
-      <link>/2016/02/05/swc-software-carpentry-as-a-university-course/</link>
+      <link>https://daniel.rbind.io/2016/02/05/swc-software-carpentry-as-a-university-course/</link>
       <pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/02/05/swc-software-carpentry-as-a-university-course/</guid>
+      <guid>https://daniel.rbind.io/2016/02/05/swc-software-carpentry-as-a-university-course/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2016/02/swc-as-a-university-course.html&#34;&gt;https://software-carpentry.org/blog/2016/02/swc-as-a-university-course.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>SWC: Teaching Bimodal Workshops with a Large Range</title>
-      <link>/2015/11/05/swc-teaching-bimodal-workshops-with-a-large-range/</link>
+      <link>https://daniel.rbind.io/2015/11/05/swc-teaching-bimodal-workshops-with-a-large-range/</link>
       <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/11/05/swc-teaching-bimodal-workshops-with-a-large-range/</guid>
+      <guid>https://daniel.rbind.io/2015/11/05/swc-teaching-bimodal-workshops-with-a-large-range/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2015/11/teaching-extreme-ranges.html&#34;&gt;https://software-carpentry.org/blog/2015/11/teaching-extreme-ranges.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>SWC: Assessing Our Learners Part I</title>
-      <link>/2015/06/23/swc-assessing-our-learners-part-i/</link>
+      <link>https://daniel.rbind.io/2015/06/23/swc-assessing-our-learners-part-i/</link>
       <pubDate>Tue, 23 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/06/23/swc-assessing-our-learners-part-i/</guid>
+      <guid>https://daniel.rbind.io/2015/06/23/swc-assessing-our-learners-part-i/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2015/06/learner-assessment-part-01.html&#34;&gt;https://software-carpentry.org/blog/2015/06/learner-assessment-part-01.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Getting Started with Data Science and Analysis</title>
-      <link>/2015/05/05/getting-started-with-data-science-and-analysis/</link>
+      <link>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
+      <guid>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
       <description>&lt;p&gt;I&#39;ve been an instructor for 
 &lt;a href=&#34;http://software-carpentry.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry (SWC)&lt;/a&gt;
  over a year now.
@@ -4128,20 +4549,20 @@ In many domains of research the rapid generation of large amounts of data is fun
     
     <item>
       <title>SWC: Cookie Cutter</title>
-      <link>/2015/02/10/swc-cookie-cutter/</link>
+      <link>https://daniel.rbind.io/2015/02/10/swc-cookie-cutter/</link>
       <pubDate>Tue, 10 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/02/10/swc-cookie-cutter/</guid>
+      <guid>https://daniel.rbind.io/2015/02/10/swc-cookie-cutter/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2015/02/cookie-cutter.html&#34;&gt;https://software-carpentry.org/blog/2015/02/cookie-cutter.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Open Source A Python Project I</title>
-      <link>/2015/02/05/open-source-a-python-project-i/</link>
+      <link>https://daniel.rbind.io/2015/02/05/open-source-a-python-project-i/</link>
       <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/02/05/open-source-a-python-project-i/</guid>
+      <guid>https://daniel.rbind.io/2015/02/05/open-source-a-python-project-i/</guid>
       <description>&lt;p&gt;I started my
 
 &lt;a href=&#34;https://github.com/chendaniely/multi-agent-neural-network&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;first&lt;/a&gt;
@@ -4365,20 +4786,20 @@ release numbers for your first release.&lt;/li&gt;
     
     <item>
       <title>SWC: Revamping the Instructor Survey</title>
-      <link>/2014/11/02/swc-revamping-the-instructor-survey/</link>
+      <link>https://daniel.rbind.io/2014/11/02/swc-revamping-the-instructor-survey/</link>
       <pubDate>Sun, 02 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/11/02/swc-revamping-the-instructor-survey/</guid>
+      <guid>https://daniel.rbind.io/2014/11/02/swc-revamping-the-instructor-survey/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2014/11/revised-instructor-survey.html&#34;&gt;https://software-carpentry.org/blog/2014/11/revised-instructor-survey.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Hacking Your MetroCard to $0.00</title>
-      <link>/2014/09/29/hacking-your-metrocard-to-0.00/</link>
+      <link>https://daniel.rbind.io/2014/09/29/hacking-your-metrocard-to-0.00/</link>
       <pubDate>Mon, 29 Sep 2014 20:40:00 +0000</pubDate>
       
-      <guid>/2014/09/29/hacking-your-metrocard-to-0.00/</guid>
+      <guid>https://daniel.rbind.io/2014/09/29/hacking-your-metrocard-to-0.00/</guid>
       <description>&lt;p&gt;Earlier this month, Ben Wellington wrote a blog post about
 
 &lt;a href=&#34;http://iquantny.tumblr.com/post/96700509489/how-memorizing-19-05-can-help-you-outsmart-the-mta&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How Memorizing “$19.05” Can Help You Outsmart the MTA&lt;/a&gt;
@@ -4484,10 +4905,10 @@ difference and you&#39;ll have one fewer thing to be worried about.&lt;/p&gt;
     
     <item>
       <title>Welcome to Jekyll!</title>
-      <link>/2014/09/07/welcome-to-jekyll/</link>
+      <link>https://daniel.rbind.io/2014/09/07/welcome-to-jekyll/</link>
       <pubDate>Sun, 07 Sep 2014 15:38:57 +0000</pubDate>
       
-      <guid>/2014/09/07/welcome-to-jekyll/</guid>
+      <guid>https://daniel.rbind.io/2014/09/07/welcome-to-jekyll/</guid>
       <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 &lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
@@ -4510,20 +4931,20 @@ print_hi(&amp;lsquo;Tom&amp;rsquo;)
     
     <item>
       <title>SWC: Our First High School Workshop at Rockefeller University</title>
-      <link>/2014/07/07/swc-our-first-high-school-workshop-at-rockefeller-university/</link>
+      <link>https://daniel.rbind.io/2014/07/07/swc-our-first-high-school-workshop-at-rockefeller-university/</link>
       <pubDate>Mon, 07 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/07/07/swc-our-first-high-school-workshop-at-rockefeller-university/</guid>
+      <guid>https://daniel.rbind.io/2014/07/07/swc-our-first-high-school-workshop-at-rockefeller-university/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://software-carpentry.org/blog/2014/07/high-school-students-at-rockefeller.html&#34;&gt;https://software-carpentry.org/blog/2014/07/high-school-students-at-rockefeller.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Absolute and Relative Directories in Python</title>
-      <link>/2014/05/16/absolute-and-relative-directories-in-python/</link>
+      <link>https://daniel.rbind.io/2014/05/16/absolute-and-relative-directories-in-python/</link>
       <pubDate>Fri, 16 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/05/16/absolute-and-relative-directories-in-python/</guid>
+      <guid>https://daniel.rbind.io/2014/05/16/absolute-and-relative-directories-in-python/</guid>
       <description>&lt;p&gt;One of the most common tasks (for me at least) is saving or getting data from another directory from where the current python script is running. However, for many of the file I/O functions, it assumes the current directory or you need to give it an absolute directory. Using something like &lt;code&gt;../other_directory&lt;/code&gt; will not work.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Here is one way you can get the current script directory, and then append to the string the relative paths.&lt;/p&gt;
@@ -4544,10 +4965,10 @@ df&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_csv(data, sep&lt;sp
     
     <item>
       <title>Installing Eclipse in Ubuntu 13.10</title>
-      <link>/2014/02/04/installing-eclipse-in-ubuntu-13.10/</link>
+      <link>https://daniel.rbind.io/2014/02/04/installing-eclipse-in-ubuntu-13.10/</link>
       <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/02/04/installing-eclipse-in-ubuntu-13.10/</guid>
+      <guid>https://daniel.rbind.io/2014/02/04/installing-eclipse-in-ubuntu-13.10/</guid>
       <description>&lt;p&gt;Adapted answer from Shubhmay and TimD on 
 &lt;a href=&#34;http://askubuntu.com/questions/26632/how-to-install-eclipse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;askubuntu&lt;/a&gt;
  on installing Eclipse.&lt;/p&gt;
@@ -4603,10 +5024,10 @@ That way you will be able to install multiple different versions of eclipse&lt;/
     
     <item>
       <title>Setting Up Repast Simphony 2.1 in Linux</title>
-      <link>/2014/02/04/setting-up-repast-simphony-2.1-in-linux/</link>
+      <link>https://daniel.rbind.io/2014/02/04/setting-up-repast-simphony-2.1-in-linux/</link>
       <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>/2014/02/04/setting-up-repast-simphony-2.1-in-linux/</guid>
+      <guid>https://daniel.rbind.io/2014/02/04/setting-up-repast-simphony-2.1-in-linux/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;http://repast.sourceforge.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Repast Simphony&lt;/a&gt;
  is a Java based collection of agent-based modeling and simulation software.&lt;/p&gt;
@@ -4625,10 +5046,10 @@ ls | xargs -I targ sudo ln -s ~/.eclipse/org.eclipse.platform_4.3.0_1473617060_l
     
     <item>
       <title>Setting up a WebDAV Client for Courseworks</title>
-      <link>/2013/09/04/setting-up-a-webdav-client-for-courseworks/</link>
+      <link>https://daniel.rbind.io/2013/09/04/setting-up-a-webdav-client-for-courseworks/</link>
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/09/04/setting-up-a-webdav-client-for-courseworks/</guid>
+      <guid>https://daniel.rbind.io/2013/09/04/setting-up-a-webdav-client-for-courseworks/</guid>
       <description>&lt;p&gt;Columbia University&#39;s Courseworks website allows you to download files for a registered class.  A problem arises when multiple files needed to be downloaded simultaneously.  One simply cannot just select the files and bulk download them.  Courseworks have instructions to circumvent this limitation in the web interface by implementing a 
 &lt;a href=&#34;http://en.wikipedia.org/wiki/WebDAV&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WebDAV&lt;/a&gt;
  client.  However, other than Cyberduck under their Mac instructions, the Windows suggestion is quite limited.&lt;/p&gt;
@@ -4699,10 +5120,10 @@ in Windows.  You can also use the Cyberduck instructions for Mac.&lt;/p&gt;
     
     <item>
       <title>Setting up VirtualBox</title>
-      <link>/2013/02/21/setting-up-virtualbox/</link>
+      <link>https://daniel.rbind.io/2013/02/21/setting-up-virtualbox/</link>
       <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/02/21/setting-up-virtualbox/</guid>
+      <guid>https://daniel.rbind.io/2013/02/21/setting-up-virtualbox/</guid>
       <description>&lt;p&gt;Edit: March 31, 2014: As an assignment for &lt;!-- raw HTML omitted --&gt;Software Carpentry&lt;!-- raw HTML omitted --&gt; I made a screencast to follow along with these steps, &lt;!-- raw HTML omitted --&gt;here&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;Installing Windows XP in VirtualBox:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;

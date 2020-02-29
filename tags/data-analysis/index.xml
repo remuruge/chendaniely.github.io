@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data analysis on Daniel Chen</title>
-    <link>/tags/data-analysis/</link>
+    <link>https://daniel.rbind.io/tags/data-analysis/</link>
     <description>Recent content in data analysis on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 05 May 2015 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting Started with Data Science and Analysis</title>
-      <link>/2015/05/05/getting-started-with-data-science-and-analysis/</link>
+      <link>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</link>
       <pubDate>Tue, 05 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
+      <guid>https://daniel.rbind.io/2015/05/05/getting-started-with-data-science-and-analysis/</guid>
       <description>&lt;p&gt;I&#39;ve been an instructor for 
 &lt;a href=&#34;http://software-carpentry.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Software-Carpentry (SWC)&lt;/a&gt;
  over a year now.

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mann on Daniel Chen</title>
-    <link>/tags/mann/</link>
+    <link>https://daniel.rbind.io/tags/mann/</link>
     <description>Recent content in mann on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Thu, 30 Mar 2017 00:10:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/mann/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/mann/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A &#39;Simple&#39; Neural-Network Model</title>
-      <link>/2017/03/30/a-simple-neural-network-model/</link>
+      <link>https://daniel.rbind.io/2017/03/30/a-simple-neural-network-model/</link>
       <pubDate>Thu, 30 Mar 2017 00:10:00 +0000</pubDate>
       
-      <guid>/2017/03/30/a-simple-neural-network-model/</guid>
+      <guid>https://daniel.rbind.io/2017/03/30/a-simple-neural-network-model/</guid>
       <description>&lt;p&gt;My previous 
 &lt;a href=&#34;http://chendaniely.github.io/research/2016/09/29/expanding_watts_to_lens/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
  summarized the main points of the 
@@ -99,10 +99,10 @@ end of each simulation time tick.&lt;/p&gt;
     
     <item>
       <title>Expanding the Watts Model</title>
-      <link>/2016/09/29/expanding-the-watts-model/</link>
+      <link>https://daniel.rbind.io/2016/09/29/expanding-the-watts-model/</link>
       <pubDate>Thu, 29 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/09/29/expanding-the-watts-model/</guid>
+      <guid>https://daniel.rbind.io/2016/09/29/expanding-the-watts-model/</guid>
       <description>&lt;p&gt;I wrote a 
 &lt;a href=&#34;http://chendaniely.github.io/research/2016/08/31/a_simple_model_of_global_cascades_on_random_networks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
  and

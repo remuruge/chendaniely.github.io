@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>paper review on Daniel Chen</title>
-    <link>/tags/paper-review/</link>
+    <link>https://daniel.rbind.io/tags/paper-review/</link>
     <description>Recent content in paper review on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Wed, 31 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/paper-review/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/paper-review/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A Simple Model of Global Cascades on Random Networks</title>
-      <link>/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</link>
+      <link>https://daniel.rbind.io/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</link>
       <pubDate>Wed, 31 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</guid>
+      <guid>https://daniel.rbind.io/2016/08/31/a-simple-model-of-global-cascades-on-random-networks/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://twitter.com/duncanjwatts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Duncan J Watts&lt;/a&gt;
  wrote a paper that

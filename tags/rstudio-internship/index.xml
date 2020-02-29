@@ -2,23 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstudio-internship on Daniel Chen</title>
-    <link>/tags/rstudio-internship/</link>
+    <link>https://daniel.rbind.io/tags/rstudio-internship/</link>
     <description>Recent content in rstudio-internship on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Wed, 29 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/rstudio-internship/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/rstudio-internship/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My time as an RStudio Intern</title>
-      <link>/2020/01/29/my-time-as-an-rstudio-intern/</link>
+      <link>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</link>
       <pubDate>Wed, 29 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/01/29/my-time-as-an-rstudio-intern/</guid>
+      <guid>https://daniel.rbind.io/2020/01/29/my-time-as-an-rstudio-intern/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I’ve had a lot of time to think about my time as an RStudio intern.
@@ -116,13 +117,13 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;div id=&#34;therese-and-malcolm-in-los-angeles-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Therese and Malcolm in Los Angeles, CA&lt;/h4&gt;
 &lt;p&gt;I got to meet Therese and Malcolm when I was in LA staying at a friend’s place for another friends wedding.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_therese_malcom.jpg&#34; width=&#34;1632&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;julia-in-san-francisco-ca&#34; class=&#34;section level4&#34;&gt;
 &lt;h4&gt;Julia in San Francisco, CA&lt;/h4&gt;
 &lt;p&gt;I got the tour of Julia’s lab when I was in San Francisco for the
 &lt;a href=&#34;https://pybay.com/&#34;&gt;PyBay conference&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_1.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;More of Julia’s lab at the bottom of the post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;joyce-in-raleigh-nc.&#34; class=&#34;section level4&#34;&gt;
@@ -133,7 +134,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_joyce.jpg&#34; width=&#34;1518&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;education-and-shiny-teams&#34; class=&#34;section level3&#34;&gt;
@@ -141,7 +142,7 @@ I got to meet a handful of the interns in person beforehand.&lt;/p&gt;
 &lt;p&gt;I met with the Shiny team for daily stand-ups, and the education team about every week.
 The sheer amount of people I could ask for help is absolutely &lt;strong&gt;insane&lt;/strong&gt;.&lt;/p&gt;
 &lt;center&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen @ rstudio::conf 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This summer I got the opportunity work with the &lt;a href=&#34;https://twitter.com/rstudio?ref_src=twsrc%5Etfw&#34;&gt;@rstudio&lt;/a&gt; education and shiny teams. Definitely leveled up my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; skills 🍄, and looking forward to sharing it with the rest of the community. So sad this is all over😭. &lt;a href=&#34;https://t.co/qc7r3j6wg0&#34;&gt;pic.twitter.com/qc7r3j6wg0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dⓐniel Chen 🐍🏴‍☠️ (@chendaniely) &lt;a href=&#34;https://twitter.com/chendaniely/status/1165696768618749953?ref_src=twsrc%5Etfw&#34;&gt;August 25, 2019&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 &lt;/center&gt;
@@ -201,18 +202,19 @@ education and pedagogy of data science in medicine.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://education.rstudio.com/blog/2019/10/twelve-weeks/&#34;&gt;Desirée De Leon&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Picture’s around Julia’s lab.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; /&gt;&lt;!-- --&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; /&gt;&lt;!-- --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;rstudio_intern_julia_a.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_b.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_c.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_d.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_e.jpg&#34; width=&#34;1518&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_f.jpg&#34; width=&#34;2024&#34; /&gt;&lt;img src=&#34;rstudio_intern_julia_g.jpg&#34; width=&#34;2024&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Git Squash and Merge Workflow</title>
-      <link>/2019/08/27/git-squash-and-merge-workflow/</link>
+      <link>https://daniel.rbind.io/2019/08/27/git-squash-and-merge-workflow/</link>
       <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/27/git-squash-and-merge-workflow/</guid>
+      <guid>https://daniel.rbind.io/2019/08/27/git-squash-and-merge-workflow/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I have a love-hate relationship with Git.
@@ -487,11 +489,12 @@ i.e.,&lt;/p&gt;
     
     <item>
       <title>Inconsistencies with the `==` operator in R</title>
-      <link>/2019/08/06/inconsistencies-with-in-r/</link>
+      <link>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</link>
       <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/08/06/inconsistencies-with-in-r/</guid>
+      <guid>https://daniel.rbind.io/2019/08/06/inconsistencies-with-in-r/</guid>
       <description>
+&lt;script src=&#34;https://daniel.rbind.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;One of the cool things about working on &lt;a href=&#34;https://github.com/rstudio-education/gradethis&#34;&gt;&lt;code&gt;gradethis&lt;/code&gt;&lt;/a&gt;
@@ -621,10 +624,10 @@ identical(u, s)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>New Website a la Blogdown!</title>
-      <link>/2019/07/23/new-website-a-la-blogdown/</link>
+      <link>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</link>
       <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/07/23/new-website-a-la-blogdown/</guid>
+      <guid>https://daniel.rbind.io/2019/07/23/new-website-a-la-blogdown/</guid>
       <description>&lt;p&gt;I finally got everything moved over to 
 &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogdown&lt;/a&gt;
 
@@ -682,10 +685,10 @@ and I have to push using that remote instead of the &lt;code&gt;origin&lt;/code&
     
     <item>
       <title>RStudio internship week 2</title>
-      <link>/2019/06/18/rstudio-internship-week-2/</link>
+      <link>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/18/rstudio-internship-week-2/</guid>
+      <guid>https://daniel.rbind.io/2019/06/18/rstudio-internship-week-2/</guid>
       <description>&lt;p&gt;The main topics and events of last week were:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Much git.&lt;/li&gt;
@@ -903,10 +906,10 @@ were going to be the way to go, but that ended up in a dead end.&lt;/p&gt;
     
     <item>
       <title>And we&#39;re off! RStudio internship week 1, complete.</title>
-      <link>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
+      <link>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
+      <guid>https://daniel.rbind.io/2019/06/10/and-were-off-rstudio-internship-week-1-complete./</guid>
       <description>&lt;p&gt;I&#39;m still pinching myself about being one of the 
 &lt;a href=&#34;https://blog.rstudio.com/2019/03/25/summer-interns-2019/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;RStudio interns this year&lt;/a&gt;
 .

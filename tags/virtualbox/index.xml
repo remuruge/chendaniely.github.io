@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VirtualBox on Daniel Chen</title>
-    <link>/tags/virtualbox/</link>
+    <link>https://daniel.rbind.io/tags/virtualbox/</link>
     <description>Recent content in VirtualBox on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Thu, 21 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting up VirtualBox</title>
-      <link>/2013/02/21/setting-up-virtualbox/</link>
+      <link>https://daniel.rbind.io/2013/02/21/setting-up-virtualbox/</link>
       <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/02/21/setting-up-virtualbox/</guid>
+      <guid>https://daniel.rbind.io/2013/02/21/setting-up-virtualbox/</guid>
       <description>&lt;p&gt;Edit: March 31, 2014: As an assignment for &lt;!-- raw HTML omitted --&gt;Software Carpentry&lt;!-- raw HTML omitted --&gt; I made a screencast to follow along with these steps, &lt;!-- raw HTML omitted --&gt;here&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;Installing Windows XP in VirtualBox:&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;

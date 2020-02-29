@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on Daniel Chen</title>
-    <link>/tags/windows/</link>
+    <link>https://daniel.rbind.io/tags/windows/</link>
     <description>Recent content in Windows on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Wed, 04 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Setting up a WebDAV Client for Courseworks</title>
-      <link>/2013/09/04/setting-up-a-webdav-client-for-courseworks/</link>
+      <link>https://daniel.rbind.io/2013/09/04/setting-up-a-webdav-client-for-courseworks/</link>
       <pubDate>Wed, 04 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>/2013/09/04/setting-up-a-webdav-client-for-courseworks/</guid>
+      <guid>https://daniel.rbind.io/2013/09/04/setting-up-a-webdav-client-for-courseworks/</guid>
       <description>&lt;p&gt;Columbia University&#39;s Courseworks website allows you to download files for a registered class.  A problem arises when multiple files needed to be downloaded simultaneously.  One simply cannot just select the files and bulk download them.  Courseworks have instructions to circumvent this limitation in the web interface by implementing a 
 &lt;a href=&#34;http://en.wikipedia.org/wiki/WebDAV&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WebDAV&lt;/a&gt;
  client.  However, other than Cyberduck under their Mac instructions, the Windows suggestion is quite limited.&lt;/p&gt;

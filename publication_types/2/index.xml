@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 on Daniel Chen</title>
-    <link>/publication_types/2/</link>
+    <link>https://daniel.rbind.io/publication_types/2/</link>
     <description>Recent content in 2 on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>An example journal article</title>
-      <link>/publication/journal-article/</link>
+      <link>https://daniel.rbind.io/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/journal-article/</guid>
+      <guid>https://daniel.rbind.io/publication/journal-article/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Supplementary notes can be added here, including 

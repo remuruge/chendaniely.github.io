@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xkcd on Daniel Chen</title>
-    <link>/tags/xkcd/</link>
+    <link>https://daniel.rbind.io/tags/xkcd/</link>
     <description>Recent content in xkcd on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     <lastBuildDate>Mon, 14 Mar 2016 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/xkcd/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/tags/xkcd/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Scientific &#39;Purity&#39; in the &#39;Connected Age&#39;</title>
-      <link>/2016/03/14/scientific-purity-in-the-connected-age/</link>
+      <link>https://daniel.rbind.io/2016/03/14/scientific-purity-in-the-connected-age/</link>
       <pubDate>Mon, 14 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>/2016/03/14/scientific-purity-in-the-connected-age/</guid>
+      <guid>https://daniel.rbind.io/2016/03/14/scientific-purity-in-the-connected-age/</guid>
       <description>&lt;p&gt;I just started reading
 &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Six Degrees: The Science of a Connected Age&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; by Duncan J. Watts.
 It&#39;s a book on network theory and related to the

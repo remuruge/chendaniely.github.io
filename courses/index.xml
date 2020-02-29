@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses on Daniel Chen</title>
-    <link>/courses/</link>
+    <link>https://daniel.rbind.io/courses/</link>
     <description>Recent content in Courses on Daniel Chen</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Daniel Chen {year}</copyright>
     
-	    <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://daniel.rbind.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python</title>
-      <link>/courses/python/</link>
+      <link>https://daniel.rbind.io/courses/python/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/courses/python/</guid>
+      <guid>https://daniel.rbind.io/courses/python/</guid>
       <description>&lt;p&gt;Here you can find my Python related courses.&lt;/p&gt;
 &lt;p&gt;A table of public courses can be found here:&lt;/p&gt;
 </description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>R</title>
-      <link>/courses/r/</link>
+      <link>https://daniel.rbind.io/courses/r/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/courses/r/</guid>
+      <guid>https://daniel.rbind.io/courses/r/</guid>
       <description>&lt;p&gt;R related courses.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>/courses/git/</link>
+      <link>https://daniel.rbind.io/courses/git/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/courses/git/</guid>
+      <guid>https://daniel.rbind.io/courses/git/</guid>
       <description></description>
     </item>
     
